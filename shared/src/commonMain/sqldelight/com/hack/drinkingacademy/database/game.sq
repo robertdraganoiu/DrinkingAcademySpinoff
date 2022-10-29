@@ -1,0 +1,106 @@
+CREATE TABLE user(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    progress INTEGER NOT NULL,
+    soundLevel INTEGER NOT NULL,
+    musicLevel INTEGER NOT NULL
+);
+
+createUserWithSettings:
+INSERT OR REPLACE
+INTO user(
+    progress,
+    soundLevel,
+    musicLevel
+) VALUES (0, ?, ?);
+
+getUser:
+SELECT *
+FROM user;
+
+updateUserScore:
+UPDATE user
+SET progress = ?
+WHERE id = 1;
+
+updateUserSettings:
+UPDATE user
+SET soundLevel = ?,
+    musicLevel = ?
+WHERE id = 1;
+
+
+CREATE TABLE game_mode(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL
+);
+
+addGameMode:
+INSERT OR REPLACE
+INTO game_mode(
+    name,
+    description
+) VALUES (?, ?);
+
+getGameModes:
+SELECT *
+FROM game_mode;
+
+getGameModeByName:
+SELECT *
+FROM game_mode
+WHERE name = ?;
+
+CREATE TABLE game_category(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL
+);
+
+addGameCategory:
+INSERT OR REPLACE
+INTO game_category(
+    name,
+    description
+) VALUES(?, ?);
+
+getGameCategories:
+SELECT *
+FROM game_category;
+
+getGameCategoryByName:
+SELECT *
+FROM game_category
+WHERE name = ?;
+
+CREATE TABLE game_element(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    game_mode_id INTEGER NOT NULL,
+    game_category_id INTEGER NOT NULL,
+    card_type INTEGER NOT NULL,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    FOREIGN KEY (game_mode_id) REFERENCES game_mode(id) ON DELETE CASCADE,
+    FOREIGN KEY (game_category_id) REFERENCES game_category(id) ON DELETE CASCADE
+);
+
+addGameElement:
+INSERT OR REPLACE
+INTO game_element(
+    game_mode_id,
+    game_category_id,
+    card_type,
+    title,
+    content
+) VALUES(?, ?, ?, ?, ?);
+
+getAllGameElements:
+SELECT *
+FROM game_element;
+
+getGameElementsByGameModeId:
+SELECT *
+FROM game_element
+WHERE game_mode_id = ?;
+
+
