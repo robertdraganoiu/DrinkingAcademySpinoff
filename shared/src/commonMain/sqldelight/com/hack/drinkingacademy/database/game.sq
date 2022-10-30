@@ -46,6 +46,11 @@ getGameModes:
 SELECT *
 FROM game_mode;
 
+getGameModeById:
+SELECT *
+FROM game_mode
+WHERE id = ?;
+
 getGameModeByName:
 SELECT *
 FROM game_mode
@@ -68,6 +73,11 @@ getGameCategories:
 SELECT *
 FROM game_category;
 
+getGameCategoryById:
+SELECT *
+FROM game_category
+WHERE id = ?;
+
 getGameCategoryByName:
 SELECT *
 FROM game_category
@@ -77,7 +87,7 @@ CREATE TABLE game_element(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     game_mode_id INTEGER NOT NULL,
     game_category_id INTEGER NOT NULL,
-    card_type INTEGER NOT NULL,
+    game_element_type_id INTEGER NOT NULL,
     title TEXT NOT NULL,
     content TEXT NOT NULL,
     FOREIGN KEY (game_mode_id) REFERENCES game_mode(id) ON DELETE CASCADE,
@@ -89,7 +99,7 @@ INSERT OR REPLACE
 INTO game_element(
     game_mode_id,
     game_category_id,
-    card_type,
+    game_element_type_id,
     title,
     content
 ) VALUES(?, ?, ?, ?, ?);
