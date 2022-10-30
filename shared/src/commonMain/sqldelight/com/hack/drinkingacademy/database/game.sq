@@ -5,13 +5,11 @@ CREATE TABLE user(
     musicLevel INTEGER NOT NULL
 );
 
-createUserWithSettings:
-INSERT OR REPLACE
-INTO user(
+INSERT INTO user(
     progress,
     soundLevel,
     musicLevel
-) VALUES (0, ?, ?);
+) VALUES (0, 0, 0);
 
 getUser:
 SELECT *

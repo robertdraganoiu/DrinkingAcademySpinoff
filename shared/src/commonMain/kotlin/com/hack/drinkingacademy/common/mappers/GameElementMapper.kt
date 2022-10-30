@@ -13,6 +13,6 @@ fun Game_element.toGameElement(gameMode: GameMode, gameCategory: GameCategory): 
         gameCategory = gameCategory,
         title = title,
         type = gameElementType,
-        cards = content.toCards(gameElementType)
+        content = content
     )
 }

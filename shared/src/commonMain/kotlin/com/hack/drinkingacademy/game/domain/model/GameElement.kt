@@ -6,5 +6,5 @@ data class GameElement(
     val gameCategory: GameCategory,
     val title: String,
     val type: GameElementType,
-    val cards: List<GameCard>
+    val content: String
 )

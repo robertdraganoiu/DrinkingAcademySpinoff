@@ -1,17 +1,17 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
 }
 
 android {
-    namespace = "com.hack.drinkingacademy.android"
-    compileSdk = 32
+    namespace = "com.plcoding.noteappkmm.android"
+    compileSdk = 33
     defaultConfig {
-        applicationId = "com.hack.drinkingacademy.android"
+        applicationId = "com.plcoding.noteappkmm.android"
         minSdk = 21
-        targetSdk = 32
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }

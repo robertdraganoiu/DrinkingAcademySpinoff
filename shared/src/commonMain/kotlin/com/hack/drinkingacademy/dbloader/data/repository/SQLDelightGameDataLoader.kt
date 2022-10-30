@@ -35,8 +35,12 @@ class SQLDelightGameDataLoader(db: GameDatabase) : GameDataLoader {
         if (gameModeId == null || gameCategoryId == null)
             throw NoSuchElementException("Wrong game mode name or game category name!")
 
-        // throws NoSuchElementException if name is wrong
-        val gameElementTypeId = GameElementType.fromName(gameElementDetails.type).id
+        var gameElementTypeId : Long?
+        try {
+            gameElementTypeId = GameElementType.fromName(gameElementDetails.type).id
+        } catch (e: NoSuchElementException) {
+            throw NoSuchElementException("Wrong game element type name!")
+        }
 
         queries.addGameElement(
             gameModeId,
