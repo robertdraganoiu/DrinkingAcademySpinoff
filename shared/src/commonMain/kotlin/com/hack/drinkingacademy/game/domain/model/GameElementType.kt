@@ -7,8 +7,10 @@ enum class GameElementType(val id: Long) {
     MULTI_EXTEND(3);
 
     companion object {
+        /** Used in game sqlite data source when querying the db */
         fun fromLong(id: Long) = GameElementType.values().first { it.id == id }
 
+        /** Used in dbloader when adding from files*/
         fun fromName(name: String) = GameElementType.values().first { it.toString() == name }
     }
 }

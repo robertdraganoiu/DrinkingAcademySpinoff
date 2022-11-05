@@ -6,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "com.plcoding.noteappkmm.android"
+    namespace = "com.hack.drinkingacademy.android"
     compileSdk = 33
     defaultConfig {
-        applicationId = "com.plcoding.noteappkmm.android"
+        applicationId = "com.hack.drinkingacademy.android"
         minSdk = 21
         targetSdk = 33
         versionCode = 1
