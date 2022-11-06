@@ -16,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.hack.drinkingacademy.android.player_select.PlayerSelectScreen
 import com.hack.drinkingacademy.android.user_details.UserScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -68,7 +69,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    UserScreen()
+//                    UserScreen()
+                    PlayerSelectScreen()
                 }
             }
         }

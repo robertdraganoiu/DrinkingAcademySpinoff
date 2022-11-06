@@ -7,4 +7,6 @@
     <string name="graduate_avatar_description">Graduate avatar</string>
     <string name="assistant_avatar_description">Assistant avatar</string>
     <string name="teacher_avatar_description">Teacher avatar</string>
+    <string name="user_screen_background_description">User screen background</string>
+    <string name="player_select_background_description">Player select background</string>
 </resources>
