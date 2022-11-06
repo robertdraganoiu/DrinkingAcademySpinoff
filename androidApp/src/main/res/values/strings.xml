@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="freshman_avatar_description">Freshman avatar</string>
+    <string name="sophomore_avatar_description">Sophomore avatar</string>
+    <string name="junior_avatar_description">Junior avatar</string>
+    <string name="senior_avatar_description">Senior avatar</string>
+    <string name="graduate_avatar_description">Graduate avatar</string>
+    <string name="assistant_avatar_description">Assistant avatar</string>
+    <string name="teacher_avatar_description">Teacher avatar</string>
+</resources>
