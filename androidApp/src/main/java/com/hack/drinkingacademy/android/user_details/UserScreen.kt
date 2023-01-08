@@ -19,11 +19,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import com.hack.drinkingacademy.android.R
 
 @Composable
 fun UserScreen(
-    viewModel: UserDetailsViewModel = hiltViewModel()
+    viewModel: UserDetailsViewModel = hiltViewModel(),
+    navController: NavHostController
 ) {
     val state by viewModel.state.collectAsState()
 
@@ -51,7 +53,7 @@ fun UserScreen(
                 fontSize = 20.sp
             )
             Button(
-                onClick = { viewModel.addProgress(50) }
+                onClick = { navController.navigate("player_select") }
             ) {
                 Text(
                     text = "Start game",

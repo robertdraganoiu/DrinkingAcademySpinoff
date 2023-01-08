@@ -13,9 +13,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.hack.drinkingacademy.android.game.GameScreen
 import com.hack.drinkingacademy.android.game_mode_select.GameModeSelectScreen
 import com.hack.drinkingacademy.android.player_select.PlayerSelectScreen
 import com.hack.drinkingacademy.android.user_details.UserScreen
@@ -70,9 +73,24 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    UserScreen()
-//                    PlayerSelectScreen()
-//                    GameModeSelectScreen()
+                    val navController = rememberNavController()
+                    NavHost(navController = navController, startDestination = "user") {
+                        composable(route = "user") {
+                            UserScreen(navController = navController)
+                        }
+                        composable(route = "player_select") {
+                            PlayerSelectScreen(navController = navController)
+                        }
+                        composable(route = "game_mode_select") {
+                            GameModeSelectScreen(navController = navController)
+                        }
+                        composable(route = "game") {
+                            GameScreen(navController = navController)
+                        }
+//                        composable(route = "summary") {
+//                            GameSummary(navController = navController)
+//                        }
+                    }
                 }
             }
         }

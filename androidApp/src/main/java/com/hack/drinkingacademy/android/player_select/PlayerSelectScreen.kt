@@ -16,12 +16,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import com.hack.drinkingacademy.android.R
 import java.util.*
 
 @Composable
 fun PlayerSelectScreen(
-    viewModel: PlayerSelectViewModel = hiltViewModel()
+    viewModel: PlayerSelectViewModel = hiltViewModel(),
+    navController: NavHostController
 ) {
     val players by viewModel.players.collectAsState()
 
@@ -53,7 +55,7 @@ fun PlayerSelectScreen(
                     )
                 }
                 Button(
-                    onClick = { /* TODO navigation */}
+                    onClick = { navController.navigate("game_mode_select")}
                 ) {
                     Text(
                         text = "Next",
