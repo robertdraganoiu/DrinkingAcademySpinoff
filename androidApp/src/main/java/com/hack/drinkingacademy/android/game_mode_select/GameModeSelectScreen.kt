@@ -40,8 +40,8 @@ fun GameModeSelectScreen(
                         gameMode.id
                     ),
                     onClick = {
-                        viewModel.selectGameMode(gameMode.id.toInt())
-                        navController.navigate("game")
+                        val selected = viewModel.selectGameMode(gameMode.id.toInt() - 1)
+                        if (selected) navController.navigate("game")
                     })
             }
         }

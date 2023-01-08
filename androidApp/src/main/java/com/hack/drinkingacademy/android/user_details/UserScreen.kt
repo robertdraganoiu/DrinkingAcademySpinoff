@@ -1,5 +1,6 @@
 package com.hack.drinkingacademy.android.user_details
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
@@ -21,6 +22,7 @@ import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.hack.drinkingacademy.android.R
+import com.hack.drinkingacademy.android.game.GameViewModel
 
 @Composable
 fun UserScreen(
@@ -53,7 +55,9 @@ fun UserScreen(
                 fontSize = 20.sp
             )
             Button(
-                onClick = { navController.navigate("player_select") }
+                onClick = {
+                    navController.navigate("player_select")
+                }
             ) {
                 Text(
                     text = "Start game",

@@ -55,26 +55,27 @@ class GameModeSelectViewModel @Inject constructor(
         else -> R.string.game_mode_logo_inauguration_description
     }
 
-    fun selectGameMode(id: Int) {
+    fun selectGameMode(id: Int): Boolean {
         val gameModesList = gameModes.value
         if (id < 0 || id >= gameModesList.size) {
             Log.e(
                 GameModeSelectViewModel::class.simpleName,
                 "Id $id out of bounds. Max game mode list has ${gameModesList.size} elements. Aborted selection."
             )
-            return
+            return false
         }
         if (!gameModesList[id].isEnabled) {
             Log.i(
                 GameModeSelectViewModel::class.simpleName,
                 "Tried to select a game mode that is not enabled. Aborted selection."
             )
-            return
+            return false
         }
-        savedStateHandle["gameMode"] = gameModesList[id]
-        Log.e(
+        savedStateHandle["gameMode"] = gameModesList[id].id
+        Log.i(
             GameModeSelectViewModel::class.simpleName,
             "Game mode $id(${gameModesList[id].name} selected."
         )
+        return true
     }
 }

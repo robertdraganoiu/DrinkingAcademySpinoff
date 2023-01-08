@@ -18,4 +18,5 @@
     <string name="game_mode_logo_after_hours_description">After hours game background</string>
     <string name="game_mode_logo_survival_description">Survival game background</string>
     <string name="game_mode_logo_team_building_description">Team building game mode logo</string>
+    <string name="navigation_log_id">Nav</string>
 </resources>
