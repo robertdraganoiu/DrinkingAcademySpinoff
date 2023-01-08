@@ -1,28 +1,22 @@
 package com.hack.drinkingacademy.android.player_select
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hack.drinkingacademy.android.R
-import com.hack.drinkingacademy.android.player_select.PlayerSelectViewModel
 import java.util.*
 
 @Composable
@@ -72,8 +66,8 @@ fun PlayerSelectScreen(
 
         // background image
         Image(
-            painter = painterResource(id = R.drawable.player_select_screen_background),
-            contentDescription = stringResource(id = R.string.player_select_background_description),
+            painter = painterResource(id = R.drawable.background_player_select),
+            contentDescription = stringResource(id = R.string.background_player_select_description),
             contentScale = ContentScale.FillBounds,
             modifier = Modifier
                 .matchParentSize()

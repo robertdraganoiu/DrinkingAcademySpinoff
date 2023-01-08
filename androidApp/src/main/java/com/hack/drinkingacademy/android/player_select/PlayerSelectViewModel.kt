@@ -1,7 +1,9 @@
 package com.hack.drinkingacademy.android.player_select
 
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.hack.drinkingacademy.android.user_details.UserDetailsViewModel
 import com.hack.drinkingacademy.common.constants.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.combine
@@ -14,11 +16,17 @@ class PlayerSelectViewModel @Inject constructor(
     val players = savedStateHandle.getStateFlow("players", emptyList<String>())
 
     fun addPlayer(name: String) {
-        if (players.value.size == Constants.MAX_PLAYERS) return
+        if (players.value.size == Constants.MAX_PLAYERS) {
+            Log.i(
+                PlayerSelectViewModel::class.simpleName,
+                "Tried to add more than ${Constants.MAX_PLAYERS} players. Aborted adding."
+            )
+            return
+        }
         savedStateHandle["players"] = players.value + name
     }
 
     fun removePlayer(name: String) {
-        savedStateHandle["players"] = players.value.toMutableList().filter { it != name}
+        savedStateHandle["players"] = players.value.toMutableList().filter { it != name }
     }
 }

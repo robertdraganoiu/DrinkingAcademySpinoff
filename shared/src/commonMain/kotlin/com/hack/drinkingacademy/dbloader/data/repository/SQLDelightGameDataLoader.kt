@@ -14,7 +14,7 @@ class SQLDelightGameDataLoader(db: GameDatabase) : GameDataLoader {
     private val queries = db.gameQueries
 
     override suspend fun addGameMode(gameModeDetails: GameModeDetails) {
-        queries.addGameMode(gameModeDetails.name, gameModeDetails.description)
+        queries.addGameMode(gameModeDetails.name, gameModeDetails.description, gameModeDetails.isEnabled)
     }
 
     override suspend fun addGameCategory(gameCategoryDetails: GameCategoryDetails) {

@@ -63,8 +63,8 @@ fun UserScreen(
 
         // background image
         Image(
-            painter = painterResource(id = R.drawable.user_screen_background),
-            contentDescription = stringResource(id = R.string.user_screen_background_description),
+            painter = painterResource(id = R.drawable.background_user_details),
+            contentDescription = stringResource(id = R.string.background_user_details_description),
             contentScale = ContentScale.FillBounds,
             modifier = Modifier
                 .matchParentSize()

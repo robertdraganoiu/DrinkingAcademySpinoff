@@ -1,33 +1,80 @@
 package com.hack.drinkingacademy.android.game_mode_select
 
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.hack.drinkingacademy.android.R
+import com.hack.drinkingacademy.android.user_details.UserDetailsViewModel
+import com.hack.drinkingacademy.common.constants.Constants
 import com.hack.drinkingacademy.game.domain.model.GameMode
 import com.hack.drinkingacademy.game.domain.repository.GameDataSource
 import com.hack.drinkingacademy.game.domain.use_case.get_game_cards.TransformGameElementsToCardsUseCase
 import com.hack.drinkingacademy.game.domain.use_case.select_game_elements.FilterGameElementsUseCase
+import com.hack.drinkingacademy.user.domain.model.UserTitle
 import com.hack.drinkingacademy.user.domain.repository.UserDataSource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class GamePrepStateViewModel @Inject constructor(
-    private val userDataSource: UserDataSource,
-    private val gameDataSource: GameDataSource,
-    private val savedStateHandle: SavedStateHandle
+class GameModeSelectViewModel @Inject constructor(
+    private val savedStateHandle: SavedStateHandle,
+    private val gameDataSource: GameDataSource
 ) : ViewModel() {
-    private val transformElementsToCards =  TransformGameElementsToCardsUseCase()
-    private val filterElements = FilterGameElementsUseCase()
-
-    val user = savedStateHandle.getStateFlow("user", null)
-    val players = savedStateHandle.getStateFlow("players", emptyList<String>())
     val gameModes = savedStateHandle.getStateFlow("gameModes", emptyList<GameMode>())
 
-    val state = combine(user, players, gameModes) { user, players, gameModes ->
-        GamePrepState(
-            user = user,
-            players = players,
+    init {
+        loadGameModes()
+    }
+
+    private fun loadGameModes() {
+        viewModelScope.launch {
+            val gameModes = gameDataSource.getGameModes()
+            savedStateHandle["gameModes"] = gameModes
+            Log.i(GameModeSelectViewModel::class.simpleName, "Loaded ${gameModes.size} game modes.")
+        }
+    }
+
+    fun getGameModeLogoDrawableIdFromId(id: Long): Int = when (id.toInt()) {
+        0 -> R.drawable.game_mode_logo_inauguration
+        1 -> R.drawable.game_mode_logo_gender_olympics
+        2 -> R.drawable.game_mode_logo_after_hours
+        3 -> R.drawable.game_mode_logo_survival
+        4 -> R.drawable.game_mode_logo_team_building
+        else -> R.drawable.game_mode_logo_inauguration
+    }
+
+    fun getGameModeLogoDescriptionIdFromId(id: Long): Int = when (id.toInt()) {
+        0 -> R.string.game_mode_logo_inauguration_description
+        1 -> R.string.game_mode_logo_gender_olympics_description
+        2 -> R.string.game_mode_logo_after_hours_description
+        3 -> R.string.game_mode_logo_survival_description
+        4 -> R.string.game_mode_logo_team_building_description
+        else -> R.string.game_mode_logo_inauguration_description
+    }
+
+    fun selectGameMode(id: Int) {
+        val gameModesList = gameModes.value
+        if (id < 0 || id >= gameModesList.size) {
+            Log.e(
+                GameModeSelectViewModel::class.simpleName,
+                "Id $id out of bounds. Max game mode list has ${gameModesList.size} elements. Aborted selection."
+            )
+            return
+        }
+        if (!gameModesList[id].isEnabled) {
+            Log.i(
+                GameModeSelectViewModel::class.simpleName,
+                "Tried to select a game mode that is not enabled. Aborted selection."
+            )
+            return
+        }
+        savedStateHandle["gameMode"] = gameModesList[id]
+        Log.e(
+            GameModeSelectViewModel::class.simpleName,
+            "Game mode $id(${gameModesList[id].name} selected."
         )
     }
 }

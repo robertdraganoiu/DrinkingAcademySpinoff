@@ -9,17 +9,17 @@ class SQLDelightUserDataSource(db: GameDatabase): UserDataSource {
 
     private val queries = db.gameQueries
 
-    override fun getUser(): UserDetails? {
+    override suspend fun getUser(): UserDetails? {
         return queries.getUser()
             .executeAsOneOrNull()
             ?.toUserDetails()
     }
 
-    override fun updateUserScore(progress: Long) {
+    override suspend fun updateUserScore(progress: Long) {
         queries.updateUserScore(progress)
     }
 
-    override fun updateUserSettings(soundLevel: Long, musicLevel: Long) {
+    override suspend fun updateUserSettings(soundLevel: Long, musicLevel: Long) {
         queries.updateUserSettings(soundLevel, musicLevel)
     }
 }

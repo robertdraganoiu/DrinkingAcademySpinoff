@@ -1,5 +1,6 @@
 package com.hack.drinkingacademy.android.user_details
 
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -47,15 +48,23 @@ class UserDetailsViewModel @Inject constructor(
         loadUserDetails()
     }
 
-    fun loadUserDetails() {
-        userDetails = userDataSource.getUser()
-        savedStateHandle["progress"] = userDetails?.progress
-        savedStateHandle["soundLevel"] = userDetails?.soundLevel
-        savedStateHandle["musicLevel"] = userDetails?.musicLevel
+    private fun loadUserDetails() {
+        viewModelScope.launch {
+            userDetails = userDataSource.getUser()
+            savedStateHandle["progress"] = userDetails?.progress
+            savedStateHandle["soundLevel"] = userDetails?.soundLevel
+            savedStateHandle["musicLevel"] = userDetails?.musicLevel
+        }
     }
 
     fun addProgress(added: Long) {
-        if (added < 0) return
+        if (added < 0) {
+            Log.e(
+                UserDetailsViewModel::class.simpleName,
+                "Tried to add $added points. Aborted points update."
+            )
+            return
+        }
         viewModelScope.launch {
             userDataSource.updateUserScore(progress.value + added)
             loadUserDetails()
@@ -78,27 +87,23 @@ class UserDetailsViewModel @Inject constructor(
         }
     }
 
-    private fun getAvatarIdFromTitle(title: UserTitle): Int {
-        return when(title) {
-            UserTitle.FRESHMAN -> R.drawable.freshman_avatar
-            UserTitle.SOPHOMORE -> R.drawable.sophomore_avatar
-            UserTitle.JUNIOR -> R.drawable.junior_avatar
-            UserTitle.SENIOR -> R.drawable.senior_avatar
-            UserTitle.GRADUATE -> R.drawable.graduate_avatar
-            UserTitle.ASSISTANT -> R.drawable.assistant_avatar
-            UserTitle.TEACHER -> R.drawable.teacher_avatar
-        }
+    private fun getAvatarIdFromTitle(title: UserTitle): Int = when (title) {
+        UserTitle.FRESHMAN -> R.drawable.user_avatar_freshman
+        UserTitle.SOPHOMORE -> R.drawable.user_avatar_sophomore
+        UserTitle.JUNIOR -> R.drawable.user_avatar_junior
+        UserTitle.SENIOR -> R.drawable.user_avatar_senior
+        UserTitle.GRADUATE -> R.drawable.user_avatar_graduate
+        UserTitle.ASSISTANT -> R.drawable.user_avatar_assistant
+        UserTitle.TEACHER -> R.drawable.user_avatar_teacher
     }
 
-    private fun getAvatarDescriptionFromTitle(title: UserTitle): Int {
-        return when(title) {
-            UserTitle.FRESHMAN -> R.string.freshman_avatar_description
-            UserTitle.SOPHOMORE -> R.string.sophomore_avatar_description
-            UserTitle.JUNIOR -> R.string.junior_avatar_description
-            UserTitle.SENIOR -> R.string.senior_avatar_description
-            UserTitle.GRADUATE -> R.string.graduate_avatar_description
-            UserTitle.ASSISTANT -> R.string.assistant_avatar_description
-            UserTitle.TEACHER -> R.string.teacher_avatar_description
-        }
+    private fun getAvatarDescriptionFromTitle(title: UserTitle): Int = when (title) {
+        UserTitle.FRESHMAN -> R.string.user_avatar_freshman_description
+        UserTitle.SOPHOMORE -> R.string.user_avatar_sophomore_description
+        UserTitle.JUNIOR -> R.string.user_avatar_junior_description
+        UserTitle.SENIOR -> R.string.user_avatar_senior_description
+        UserTitle.GRADUATE -> R.string.user_avatar_graduate_description
+        UserTitle.ASSISTANT -> R.string.user_avatar_assistant_description
+        UserTitle.TEACHER -> R.string.user_avatar_teacher_description
     }
 }

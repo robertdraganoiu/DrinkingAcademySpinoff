@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="freshman_avatar_description">Freshman avatar</string>
-    <string name="sophomore_avatar_description">Sophomore avatar</string>
-    <string name="junior_avatar_description">Junior avatar</string>
-    <string name="senior_avatar_description">Senior avatar</string>
-    <string name="graduate_avatar_description">Graduate avatar</string>
-    <string name="assistant_avatar_description">Assistant avatar</string>
-    <string name="teacher_avatar_description">Teacher avatar</string>
-    <string name="user_screen_background_description">User screen background</string>
-    <string name="player_select_background_description">Player select background</string>
+    <string name="user_avatar_freshman_description">Freshman avatar</string>
+    <string name="user_avatar_sophomore_description">Sophomore avatar</string>
+    <string name="user_avatar_junior_description">Junior avatar</string>
+    <string name="user_avatar_senior_description">Senior avatar</string>
+    <string name="user_avatar_graduate_description">Graduate avatar</string>
+    <string name="user_avatar_assistant_description">Assistant avatar</string>
+    <string name="user_avatar_teacher_description">Teacher avatar</string>
+    <string name="background_user_details_description">User screen background</string>
+    <string name="background_player_select_description">Player select background</string>
+    <string name="background_game_mode_select_description">Game mode screen background</string>
+    <string name="background_game_inauguration_description">Inauguration game background</string>
+    <string name="background_game_gender_olympics_description">Gender Olympics game background</string>
+    <string name="background_game_after_hours_description">After hours game background</string>
+    <string name="game_mode_logo_inauguration_description">Inauguration game mode logo</string>
+    <string name="game_mode_logo_gender_olympics_description">Gender Olympics game mode logo</string>
+    <string name="game_mode_logo_after_hours_description">After hours game background</string>
+    <string name="game_mode_logo_survival_description">Survival game background</string>
+    <string name="game_mode_logo_team_building_description">Team building game mode logo</string>
 </resources>

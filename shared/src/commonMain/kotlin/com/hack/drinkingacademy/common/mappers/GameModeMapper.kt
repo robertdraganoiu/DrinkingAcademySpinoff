@@ -7,6 +7,7 @@ fun Game_mode.toGameMode(): GameMode {
     return GameMode(
         id = id,
         name = name,
-        description = description
+        description = description,
+        isEnabled = isEnabled != 0L
     )
 }
