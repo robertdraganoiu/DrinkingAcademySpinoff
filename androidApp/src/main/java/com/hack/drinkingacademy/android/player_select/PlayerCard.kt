@@ -63,7 +63,7 @@ fun PlayerCard(
                 fontSize = 18.sp,
                 color = Color.White,
                 fontFamily = FontFamily(Font(R.font.rubik)),
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
             )
         } else {
             TextField(

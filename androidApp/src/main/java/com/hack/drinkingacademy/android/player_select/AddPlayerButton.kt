@@ -20,7 +20,7 @@ fun AddPlayerButton(onClick: () -> Unit) {
     Button(
         onClick = onClick,
         modifier = Modifier
-            .size(60.dp)
+            .size(72.dp)
     ) {
         Icon(
             imageVector = Icons.Default.Add,

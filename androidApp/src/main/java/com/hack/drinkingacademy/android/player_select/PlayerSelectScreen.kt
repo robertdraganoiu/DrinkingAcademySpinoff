@@ -86,7 +86,7 @@ fun PlayerSelectScreen(
 
             // Player List with + Button and Input Field
             LazyVerticalGrid(
-                columns = GridCells.Adaptive(minSize = 120.dp),
+                columns = GridCells.Adaptive(minSize = 150.dp),
                 contentPadding = PaddingValues(vertical = 16.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
