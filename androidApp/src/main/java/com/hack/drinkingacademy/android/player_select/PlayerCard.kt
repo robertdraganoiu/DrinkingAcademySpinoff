@@ -18,6 +18,8 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -41,8 +43,10 @@ fun PlayerCard(
     readOnly: Boolean = true,
     onNameChange: (String) -> Unit = {},
     onAddPlayer: () -> Unit = {},
-    focusRequester: FocusRequester = FocusRequester(),
 ) {
+    // A focus requester to request focus for the text field when adding a new player
+    val focusRequester = remember { FocusRequester() }
+    
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
@@ -97,6 +101,12 @@ fun PlayerCard(
                 contentDescription = "Remove player",
                 tint = Color.Red // Red to make the close icon stand out
             )
+        }
+    }
+
+    LaunchedEffect(readOnly) {
+        if (!readOnly) {
+            focusRequester.requestFocus()
         }
     }
 }
