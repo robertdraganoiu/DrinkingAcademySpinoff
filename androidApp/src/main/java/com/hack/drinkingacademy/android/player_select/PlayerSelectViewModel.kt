@@ -14,6 +14,7 @@ class PlayerSelectViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     val players = savedStateHandle.getStateFlow("players", emptyList<String>())
+    val difficulty = savedStateHandle.getStateFlow("difficulty", 1f)
 
     fun addPlayer(name: String) {
         if (players.value.size == Constants.MAX_PLAYERS) {
@@ -28,5 +29,9 @@ class PlayerSelectViewModel @Inject constructor(
 
     fun removePlayer(name: String) {
         savedStateHandle["players"] = players.value.toMutableList().filter { it != name }
+    }
+
+    fun setDifficulty(difficulty: Float) {
+        savedStateHandle["difficulty"] = difficulty
     }
 }

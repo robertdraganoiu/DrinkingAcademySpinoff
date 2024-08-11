@@ -41,9 +41,9 @@ fun PlayerSelectScreen(
     navController: NavHostController
 ) {
     val players by viewModel.players.collectAsState()
-    var showTextField by remember { mutableStateOf(false) }
-    var playerName by remember { mutableStateOf("") }
-    var crazinessLevel by remember { mutableStateOf(1f) }
+    val crazinessLevel by viewModel.difficulty.collectAsState()
+    var showPlayerInputField by remember { mutableStateOf(false) }
+    var inputPlayerName by remember { mutableStateOf("") }
 
     // Background Box with black overlay
     Box(
@@ -71,7 +71,7 @@ fun PlayerSelectScreen(
 
             // Craziness Level Slider Section
             CrazinessLevelSlider(crazinessLevel) { newValue ->
-                crazinessLevel = newValue
+                viewModel.setDifficulty(newValue)
             }
 
             // "Players" Header
@@ -103,25 +103,25 @@ fun PlayerSelectScreen(
 
                 // Add Player Button and TextField
                 item {
-                    if (showTextField) {
+                    if (showPlayerInputField) {
                         PlayerCard(
-                            name = playerName,
+                            name = inputPlayerName,
                             onCloseClick = {
-                                showTextField = false
-                                playerName = ""
+                                showPlayerInputField = false
+                                inputPlayerName = ""
                             },
                             readOnly = false,
-                            onNameChange = { playerName = it },
+                            onNameChange = { inputPlayerName = it },
                             onAddPlayer = {
-                                if (playerName.isNotBlank()) {
-                                    viewModel.addPlayer(playerName)
-                                    playerName = ""
-                                    showTextField = false
+                                if (inputPlayerName.isNotBlank()) {
+                                    viewModel.addPlayer(inputPlayerName)
+                                    inputPlayerName = ""
+                                    showPlayerInputField = false
                                 }
                             },
                         )
                     } else {
-                        AddPlayerButton(onClick = { showTextField = true })
+                        AddPlayerButton(onClick = { showPlayerInputField = true })
                     }
                 }
             }
