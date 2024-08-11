@@ -116,7 +116,7 @@ fun PlayerSelectScreen(
                                 if (playerName.isNotBlank()) {
                                     viewModel.addPlayer(playerName)
                                     playerName = ""
-                                    // Request focus for the next input field after adding a player
+                                    showTextField = false
                                 }
                             },
                         )
