@@ -32,6 +32,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -58,6 +60,9 @@ fun PlayerSelectScreen(
     var showTextField by remember { mutableStateOf(false) }
     var playerName by remember { mutableStateOf("") }
     var crazinessLevel by remember { mutableStateOf(1f) }
+
+    // A focus requester to request focus for the text field when adding a new player
+    val focusRequester = remember { FocusRequester() }
 
     // Background Box with black overlay
     Box(
@@ -118,19 +123,23 @@ fun PlayerSelectScreen(
                 // Add Player Button and TextField
                 item {
                     if (showTextField) {
-                        PlayerInputCard(
-                            playerName = playerName,
-                            onPlayerNameChange = { playerName = it },
+                        PlayerCard(
+                            name = playerName,
+                            onCloseClick = {
+                                showTextField = false
+                                playerName = ""
+                            },
+                            readOnly = false,
+                            onNameChange = { playerName = it },
                             onAddPlayer = {
                                 if (playerName.isNotBlank()) {
                                     viewModel.addPlayer(playerName)
                                     playerName = ""
+                                    // Request focus for the next input field after adding a player
+                                    focusRequester.requestFocus()
                                 }
                             },
-                            onCancel = {
-                                showTextField = false
-                                playerName = ""
-                            }
+                            focusRequester = focusRequester // Pass the focus requester
                         )
                     } else {
                         AddPlayerButton(onClick = { showTextField = true })
@@ -202,82 +211,6 @@ fun CrazinessLevelSlider(crazinessLevel: Float, onValueChange: (Float) -> Unit) 
             fontFamily = FontFamily(Font(R.font.rubik)),
             color = Color.White
         )
-    }
-}
-
-@Composable
-fun AddPlayerButton(onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .size(60.dp)
-            .background(Color.Green, shape = CircleShape)
-            .clickable { onClick() },
-        contentAlignment = Alignment.Center
-    ) {
-        Icon(
-            imageVector = Icons.Default.Add,
-            contentDescription = "Add Player",
-            tint = Color.White,
-            modifier = Modifier.size(36.dp)
-        )
-    }
-}
-
-@Composable
-fun PlayerInputCard(
-    playerName: String,
-    onPlayerNameChange: (String) -> Unit,
-    onAddPlayer: () -> Unit,
-    onCancel: () -> Unit
-) {
-    Box(
-        modifier = Modifier
-            .background(Color(0xAA000000), RoundedCornerShape(10.dp))
-            .padding(8.dp)
-            .fillMaxWidth()
-            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
-                onCancel()
-            }
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            TextField(
-                value = playerName,
-                onValueChange = onPlayerNameChange,
-                label = { Text("Enter Player Name", color = Color.White) },
-                textStyle = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.rubik)),
-                    color = Color.White,
-                    fontSize = 16.sp
-                ),
-                singleLine = true,
-                keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
-                keyboardActions = KeyboardActions(onDone = {
-                    if (playerName.isNotBlank()) {
-                        onAddPlayer()
-                    }
-                }),
-                colors = TextFieldDefaults.textFieldColors(
-                    backgroundColor = Color.Transparent,
-                    cursorColor = Color.White,
-                    focusedIndicatorColor = Color.Cyan,
-                    unfocusedIndicatorColor = Color.Gray,
-                    textColor = Color.White
-                ),
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 8.dp)
-            )
-            IconButton(onClick = { onCancel() }) {
-                Icon(
-                    imageVector = Icons.Default.Close,
-                    contentDescription = "Cancel",
-                    tint = Color.Red // Red to make the close icon stand out
-                )
-            }
-        }
     }
 }
 
