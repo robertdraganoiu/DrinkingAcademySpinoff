@@ -3,10 +3,8 @@ package com.hack.drinkingacademy.android.player_select
 import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.hack.drinkingacademy.android.user_details.UserDetailsViewModel
 import com.hack.drinkingacademy.common.constants.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.combine
 import javax.inject.Inject
 
 @HiltViewModel
@@ -31,7 +29,7 @@ class PlayerSelectViewModel @Inject constructor(
         savedStateHandle["players"] = players.value.toMutableList().filter { it != name }
     }
 
-    fun setDifficulty(difficulty: Float) {
+    fun setDifficulty(difficulty: Int) {
         savedStateHandle["difficulty"] = difficulty
     }
 }

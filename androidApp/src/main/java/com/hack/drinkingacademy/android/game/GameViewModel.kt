@@ -4,68 +4,87 @@ import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hack.drinkingacademy.game.domain.model.GameCard
-import com.hack.drinkingacademy.game.domain.repository.GameDataSource
-import com.hack.drinkingacademy.game.domain.use_case.get_game_cards.TransformGameElementsToCardsUseCase
-import com.hack.drinkingacademy.game.domain.use_case.select_game_elements.FilterGameElementsUseCase
+import com.hack.drinkingacademy.game.GameCreationUtils
+import com.hack.drinkingacademy.game.GameDataSource
+import com.hack.drinkingacademy.game.model.GameCard
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class GameViewModel @Inject constructor(
+    savedStateHandle: SavedStateHandle,
     private val gameDataSource: GameDataSource,
-    private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
-    private val transformElementsToCards = TransformGameElementsToCardsUseCase()
-    private val filterElements = FilterGameElementsUseCase()
 
-    private val players = savedStateHandle.getStateFlow("players", emptyList<String>())
-    private val gameModeId = savedStateHandle.getStateFlow("gameMode", -1)
-    private val cards = savedStateHandle.getStateFlow("cards", emptyList<GameCard>())
-    private val currentCard = savedStateHandle.getStateFlow("currentCard", 0)
+    private val _gameState = MutableStateFlow<GameState>(GameState.Loading)
+    val gameState: StateFlow<GameState> = _gameState
 
     init {
-        loadGameCards(players.value, gameModeId.value)
+        loadGameCards(
+            players = savedStateHandle["players"],
+            difficulty = savedStateHandle["difficulty"]
+        )
     }
 
-    private fun loadGameCards(players: List<String>, gameModeId: Int) {
-        if (players.isEmpty()) {
-            Log.e(
-                GameViewModel::class.simpleName,
-                "No players are were found! Aborting cards loading."
-            )
+    private fun loadGameCards(players: List<String>?, difficulty: Int?) {
+        if (players.isNullOrEmpty()) {
+            val errorMessage = "Players list is $players Aborting cards loading."
+            Log.e(GameViewModel::class.simpleName, errorMessage)
+            _gameState.value =
+                GameState.Error(errorMessage)
             return
         }
-        if (gameModeId == -1) {
-            Log.e(
-                GameViewModel::class.simpleName,
-                "Game mode is not selected! Aborting cards loading."
-            )
+        if (difficulty == null || difficulty !in 1..5) {
+            val errorMessage = "Difficulty setting is $difficulty. Aborting cards loading."
+            Log.e(GameViewModel::class.simpleName, errorMessage)
+            _gameState.value =
+                GameState.Error(errorMessage)
             return
         }
 
         viewModelScope.launch {
-            val allGameModeElements = gameDataSource.getGameElementsByGameModeId(gameModeId.toLong())
-            val gameCards =
-                transformElementsToCards.execute(
-                    filterElements.execute(
-                        allGameModeElements,
-                        players
-                    )
+            _gameState.value = GameState.Loading
+
+            try {
+                val gameCards = GameCreationUtils.createGameFromCardsAndPlayers(
+                    gameDataSource.getRandomCards(
+                        difficulty,
+                        GameCreationUtils.computeGameSize(players.size)
+                    ), players
                 )
-            savedStateHandle["cards"] = gameCards
-            Log.i(
-                GameViewModel::class.simpleName,
-                "${gameCards.size} game cards were successfully created."
-            )
+                _gameState.value = GameState.Running(gameCards.toMutableList())
+                Log.i(
+                    GameViewModel::class.simpleName,
+                    "${gameCards.size} game cards were successfully created."
+                )
+            } catch (e: Exception) {
+                _gameState.value = GameState.Error("Failed to load game cards: ${e.message}")
+                Log.e(GameViewModel::class.simpleName, "Error loading game cards: ${e.message}")
+            }
         }
     }
 
-    private fun getCurrentCard(): GameCard? =
-        if (currentCard.value < cards.value.size) cards.value[currentCard.value] else null
+    fun popCard() {
+        val currentState = _gameState.value
+        if (currentState is GameState.Running) {
+            val currentStack = currentState.gameCards.toMutableList()
+            if (currentStack.isNotEmpty()) {
+                currentStack.removeAt(currentStack.lastIndex)
+                _gameState.value = GameState.Running(currentStack)
+            }
+        }
+    }
 
-    private fun incrementCurrentCard(): Unit {
-        savedStateHandle["currentCard"] = currentCard.value + 1
+    fun isGameOver(): Boolean {
+        return (gameState.value as? GameState.Running)?.gameCards?.isEmpty() ?: true
+    }
+
+    sealed class GameState {
+        object Loading : GameState()
+        data class Running(val gameCards: List<GameCard>) : GameState()
+        data class Error(val message: String) : GameState()
     }
 }

@@ -5,8 +5,8 @@ import com.hack.drinkingacademy.common.local.DatabaseDriverFactory
 import com.hack.drinkingacademy.database.GameDatabase
 import com.hack.drinkingacademy.dbloader.data.repository.SQLDelightGameDataLoader
 import com.hack.drinkingacademy.dbloader.domain.repository.GameDataLoader
-import com.hack.drinkingacademy.game.data.repository.SQLDelightGameDataSource
-import com.hack.drinkingacademy.game.domain.repository.GameDataSource
+import com.hack.drinkingacademy.game.impl.SQLDelightGameDataSource
+import com.hack.drinkingacademy.game.GameDataSource
 import com.hack.drinkingacademy.user.data.repository.SQLDelightUserDataSource
 import com.hack.drinkingacademy.user.domain.repository.UserDataSource
 import com.squareup.sqldelight.db.SqlDriver

@@ -1,4 +1,4 @@
-package com.hack.drinkingacademy.game.domain.model
+package com.hack.drinkingacademy.game.model
 
 enum class GameElementType(val id: Long) {
     SINGLE(0),

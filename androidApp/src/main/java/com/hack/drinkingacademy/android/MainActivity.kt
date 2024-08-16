@@ -106,21 +106,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "player_select") {
-//                        composable(route = "user") {
-//                            UserScreen(navController = navController)
-//                        }
                         composable(route = "player_select") {
                             PlayerSelectScreen(navController = navController)
                         }
-//                        composable(route = "game_mode_select") {
-//                            GameModeSelectScreen(navController = navController)
-//                        }
                         composable(route = "game") {
                             GameScreen(navController = navController)
                         }
-//                        composable(route = "summary") {
-//                            GameSummary(navController = navController)
-//                        }
                     }
                 }
             }

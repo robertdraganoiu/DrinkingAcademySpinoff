@@ -1,20 +1,29 @@
-package com.hack.drinkingacademy.game.data.repository
+package com.hack.drinkingacademy.game.impl
 
 import com.hack.drinkingacademy.common.mappers.toGameCategory
 import com.hack.drinkingacademy.common.mappers.toGameElement
 import com.hack.drinkingacademy.common.mappers.toGameMode
 import com.hack.drinkingacademy.database.GameDatabase
-import com.hack.drinkingacademy.game.domain.model.GameCategory
-import com.hack.drinkingacademy.game.domain.model.GameElement
-import com.hack.drinkingacademy.game.domain.model.GameMode
-import com.hack.drinkingacademy.game.domain.repository.GameDataSource
+import com.hack.drinkingacademy.game.model.GameCategory
+import com.hack.drinkingacademy.game.model.GameElement
+import com.hack.drinkingacademy.game.model.GameMode
+import com.hack.drinkingacademy.game.GameDataSource
+import com.hack.drinkingacademy.game.model.ChallengeType
+import com.hack.drinkingacademy.game.model.GameCard
 
 class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
 
     private val queries = db.gameQueries
 
+    override suspend fun getRandomCards(difficulty: Int, count: Int): List<GameCard> {
+        return listOf(
+            GameCard(ChallengeType.TRUTH, listOf("<player> has to admit one of their sexual fantasies.")),
+            GameCard(ChallengeType.DARE, listOf("<player> has undo <player>'s zipper with their mouth."))
+        )
+    }
+
     override suspend fun getGameModes(): List<GameMode> {
-        return queries.getGameModes().executeAsList().map {it.toGameMode()}
+        return queries.getGameModes().executeAsList().map { it.toGameMode() }
     }
 
     override suspend fun getGameModeById(id: Long): GameMode? {
@@ -36,8 +45,11 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
     override suspend fun getGameElementsByGameModeId(id: Long): List<GameElement> {
         return queries.getGameElementsByGameModeId(id)
             .executeAsList()
-            .map { it.toGameElement(
-                getGameModeById(it.game_mode_id)!!,
-                getGameCategoryById(it.game_category_id)!!)}
+            .map {
+                it.toGameElement(
+                    getGameModeById(it.game_mode_id)!!,
+                    getGameCategoryById(it.game_category_id)!!
+                )
+            }
     }
 }

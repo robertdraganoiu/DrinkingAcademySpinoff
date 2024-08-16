@@ -7,7 +7,7 @@ import com.hack.drinkingacademy.dbloader.domain.model.GameCategoryDetails
 import com.hack.drinkingacademy.dbloader.domain.model.GameElementDetails
 import com.hack.drinkingacademy.dbloader.domain.model.GameModeDetails
 import com.hack.drinkingacademy.dbloader.domain.repository.GameDataLoader
-import com.hack.drinkingacademy.game.domain.model.GameElementType
+import com.hack.drinkingacademy.game.model.GameElementType
 
 class SQLDelightGameDataLoader(db: GameDatabase) : GameDataLoader {
 

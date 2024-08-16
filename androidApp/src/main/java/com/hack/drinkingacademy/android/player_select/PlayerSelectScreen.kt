@@ -71,7 +71,7 @@ fun PlayerSelectScreen(
 
             // Craziness Level Slider Section
             CrazinessLevelSlider(crazinessLevel) { newValue ->
-                viewModel.setDifficulty(newValue)
+                viewModel.setDifficulty(newValue.toInt())
             }
 
             // "Players" Header
@@ -128,7 +128,7 @@ fun PlayerSelectScreen(
 
             // Start Game Button
             Button(
-                onClick = { navController.navigate("game_mode_select") },
+                onClick = { navController.navigate("game") },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp)
@@ -145,7 +145,7 @@ fun PlayerSelectScreen(
 
         // Background Image
         Image(
-            painter = painterResource(id = R.drawable.background_player_select),
+            painter = painterResource(id = R.drawable.background_player_select2),
             contentDescription = stringResource(id = R.string.background_player_select_description),
             contentScale = ContentScale.FillBounds,
             modifier = Modifier

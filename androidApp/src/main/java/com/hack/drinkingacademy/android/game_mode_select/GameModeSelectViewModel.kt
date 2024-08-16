@@ -5,16 +5,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hack.drinkingacademy.android.R
-import com.hack.drinkingacademy.android.user_details.UserDetailsViewModel
-import com.hack.drinkingacademy.common.constants.Constants
-import com.hack.drinkingacademy.game.domain.model.GameMode
-import com.hack.drinkingacademy.game.domain.repository.GameDataSource
-import com.hack.drinkingacademy.game.domain.use_case.get_game_cards.TransformGameElementsToCardsUseCase
-import com.hack.drinkingacademy.game.domain.use_case.select_game_elements.FilterGameElementsUseCase
-import com.hack.drinkingacademy.user.domain.model.UserTitle
-import com.hack.drinkingacademy.user.domain.repository.UserDataSource
+import com.hack.drinkingacademy.game.model.GameMode
+import com.hack.drinkingacademy.game.GameDataSource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

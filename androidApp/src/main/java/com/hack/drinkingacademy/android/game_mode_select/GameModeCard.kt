@@ -19,7 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.hack.drinkingacademy.android.R
-import com.hack.drinkingacademy.game.domain.model.GameMode
+import com.hack.drinkingacademy.game.model.GameMode
 
 @Composable
 fun GameModeCard(
