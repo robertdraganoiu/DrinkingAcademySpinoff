@@ -7,7 +7,12 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Shapes
+import androidx.compose.material.Surface
+import androidx.compose.material.Typography
+import androidx.compose.material.darkColors
+import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -17,13 +22,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.hack.drinkingacademy.android.game.GameScreen
-import com.hack.drinkingacademy.android.game_mode_select.GameModeSelectScreen
 import com.hack.drinkingacademy.android.player_select.PlayerSelectScreen
-import com.hack.drinkingacademy.android.user_details.UserScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @Composable
@@ -109,7 +114,10 @@ class MainActivity : ComponentActivity() {
                         composable(route = "player_select") {
                             PlayerSelectScreen(navController = navController)
                         }
-                        composable(route = "game") {
+                        composable(route = "game/{players}/{difficulty}", arguments = listOf(
+                            navArgument("players") { type = NavType.StringType },
+                            navArgument("difficulty") { type = NavType.FloatType }
+                        )) {
                             GameScreen(navController = navController)
                         }
                     }

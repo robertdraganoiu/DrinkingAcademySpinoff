@@ -34,14 +34,14 @@ import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.hack.drinkingacademy.android.R
+import com.hack.drinkingacademy.android.util.toJson
 
 @Composable
 fun PlayerSelectScreen(
-    viewModel: PlayerSelectViewModel = hiltViewModel(),
-    navController: NavHostController
+    viewModel: PlayerSelectViewModel = hiltViewModel(), navController: NavHostController
 ) {
     val players by viewModel.players.collectAsState()
-    val crazinessLevel by viewModel.difficulty.collectAsState()
+    val difficulty by viewModel.difficulty.collectAsState()
     var showPlayerInputField by remember { mutableStateOf(false) }
     var inputPlayerName by remember { mutableStateOf("") }
 
@@ -70,8 +70,8 @@ fun PlayerSelectScreen(
             )
 
             // Craziness Level Slider Section
-            CrazinessLevelSlider(crazinessLevel) { newValue ->
-                viewModel.setDifficulty(newValue.toInt())
+            CrazinessLevelSlider(difficulty) { newValue ->
+                viewModel.setDifficulty(newValue)
             }
 
             // "Players" Header
@@ -95,10 +95,8 @@ fun PlayerSelectScreen(
                     .weight(1f)
             ) {
                 items(players.size) { index ->
-                    PlayerCard(
-                        name = players[index],
-                        onCloseClick = { viewModel.removePlayer(players[index]) }
-                    )
+                    PlayerCard(name = players[index],
+                        onCloseClick = { viewModel.removePlayer(players[index]) })
                 }
 
                 // Add Player Button and TextField
@@ -128,7 +126,7 @@ fun PlayerSelectScreen(
 
             // Start Game Button
             Button(
-                onClick = { navController.navigate("game") },
+                onClick = { navController.navigate("game/${players.toJson()}/$difficulty") },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp)

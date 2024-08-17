@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.hack.drinkingacademy.android.util.fromJson
 import com.hack.drinkingacademy.game.GameCreationUtils
 import com.hack.drinkingacademy.game.GameDataSource
 import com.hack.drinkingacademy.game.model.GameCard
@@ -23,35 +24,35 @@ class GameViewModel @Inject constructor(
     val gameState: StateFlow<GameState> = _gameState
 
     init {
-        loadGameCards(
-            players = savedStateHandle["players"],
-            difficulty = savedStateHandle["difficulty"]
-        )
+        val players: List<String> = savedStateHandle.get<String>("players")?.fromJson() ?: emptyList()
+        val difficulty = savedStateHandle.get<Float>("difficulty")
+
+        when {
+            players.isNullOrEmpty() -> {
+                val errorMessage = "Players list is $players Aborting cards loading."
+                Log.e(GameViewModel::class.simpleName, errorMessage)
+                _gameState.value =
+                    GameState.Error(errorMessage)
+            }
+            difficulty == null || difficulty.toInt() !in 1..5 -> {
+                val errorMessage = "Difficulty setting is $difficulty. Aborting cards loading."
+                Log.e(GameViewModel::class.simpleName, errorMessage)
+                _gameState.value =
+                    GameState.Error(errorMessage)
+            }
+            else -> loadGameCards(players, difficulty)
+        }
     }
 
-    private fun loadGameCards(players: List<String>?, difficulty: Int?) {
-        if (players.isNullOrEmpty()) {
-            val errorMessage = "Players list is $players Aborting cards loading."
-            Log.e(GameViewModel::class.simpleName, errorMessage)
-            _gameState.value =
-                GameState.Error(errorMessage)
-            return
-        }
-        if (difficulty == null || difficulty !in 1..5) {
-            val errorMessage = "Difficulty setting is $difficulty. Aborting cards loading."
-            Log.e(GameViewModel::class.simpleName, errorMessage)
-            _gameState.value =
-                GameState.Error(errorMessage)
-            return
-        }
-
+    private fun loadGameCards(players: List<String>, difficulty: Float) {
+        Log.d("GameViewModel", "$players, $difficulty")
         viewModelScope.launch {
             _gameState.value = GameState.Loading
 
             try {
                 val gameCards = GameCreationUtils.createGameFromCardsAndPlayers(
                     gameDataSource.getRandomCards(
-                        difficulty,
+                        difficulty.toInt(),
                         GameCreationUtils.computeGameSize(players.size)
                     ), players
                 )

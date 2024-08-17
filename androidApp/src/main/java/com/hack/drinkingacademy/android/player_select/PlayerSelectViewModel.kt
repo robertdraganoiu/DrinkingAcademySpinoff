@@ -16,6 +16,7 @@ class PlayerSelectViewModel @Inject constructor(
 
     fun addPlayer(name: String) {
         if (players.value.size == Constants.MAX_PLAYERS) {
+            // TODO Show toast when max player list is hit
             Log.i(
                 PlayerSelectViewModel::class.simpleName,
                 "Tried to add more than ${Constants.MAX_PLAYERS} players. Aborted adding."
@@ -29,7 +30,7 @@ class PlayerSelectViewModel @Inject constructor(
         savedStateHandle["players"] = players.value.toMutableList().filter { it != name }
     }
 
-    fun setDifficulty(difficulty: Int) {
+    fun setDifficulty(difficulty: Float) {
         savedStateHandle["difficulty"] = difficulty
     }
 }
