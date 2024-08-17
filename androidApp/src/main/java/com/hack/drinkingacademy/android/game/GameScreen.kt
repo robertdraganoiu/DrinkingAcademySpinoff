@@ -21,7 +21,7 @@ fun GameScreen(
         is Error -> ErrorGameScreen()
         is Running -> (gameState as Running).let {
             if (it.gameCards.isNotEmpty()) {
-                RunningGameScreen(it.gameCards.first(), viewModel::popCard)
+                RunningGameScreen(it.gameCards.last(), viewModel::popCard)
             } else {
                 FinishedGameScreen()
             }
