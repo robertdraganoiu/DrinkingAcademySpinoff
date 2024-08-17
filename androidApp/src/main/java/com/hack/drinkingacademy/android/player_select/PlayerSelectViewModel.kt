@@ -1,9 +1,7 @@
 package com.hack.drinkingacademy.android.player_select
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.hack.drinkingacademy.common.constants.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -12,17 +10,9 @@ class PlayerSelectViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     val players = savedStateHandle.getStateFlow("players", emptyList<String>())
-    val difficulty = savedStateHandle.getStateFlow("difficulty", 1f)
+    val difficulty = savedStateHandle.getStateFlow("difficulty", 1)
 
     fun addPlayer(name: String) {
-        if (players.value.size == Constants.MAX_PLAYERS) {
-            // TODO Show toast when max player list is hit
-            Log.i(
-                PlayerSelectViewModel::class.simpleName,
-                "Tried to add more than ${Constants.MAX_PLAYERS} players. Aborted adding."
-            )
-            return
-        }
         savedStateHandle["players"] = players.value + name
     }
 
@@ -30,7 +20,7 @@ class PlayerSelectViewModel @Inject constructor(
         savedStateHandle["players"] = players.value.toMutableList().filter { it != name }
     }
 
-    fun setDifficulty(difficulty: Float) {
+    fun setDifficulty(difficulty: Int) {
         savedStateHandle["difficulty"] = difficulty
     }
 }

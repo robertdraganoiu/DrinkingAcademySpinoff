@@ -18,9 +18,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.hack.drinkingacademy.android.R
+import kotlin.math.roundToInt
 
 @Composable
-fun CrazinessLevelSlider(crazinessLevel: Float, onValueChange: (Float) -> Unit) {
+fun CrazinessLevelSlider(crazinessLevel: Int, onValueChange: (Int) -> Unit) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
@@ -37,8 +38,10 @@ fun CrazinessLevelSlider(crazinessLevel: Float, onValueChange: (Float) -> Unit) 
             color = Color.White // Brighter text for readability
         )
         Slider(
-            value = crazinessLevel,
-            onValueChange = onValueChange,
+            value = crazinessLevel.toFloat(),
+            onValueChange = { newValue ->
+                onValueChange(newValue.roundToInt()) // Round the value to the nearest integer
+            },
             valueRange = 1f..5f,
             steps = 3,
             colors = SliderDefaults.colors(

@@ -12,12 +12,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.Button
+import androidx.compose.material.SnackbarHost
+import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,11 +38,16 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.hack.drinkingacademy.android.R
 import com.hack.drinkingacademy.android.util.toJson
+import com.hack.drinkingacademy.common.constants.Constants
+import kotlinx.coroutines.launch
 
 @Composable
 fun PlayerSelectScreen(
     viewModel: PlayerSelectViewModel = hiltViewModel(), navController: NavHostController
 ) {
+    val snackbarHostState = remember {SnackbarHostState()}
+    val scope = rememberCoroutineScope()
+
     val players by viewModel.players.collectAsState()
     val difficulty by viewModel.difficulty.collectAsState()
     var showPlayerInputField by remember { mutableStateOf(false) }
@@ -100,34 +108,43 @@ fun PlayerSelectScreen(
                 }
 
                 // Add Player Button and TextField
-                item {
-                    if (showPlayerInputField) {
-                        PlayerCard(
-                            name = inputPlayerName,
-                            onCloseClick = {
-                                showPlayerInputField = false
-                                inputPlayerName = ""
-                            },
-                            readOnly = false,
-                            onNameChange = { inputPlayerName = it },
-                            onAddPlayer = {
-                                if (inputPlayerName.isNotBlank()) {
-                                    viewModel.addPlayer(inputPlayerName)
-                                    inputPlayerName = ""
+                if (players.size < Constants.MAX_PLAYERS) {
+                    item {
+                        if (showPlayerInputField) {
+                            PlayerCard(
+                                name = inputPlayerName,
+                                onCloseClick = {
                                     showPlayerInputField = false
-                                }
-                            },
-                        )
-                    } else {
-                        AddPlayerButton(onClick = { showPlayerInputField = true })
+                                    inputPlayerName = ""
+                                },
+                                readOnly = false,
+                                onNameChange = { inputPlayerName = it },
+                                onAddPlayer = {
+                                    if (inputPlayerName.isNotBlank()) {
+                                        viewModel.addPlayer(inputPlayerName)
+                                        inputPlayerName = ""
+                                        showPlayerInputField = false
+                                    }
+                                },
+                            )
+                        } else {
+                            AddPlayerButton(onClick = { showPlayerInputField = true })
+                        }
                     }
                 }
             }
 
             // Start Game Button
             Button(
-                onClick = { navController.navigate("game/${players.toJson()}/$difficulty") },
-                modifier = Modifier
+                onClick = {
+                    if (players.isNotEmpty()) {
+                        navController.navigate("game/${players.toJson()}/$difficulty")
+                    } else {
+                        scope.launch {
+                            snackbarHostState.showSnackbar("Add players before starting the game!")
+                        }
+                    }
+                }, modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp)
             ) {
@@ -140,6 +157,11 @@ fun PlayerSelectScreen(
                 )
             }
         }
+
+        SnackbarHost(
+            hostState = snackbarHostState,
+            modifier = Modifier.align(Alignment.BottomCenter)
+        )
 
         // Background Image
         Image(

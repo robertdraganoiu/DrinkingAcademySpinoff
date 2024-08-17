@@ -25,7 +25,7 @@ class GameViewModel @Inject constructor(
 
     init {
         val players: List<String> = savedStateHandle.get<String>("players")?.fromJson() ?: emptyList()
-        val difficulty = savedStateHandle.get<Float>("difficulty")
+        val difficulty = savedStateHandle.get<Int>("difficulty")
 
         when {
             players.isNullOrEmpty() -> {
@@ -44,7 +44,7 @@ class GameViewModel @Inject constructor(
         }
     }
 
-    private fun loadGameCards(players: List<String>, difficulty: Float) {
+    private fun loadGameCards(players: List<String>, difficulty: Int) {
         Log.d("GameViewModel", "$players, $difficulty")
         viewModelScope.launch {
             _gameState.value = GameState.Loading
@@ -52,7 +52,7 @@ class GameViewModel @Inject constructor(
             try {
                 val gameCards = GameCreationUtils.createGameFromCardsAndPlayers(
                     gameDataSource.getRandomCards(
-                        difficulty.toInt(),
+                        difficulty,
                         GameCreationUtils.computeGameSize(players.size)
                     ), players
                 )

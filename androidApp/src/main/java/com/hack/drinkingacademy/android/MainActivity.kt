@@ -116,7 +116,7 @@ class MainActivity : ComponentActivity() {
                         }
                         composable(route = "game/{players}/{difficulty}", arguments = listOf(
                             navArgument("players") { type = NavType.StringType },
-                            navArgument("difficulty") { type = NavType.FloatType }
+                            navArgument("difficulty") { type = NavType.IntType }
                         )) {
                             GameScreen(navController = navController)
                         }
