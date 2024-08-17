@@ -2,8 +2,11 @@ package com.hack.drinkingacademy.android.player_select
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Icon
@@ -18,6 +21,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
@@ -42,65 +46,70 @@ fun PlayerCard(
     // A focus requester to request focus for the text field when adding a new player
     val focusRequester = remember { FocusRequester() }
 
-    Row(
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically,
+    Box(
         modifier = Modifier
-            .background(Color(0xAA000000)) // Match background with the game craziness level box
+            .clip(CutCornerShape(6.dp)) // Apply the clipping here
+            .background(Color(0xAA000000))   // Apply the background after the clipping
             .padding(8.dp)
-
     ) {
-        if (readOnly) {
-            Text(
-                text = name,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 18.sp,
-                color = Color.White,
-                fontFamily = FontFamily(Font(R.font.rubik)),
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
-            )
-        } else {
-            TextField(
-                value = name,
-                onValueChange = onNameChange,
-//                label = { Text("Name", color = Color.White) },
-                textStyle = TextStyle(
-                    fontFamily = FontFamily(Font(R.font.rubik)),
-                    color = Color.White,
-                    fontSize = 18.sp
-                ),
-                singleLine = true,
-                keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
-                keyboardActions = KeyboardActions(onDone = {
-                    if (name.isNotBlank()) {
-                        onAddPlayer()
-                    }
-                }),
-                colors = TextFieldDefaults.textFieldColors(
-                    backgroundColor = Color.Transparent,
-                    cursorColor = Color.White,
-                    focusedIndicatorColor = Color.Cyan,
-                    unfocusedIndicatorColor = Color.Gray,
-                    textColor = Color.White
-                ),
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 8.dp)
-                    .focusRequester(focusRequester)
-            )
-        }
-        IconButton(onClick = { onCloseClick() }) {
-            Icon(
-                imageVector = Icons.Default.Close,
-                contentDescription = "Remove player",
-                tint = Color.Red // Red to make the close icon stand out
-            )
-        }
-    }
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.wrapContentSize()
+        ) {
 
-    LaunchedEffect(readOnly) {
-        if (!readOnly) {
-            focusRequester.requestFocus()
+            if (readOnly) {
+                Text(
+                    text = name,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 18.sp,
+                    color = Color.White,
+                    fontFamily = FontFamily(Font(R.font.rubik)),
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
+                )
+            } else {
+                TextField(
+                    value = name,
+                    onValueChange = onNameChange,
+//                label = { Text("Name", color = Color.White) },
+                    textStyle = TextStyle(
+                        fontFamily = FontFamily(Font(R.font.rubik)),
+                        color = Color.White,
+                        fontSize = 18.sp
+                    ),
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
+                    keyboardActions = KeyboardActions(onDone = {
+                        if (name.isNotBlank()) {
+                            onAddPlayer()
+                        }
+                    }),
+                    colors = TextFieldDefaults.textFieldColors(
+                        backgroundColor = Color.Transparent,
+                        cursorColor = Color.White,
+                        focusedIndicatorColor = Color.Cyan,
+                        unfocusedIndicatorColor = Color.Gray,
+                        textColor = Color.White
+                    ),
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(end = 8.dp)
+                        .focusRequester(focusRequester)
+                )
+            }
+            IconButton(onClick = { onCloseClick() }) {
+                Icon(
+                    imageVector = Icons.Default.Close,
+                    contentDescription = "Remove player",
+                    tint = Color.Red // Red to make the close icon stand out
+                )
+            }
+        }
+
+        LaunchedEffect(readOnly) {
+            if (!readOnly) {
+                focusRequester.requestFocus()
+            }
         }
     }
 }

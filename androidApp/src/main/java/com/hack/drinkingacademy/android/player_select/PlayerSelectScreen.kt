@@ -180,7 +180,6 @@ fun PlayerSelectScreen(
         // Image size in relation to the container
         val maxOffsetX = 30f // Limit horizontal movement to 30 pixels
         val maxOffsetY = 30f // Limit vertical movement to 30 pixels
-        val minScale = 1.05f // Minimum scale to ensure full coverage
         val maxScale = 1.15f // Slightly larger scale for zoom-in effect
 
         // Launch the infinite animation loop
@@ -222,19 +221,78 @@ fun PlayerSelectScreen(
 
 
         // Apply the transformations to the Image
+        AnimatedBackground()
+    }
+}
+
+@Composable
+fun AnimatedBackground() {
+    // Animatable values for position (x, y) and scale
+    val offsetX = remember { Animatable(0f) }
+    val offsetY = remember { Animatable(0f) }
+    val scale = remember { Animatable(1.05f) }
+
+    // Image size in relation to the container
+    val maxOffsetX = 30f // Limit horizontal movement to 30 pixels
+    val maxOffsetY = 30f // Limit vertical movement to 30 pixels
+    val maxScale = 1.15f // Slightly larger scale for zoom-in effect
+
+    // Launch the infinite animation loop
+    LaunchedEffect(Unit) {
+        launch {
+            // Animate horizontally with constrained motion
+            offsetX.animateTo(
+                targetValue = maxOffsetX, // Move right by maxOffsetX pixels
+                animationSpec = infiniteRepeatable(
+                    animation = tween(8000, easing = FastOutSlowInEasing),
+                    repeatMode = RepeatMode.Reverse
+                )
+            )
+        }
+
+        launch {
+            // Animate vertically with constrained motion
+            offsetY.animateTo(
+                targetValue = maxOffsetY, // Move down by maxOffsetY pixels
+                animationSpec = infiniteRepeatable(
+                    animation = tween(10000, easing = LinearOutSlowInEasing),
+                    repeatMode = RepeatMode.Reverse
+                )
+            )
+        }
+
+        launch {
+            // Animate zoom in and out within the specified range
+            scale.animateTo(
+                targetValue = maxScale, // Scale up to maxScale
+                animationSpec = infiniteRepeatable(
+                    animation = tween(7000, easing = CubicBezierEasing(0.42f, 0f, 0.58f, 1f)),
+                    repeatMode = RepeatMode.Reverse
+                ),
+                initialVelocity = 0f // Ensure a smooth transition with no initial velocity
+            )
+        }
+    }
+
+    // Apply the transformations to the Image
+    Box(
+        modifier = Modifier
+            .fillMaxSize() // This ensures the Box takes up all available space
+            .zIndex(-1f) // Keep the background behind other content
+    ) {
+        // Apply the transformations to the Image
         Image(
             painter = painterResource(id = R.drawable.background_player_select),
             contentDescription = stringResource(id = R.string.background_player_select_description),
-            contentScale = ContentScale.Crop, // Adjust to crop the image slightly for a seamless effect
+            contentScale = ContentScale.Crop, // Ensure the image covers the entire area
             modifier = Modifier
-                .matchParentSize()
+                .fillMaxSize() // Make the Image fill the entire Box
                 .graphicsLayer(
                     translationX = offsetX.value,
                     translationY = offsetY.value,
                     scaleX = scale.value,
                     scaleY = scale.value
                 )
-                .zIndex(-1f) // Ensures the image stays in the background
         )
     }
 }
