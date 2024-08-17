@@ -78,7 +78,7 @@ fun PlayerSelectScreen(
             )
 
             // Craziness Level Slider Section
-            CrazinessLevelSlider(difficulty) { newValue ->
+            DifficultyLevelSlider(difficulty) { newValue ->
                 viewModel.setDifficulty(newValue)
             }
 

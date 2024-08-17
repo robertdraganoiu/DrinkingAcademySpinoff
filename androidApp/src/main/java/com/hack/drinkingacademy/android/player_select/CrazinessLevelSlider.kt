@@ -21,7 +21,7 @@ import com.hack.drinkingacademy.android.R
 import kotlin.math.roundToInt
 
 @Composable
-fun CrazinessLevelSlider(crazinessLevel: Int, onValueChange: (Int) -> Unit) {
+fun DifficultyLevelSlider(difficulty: Int, onValueChange: (Int) -> Unit) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
@@ -38,7 +38,7 @@ fun CrazinessLevelSlider(crazinessLevel: Int, onValueChange: (Int) -> Unit) {
             color = Color.White // Brighter text for readability
         )
         Slider(
-            value = crazinessLevel.toFloat(),
+            value = difficulty.toFloat(),
             onValueChange = { newValue ->
                 onValueChange(newValue.roundToInt()) // Round the value to the nearest integer
             },
@@ -51,7 +51,7 @@ fun CrazinessLevelSlider(crazinessLevel: Int, onValueChange: (Int) -> Unit) {
             modifier = Modifier.padding(vertical = 8.dp)
         )
         Text(
-            text = crazinessLevel.toInt().toCrazinessLevelString(),
+            text = difficulty.toDifficultyString(),
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily(Font(R.font.rubik)),
@@ -60,7 +60,7 @@ fun CrazinessLevelSlider(crazinessLevel: Int, onValueChange: (Int) -> Unit) {
     }
 }
 
-fun Int.toCrazinessLevelString(): String = when (this) {
+fun Int.toDifficultyString(): String = when (this) {
     1 -> "1 - Sunny"
     2 -> "2 - Breezy"
     3 -> "3 - Tropical"
