@@ -9,6 +9,7 @@
     <string name="user_avatar_teacher_description">Teacher avatar</string>
     <string name="background_user_details_description">User screen background</string>
     <string name="background_player_select_description">Player select background</string>
+    <string name="background_game_description">Game background</string>
     <string name="background_game_mode_select_description">Game mode screen background</string>
     <string name="background_game_inauguration_description">Inauguration game background</string>
     <string name="background_game_gender_olympics_description">Gender Olympics game background</string>

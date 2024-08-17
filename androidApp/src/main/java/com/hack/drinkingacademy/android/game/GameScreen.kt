@@ -19,12 +19,16 @@ fun GameScreen(
 
     when (gameState) {
         is Loading -> LoadingGameScreen()
-        is Error -> ErrorGameScreen()
+        is Error -> ErrorGameScreen(navController)
         is Running -> (gameState as Running).let {
             if (it.gameCards.isNotEmpty()) {
-                RunningGameScreen(currentCard = it.gameCards.last(), onNextChallenge = viewModel::popCard, difficulty = difficulty)
+                RunningGameScreen(
+                    currentCard = it.gameCards.last(),
+                    onNextChallenge = viewModel::popCard,
+                    difficulty = difficulty
+                )
             } else {
-                FinishedGameScreen()
+                FinishedGameScreen(navController, difficulty)
             }
         }
     }
