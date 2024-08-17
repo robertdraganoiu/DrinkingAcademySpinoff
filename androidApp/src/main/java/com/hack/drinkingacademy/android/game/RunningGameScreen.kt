@@ -14,7 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -114,7 +114,7 @@ fun ChallengeCard(description: String) {
             .padding(vertical = 8.dp)
             .background(
                 color = Color(0xAA000000), // Semi-transparent dark background
-                shape = RoundedCornerShape(10.dp) // Matching the slider's corner radius
+                shape = CutCornerShape(6.dp) // Matching the slider's corner radius
             )
             .padding(16.dp)
     ) {
