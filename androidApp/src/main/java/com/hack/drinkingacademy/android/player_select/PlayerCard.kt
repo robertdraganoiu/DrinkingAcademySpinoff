@@ -1,13 +1,9 @@
 package com.hack.drinkingacademy.android.player_select
 
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Icon
@@ -22,7 +18,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
@@ -46,14 +41,13 @@ fun PlayerCard(
 ) {
     // A focus requester to request focus for the text field when adding a new player
     val focusRequester = remember { FocusRequester() }
-    
+
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .background(Color(0xAA000000)) // Match background with the game craziness level box
             .padding(8.dp)
-            .clip(RoundedCornerShape(10.dp)) // Same rounded shape as the game craziness level box
 
     ) {
         if (readOnly) {

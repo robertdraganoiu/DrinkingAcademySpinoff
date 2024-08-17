@@ -1,5 +1,12 @@
 package com.hack.drinkingacademy.android.player_select
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -16,6 +23,7 @@ import androidx.compose.material.SnackbarHost
 import androidx.compose.material.SnackbarHostState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -25,6 +33,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -45,7 +54,7 @@ import kotlinx.coroutines.launch
 fun PlayerSelectScreen(
     viewModel: PlayerSelectViewModel = hiltViewModel(), navController: NavHostController
 ) {
-    val snackbarHostState = remember {SnackbarHostState()}
+    val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
     val players by viewModel.players.collectAsState()
@@ -163,14 +172,69 @@ fun PlayerSelectScreen(
             modifier = Modifier.align(Alignment.BottomCenter)
         )
 
-        // Background Image
+        // Animatable values for position (x, y) and scale
+        val offsetX = remember { Animatable(0f) }
+        val offsetY = remember { Animatable(0f) }
+        val scale = remember { Animatable(1.05f) }
+
+        // Image size in relation to the container
+        val maxOffsetX = 30f // Limit horizontal movement to 30 pixels
+        val maxOffsetY = 30f // Limit vertical movement to 30 pixels
+        val minScale = 1.05f // Minimum scale to ensure full coverage
+        val maxScale = 1.15f // Slightly larger scale for zoom-in effect
+
+        // Launch the infinite animation loop
+        LaunchedEffect(Unit) {
+            launch {
+                // Animate horizontally with constrained motion
+                offsetX.animateTo(
+                    targetValue = maxOffsetX, // Move right by maxOffsetX pixels
+                    animationSpec = infiniteRepeatable(
+                        animation = tween(8000, easing = FastOutSlowInEasing),
+                        repeatMode = RepeatMode.Reverse
+                    )
+                )
+            }
+
+            launch {
+                // Animate vertically with constrained motion
+                offsetY.animateTo(
+                    targetValue = maxOffsetY, // Move down by maxOffsetY pixels
+                    animationSpec = infiniteRepeatable(
+                        animation = tween(10000, easing = LinearOutSlowInEasing),
+                        repeatMode = RepeatMode.Reverse
+                    )
+                )
+            }
+
+            launch {
+                // Animate zoom in and out within the specified range
+                scale.animateTo(
+                    targetValue = maxScale, // Scale up to maxScale
+                    animationSpec = infiniteRepeatable(
+                        animation = tween(7000, easing = CubicBezierEasing(0.42f, 0f, 0.58f, 1f)),
+                        repeatMode = RepeatMode.Reverse
+                    ),
+                    initialVelocity = 0f // Ensure a smooth transition with no initial velocity
+                )
+            }
+        }
+
+
+        // Apply the transformations to the Image
         Image(
             painter = painterResource(id = R.drawable.background_player_select),
             contentDescription = stringResource(id = R.string.background_player_select_description),
-            contentScale = ContentScale.FillBounds,
+            contentScale = ContentScale.Crop, // Adjust to crop the image slightly for a seamless effect
             modifier = Modifier
                 .matchParentSize()
-                .zIndex(-1f)
+                .graphicsLayer(
+                    translationX = offsetX.value,
+                    translationY = offsetY.value,
+                    scaleX = scale.value,
+                    scaleY = scale.value
+                )
+                .zIndex(-1f) // Ensures the image stays in the background
         )
     }
 }
