@@ -11,8 +11,8 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
 
     override suspend fun getRandomCards(difficulty: Int, count: Int): List<GameCard> {
         return listOf(
-            GameCard(ChallengeType.TRUTH, listOf("<player> has to admit one of their sexual fantasies.")),
-            GameCard(ChallengeType.DARE, listOf("<player> has undo <player>'s zipper with their mouth."))
+            GameCard(ChallengeType.TRUTH, "<player> has to admit one of their sexual fantasies."),
+            GameCard(ChallengeType.DARE, "<player> has undo <player>'s zipper with their mouth.")
         )
     }
 

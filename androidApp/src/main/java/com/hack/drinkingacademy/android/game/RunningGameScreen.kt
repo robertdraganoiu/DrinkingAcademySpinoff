@@ -93,7 +93,7 @@ fun RunningGameScreen(currentCard: GameCard, onNextChallenge: () -> Unit, diffic
                     contentPadding = PaddingValues(horizontal = 16.dp),
                     modifier = Modifier.align(Alignment.Center) // Center the LazyColumn
                 ) {
-                    items(currentCard.description) { desc ->
+                    items(listOf(currentCard.description)) { desc ->
                         ChallengeCard(description = desc)
                     }
                 }
