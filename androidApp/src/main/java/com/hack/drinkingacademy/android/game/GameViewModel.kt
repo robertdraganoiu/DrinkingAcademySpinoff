@@ -23,9 +23,10 @@ class GameViewModel @Inject constructor(
     private val _gameState = MutableStateFlow<GameState>(GameState.Loading)
     val gameState: StateFlow<GameState> = _gameState
 
+    val gameDifficulty = savedStateHandle.get<Int>("difficulty")
+
     init {
         val players: List<String> = savedStateHandle.get<String>("players")?.fromJson() ?: emptyList()
-        val difficulty = savedStateHandle.get<Int>("difficulty")
 
         when {
             players.isNullOrEmpty() -> {
@@ -34,13 +35,13 @@ class GameViewModel @Inject constructor(
                 _gameState.value =
                     GameState.Error(errorMessage)
             }
-            difficulty == null || difficulty.toInt() !in 1..5 -> {
-                val errorMessage = "Difficulty setting is $difficulty. Aborting cards loading."
+            gameDifficulty == null || gameDifficulty.toInt() !in 1..5 -> {
+                val errorMessage = "Difficulty setting is $gameDifficulty. Aborting cards loading."
                 Log.e(GameViewModel::class.simpleName, errorMessage)
                 _gameState.value =
                     GameState.Error(errorMessage)
             }
-            else -> loadGameCards(players, difficulty)
+            else -> loadGameCards(players, gameDifficulty)
         }
     }
 

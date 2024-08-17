@@ -15,13 +15,14 @@ fun GameScreen(
     navController: NavHostController,
 ) {
     val gameState by viewModel.gameState.collectAsState()
+    val difficulty = viewModel.gameDifficulty ?: 1
 
     when (gameState) {
         is Loading -> LoadingGameScreen()
         is Error -> ErrorGameScreen()
         is Running -> (gameState as Running).let {
             if (it.gameCards.isNotEmpty()) {
-                RunningGameScreen(it.gameCards.last(), viewModel::popCard)
+                RunningGameScreen(currentCard = it.gameCards.last(), onNextChallenge = viewModel::popCard, difficulty = difficulty)
             } else {
                 FinishedGameScreen()
             }

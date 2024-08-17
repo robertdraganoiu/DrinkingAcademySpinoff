@@ -165,7 +165,7 @@ fun PlayerSelectScreen(
 
         // Background Image
         Image(
-            painter = painterResource(id = R.drawable.background_player_select2),
+            painter = painterResource(id = R.drawable.background_player_select),
             contentDescription = stringResource(id = R.string.background_player_select_description),
             contentScale = ContentScale.FillBounds,
             modifier = Modifier

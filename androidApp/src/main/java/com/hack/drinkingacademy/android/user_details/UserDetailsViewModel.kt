@@ -36,7 +36,6 @@ class UserDetailsViewModel @Inject constructor(
     ) { progress, soundLevel, musicLevel ->
         UserDetailsState(
             title = progressToTitle.execute(progress),
-            avatarId = getAvatarIdFromTitle(progressToTitle.execute(progress)),
             avatarDescriptionId = getAvatarDescriptionFromTitle(progressToTitle.execute(progress)),
             progress = progress,
             soundLevel = soundLevel,
@@ -85,16 +84,6 @@ class UserDetailsViewModel @Inject constructor(
             userDataSource.updateUserSettings(sound, music)
             loadUserDetails()
         }
-    }
-
-    private fun getAvatarIdFromTitle(title: UserTitle): Int = when (title) {
-        UserTitle.FRESHMAN -> R.drawable.user_avatar_freshman
-        UserTitle.SOPHOMORE -> R.drawable.user_avatar_sophomore
-        UserTitle.JUNIOR -> R.drawable.user_avatar_junior
-        UserTitle.SENIOR -> R.drawable.user_avatar_senior
-        UserTitle.GRADUATE -> R.drawable.user_avatar_graduate
-        UserTitle.ASSISTANT -> R.drawable.user_avatar_assistant
-        UserTitle.TEACHER -> R.drawable.user_avatar_teacher
     }
 
     private fun getAvatarDescriptionFromTitle(title: UserTitle): Int = when (title) {
