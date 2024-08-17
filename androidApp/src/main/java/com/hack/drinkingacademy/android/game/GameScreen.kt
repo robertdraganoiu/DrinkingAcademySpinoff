@@ -18,7 +18,7 @@ fun GameScreen(
     val difficulty = viewModel.gameDifficulty ?: 1
 
     when (gameState) {
-        is Loading -> LoadingGameScreen()
+        is Loading -> LoadingGameScreen(navController, difficulty)
         is Error -> ErrorGameScreen(navController)
         is Running -> (gameState as Running).let {
             if (it.gameCards.isNotEmpty()) {

@@ -20,4 +20,5 @@
     <string name="game_mode_logo_survival_description">Survival game background</string>
     <string name="game_mode_logo_team_building_description">Team building game mode logo</string>
     <string name="navigation_log_id">Nav</string>
+    <string name="loading_spinner_description">Loading spinner</string>
 </resources>

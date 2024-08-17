@@ -9,6 +9,7 @@ import com.hack.drinkingacademy.game.GameCreationUtils
 import com.hack.drinkingacademy.game.GameDataSource
 import com.hack.drinkingacademy.game.model.GameCard
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -49,6 +50,9 @@ class GameViewModel @Inject constructor(
         Log.d("GameViewModel", "$players, $difficulty")
         viewModelScope.launch {
             _gameState.value = GameState.Loading
+
+            // TODO remove
+            delay(3000)
 
             try {
                 val gameCards = GameCreationUtils.createGameFromCardsAndPlayers(
