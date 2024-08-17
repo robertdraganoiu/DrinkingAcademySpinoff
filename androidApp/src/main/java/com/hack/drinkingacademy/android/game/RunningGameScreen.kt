@@ -36,20 +36,38 @@ import java.util.Locale
 
 @Composable
 fun RunningGameScreen(currentCard: GameCard, onNextChallenge: () -> Unit, difficulty: Int) {
-    val backgroundColor by animateColorAsState(
+    val tintColor by animateColorAsState(
         targetValue = when (currentCard.type) {
-            ChallengeType.DARE -> Color.Red
-            ChallengeType.TRUTH -> Color.Blue
-            else -> Color.Gray
+            ChallengeType.DARE -> Color.Red.copy(alpha = 0.25f)
+            ChallengeType.TRUTH -> Color.Blue.copy(alpha = 0.25f)
+            ChallengeType.POLL -> Color.Green.copy(alpha = 0.25f)
+            ChallengeType.MASTER -> Color.Yellow.copy(alpha = 0.25f)
+            ChallengeType.TRIVIA -> Color.Magenta.copy(alpha = 0.25f)
+            ChallengeType.BETRAYAL -> Color.Red.copy(alpha = 0.4f)
         }
     )
 
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(backgroundColor)
             .clickable { onNextChallenge() }
     ) {
+        Image(
+            painter = painterResource(difficulty.toGameBackground()),
+            contentDescription = stringResource(id = R.string.background_player_select_description),
+            contentScale = ContentScale.FillBounds,
+            modifier = Modifier
+                .matchParentSize()
+                .zIndex(-1f)
+        )
+
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .background(tintColor)
+                .zIndex(0f)
+        )
+
         Column(
             verticalArrangement = Arrangement.SpaceBetween,
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -100,15 +118,6 @@ fun RunningGameScreen(currentCard: GameCard, onNextChallenge: () -> Unit, diffic
                 }
             }
         }
-
-        Image(
-            painter = painterResource(difficulty.toGameBackground()),
-            contentDescription = stringResource(id = R.string.background_player_select_description),
-            contentScale = ContentScale.FillBounds,
-            modifier = Modifier
-                .matchParentSize()
-                .zIndex(-1f)
-        )
     }
 }
 
