@@ -51,8 +51,8 @@ class GameViewModel @Inject constructor(
         viewModelScope.launch {
             _gameState.value = GameState.Loading
 
-            // TODO remove
-            delay(3000)
+            // Keep this for now to show loading screen
+            delay(1000)
 
             try {
                 val gameCards = GameCreationUtils.createGameFromCardsAndPlayers(

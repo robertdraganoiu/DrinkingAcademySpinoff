@@ -146,11 +146,11 @@ fun PlayerSelectScreen(
             // Start Game Button
             Button(
                 onClick = {
-                    if (players.isNotEmpty()) {
+                    if (players.size > 1) {
                         navController.navigate("game/${players.toJson()}/$difficulty")
                     } else {
                         scope.launch {
-                            snackbarHostState.showSnackbar("Add players before starting the game!")
+                            snackbarHostState.showSnackbar("Add at least 2 players before starting the game!")
                         }
                     }
                 }, modifier = Modifier
