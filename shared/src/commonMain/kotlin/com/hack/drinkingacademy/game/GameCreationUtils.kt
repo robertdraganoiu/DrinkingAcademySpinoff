@@ -5,6 +5,8 @@ import kotlin.math.min
 
 object GameCreationUtils {
 
+    fun computeGameSize(playersCount: Int) = min(playersCount * 5, 25)
+
     fun createGameFromCardsAndPlayers(
         cards: List<GameCard>,
         players: List<String>
@@ -53,6 +55,4 @@ object GameCreationUtils {
         val index = source.indexOf(target)
         return if (index == -1) source else source.substring(0, index) + replacement + source.substring(index + target.length)
     }
-
-    fun computeGameSize(playersCount: Int) = min(playersCount * 5, 25)
 }

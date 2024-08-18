@@ -1,151 +1,25 @@
-CREATE TABLE user(
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    progress INTEGER NOT NULL,
-    soundLevel INTEGER NOT NULL,
-    musicLevel INTEGER NOT NULL
+CREATE TABLE settings(
+    musicEnabled INTEGER NOT NULL
 );
 
-INSERT INTO user(
-    progress,
-    soundLevel,
-    musicLevel
-) VALUES (0, 0, 0);
+getMusicEnabled:
+SELECT musicEnabled FROM settings LIMIT 1;
 
-getUser:
-SELECT *
-FROM user;
+toggleMusicEnabled:
+UPDATE settings
+SET musicEnabled = CASE WHEN musicEnabled = 1 THEN 0 ELSE 1 END;
 
-updateUserScore:
-UPDATE user
-SET progress = ?
-WHERE id = 1;
-
-updateUserSettings:
-UPDATE user
-SET soundLevel = ?,
-    musicLevel = ?
-WHERE id = 1;
-
-
-CREATE TABLE game_mode(
+CREATE TABLE game_card(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    description TEXT NOT NULL,
-    isEnabled INTEGER NOT NULL
+    challenge_type TEXT NOT NULL,
+    difficulty INTEGER NOT NULL,
+    content TEXT NOT NULL
 );
 
-INSERT INTO game_mode(
-    name, description, isEnabled
-) VALUES (
-"Inauguration",
-"TODO description",
-1);
-
-INSERT INTO game_mode(
-    name, description, isEnabled
-) VALUES (
-"Gender Olympics",
-"TODO description",
-1);
-
-INSERT INTO game_mode(
-    name, description, isEnabled
-) VALUES (
-"After hours ;)",
-"TODO description",
-1);
-
-INSERT INTO game_mode(
-    name, description, isEnabled
-) VALUES (
-"Survival",
-"TODO description",
-0);
-
-INSERT INTO game_mode(
-    name, description, isEnabled
-) VALUES (
-"Team building",
-"TODO description",
-0);
-
-addGameMode:
-INSERT OR REPLACE
-INTO game_mode(
-    name,
-    description,
-    isEnabled
-) VALUES (?, ?, ?);
-
-getGameModes:
-SELECT *
-FROM game_mode;
-
-getGameModeById:
-SELECT *
-FROM game_mode
-WHERE id = ?;
-
-getGameModeByName:
-SELECT *
-FROM game_mode
-WHERE name = ?;
-
-CREATE TABLE game_category(
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    description TEXT NOT NULL
-);
-
-addGameCategory:
-INSERT OR REPLACE
-INTO game_category(
-    name,
-    description
-) VALUES(?, ?);
-
-getGameCategories:
-SELECT *
-FROM game_category;
-
-getGameCategoryById:
-SELECT *
-FROM game_category
-WHERE id = ?;
-
-getGameCategoryByName:
-SELECT *
-FROM game_category
-WHERE name = ?;
-
-CREATE TABLE game_element(
-    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    game_mode_id INTEGER NOT NULL,
-    game_category_id INTEGER NOT NULL,
-    game_element_type_id INTEGER NOT NULL,
-    title TEXT NOT NULL,
-    content TEXT NOT NULL,
-    FOREIGN KEY (game_mode_id) REFERENCES game_mode(id) ON DELETE CASCADE,
-    FOREIGN KEY (game_category_id) REFERENCES game_category(id) ON DELETE CASCADE
-);
-
-addGameElement:
-INSERT OR REPLACE
-INTO game_element(
-    game_mode_id,
-    game_category_id,
-    game_element_type_id,
-    title,
-    content
-) VALUES(?, ?, ?, ?, ?);
-
-getAllGameElements:
-SELECT *
-FROM game_element;
-
-getGameElementsByGameModeId:
-SELECT *
-FROM game_element
-WHERE game_mode_id = ?;
+selectCardsWithDifficulty:
+SELECT * FROM game_card
+WHERE difficulty = ?
+ORDER BY RANDOM()
+LIMIT :card_limit;
 
 

@@ -5,8 +5,6 @@ import com.hack.drinkingacademy.common.local.DatabaseDriverFactory
 import com.hack.drinkingacademy.database.GameDatabase
 import com.hack.drinkingacademy.game.GameDataSource
 import com.hack.drinkingacademy.game.impl.SQLDelightGameDataSource
-import com.hack.drinkingacademy.user.data.repository.SQLDelightUserDataSource
-import com.hack.drinkingacademy.user.domain.repository.UserDataSource
 import com.squareup.sqldelight.db.SqlDriver
 import dagger.Module
 import dagger.Provides
@@ -22,12 +20,6 @@ object AppModule {
     @Singleton
     fun provideSQLDriver(app: Application): SqlDriver {
         return DatabaseDriverFactory(app).createDriver()
-    }
-
-    @Provides
-    @Singleton
-    fun provideUserDataSource(driver: SqlDriver) : UserDataSource {
-        return SQLDelightUserDataSource(GameDatabase(driver))
     }
 
     @Provides

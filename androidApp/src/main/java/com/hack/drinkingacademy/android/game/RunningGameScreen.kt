@@ -117,4 +117,5 @@ fun ChallengeType.toColorTint() = when (this) {
     ChallengeType.MASTER -> Color.Yellow.copy(alpha = 0.25f)
     ChallengeType.TRIVIA -> Color.Magenta.copy(alpha = 0.25f)
     ChallengeType.BETRAYAL -> Color.Red.copy(alpha = 0.4f)
+    ChallengeType.OTHER -> Color.Black.copy(alpha = 0.25f)
 }
