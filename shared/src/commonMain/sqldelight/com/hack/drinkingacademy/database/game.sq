@@ -16,9 +16,9 @@ CREATE TABLE game_card(
     content TEXT NOT NULL
 );
 
-selectCardsWithDifficulty:
+selectCardsWithDifficultyAndType:
 SELECT * FROM game_card
-WHERE difficulty = ?
+WHERE difficulty = :difficulty AND challenge_type = :type
 ORDER BY RANDOM()
 LIMIT :card_limit;
 
