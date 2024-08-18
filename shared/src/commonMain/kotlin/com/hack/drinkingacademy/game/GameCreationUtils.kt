@@ -1,11 +1,11 @@
 package com.hack.drinkingacademy.game
 
 import com.hack.drinkingacademy.game.model.GameCard
-import kotlin.math.min
+import kotlin.math.max
 
 object GameCreationUtils {
 
-    fun computeGameSize(playersCount: Int) = min(playersCount * 5, 25)
+    fun computeGameSize(playersCount: Int) = max(playersCount * 5, 25)
 
     fun createGameFromCardsAndPlayers(
         cards: List<GameCard>,
