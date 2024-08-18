@@ -1,0 +1,121 @@
+challenge_type,difficulty,content
+TRUTH,1,<player> should reveal one of their biggest secrets.
+TRUTH,1,<player> must confess their first crush.
+TRUTH,1,<player> must admit the last lie they told.
+TRUTH,1,<player> has to share an embarrassing childhood memory.
+TRUTH,1,<player> must admit their most recent regret.
+TRUTH,1,<player> must reveal their biggest fear.
+TRUTH,1,<player> has to disclose their worst habit.
+TRUTH,1,<player> should tell the group their guilty pleasure.
+TRUTH,1,<player> must confess their most awkward date.
+TRUTH,1,<player> must tell the group their last dream.
+TRUTH,2,<player> must reveal the last time they cried.
+TRUTH,2,<player> has to admit the worst thing they've ever done.
+TRUTH,2,<player> should share a secret about someone in the room.
+TRUTH,2,<player> must reveal their most awkward moment.
+TRUTH,2,<player> has to admit their biggest mistake.
+TRUTH,2,<player> should share their wildest dream.
+TRUTH,2,<player> has to disclose their last internet search.
+TRUTH,2,<player> must tell the group their strangest habit.
+TRUTH,2,<player> should reveal a secret crush.
+TRUTH,2,<player> has to admit their worst fear.
+DARE,1,<player> must dance for 30 seconds without music.
+DARE,1,<player> has to do 10 push-ups in a row.
+DARE,1,<player> must sing the chorus of their favorite song.
+DARE,1,<player> has to act like a chicken until the next round.
+DARE,1,<player> must perform a two-person yoga pose with <player>.
+DARE,1,<player> has to try to lick their elbow.
+DARE,1,<player> must speak in an accent for the next 5 minutes.
+DARE,1,<player> has to draw a self-portrait with their eyes closed.
+DARE,1,<player> must hop on one foot for a minute.
+DARE,1,<player> has to pretend to be a waiter and serve the group.
+DARE,2,<player> must do an impression of a celebrity until someone guesses who they are.
+DARE,2,<player> has to let <player> draw on their face with a marker.
+DARE,2,<player> must wear socks on their hands until the next turn.
+DARE,2,<player> has to eat something without using their hands.
+DARE,2,<player> must try to juggle with any three items they find.
+DARE,2,<player> has to do the worm dance across the room.
+DARE,2,<player> must switch an item of clothing with <player>.
+DARE,2,<player> has to take a selfie with every person in the room.
+DARE,2,<player> must hold a plank position for one minute.
+DARE,2,<player> has to walk like a model across the room.
+MASTER,1,<player> is the Master of TRUTH. They can override 1 TRUTH for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,1,<player> is the Master of DARE. They can override 1 DARE for the rest of the game or until a new master of DARE is appointed.
+MASTER,1,<player> is the Master of TRUTH. They can override 2 TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,1,<player> is the Master of DARE. They can override 2 DAREs for the rest of the game or until a new master of DARE is appointed.
+MASTER,1,<player> is the Master of TRUTH. They can override 3 TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,1,<player> is the Master of DARE. They can override 3 DAREs for the rest of the game or until a new master of DARE is appointed.
+MASTER,1,<player> is the Master of TRUTH. They can override ALL TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,1,<player> is the Master of DARE. They can override ALL DAREs for the rest of the game or until a new master of DARE is appointed.
+MASTER,1,<player> is the Master of TRUTH. They can override 1 TRUTH for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,1,<player> is the Master of DARE. They can override 1 DARE for the rest of the game or until a new master of DARE is appointed.
+MASTER,2,<player> is the Master of TRUTH. They can override 2 TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,2,<player> is the Master of DARE. They can override 2 DAREs for the rest of the game or until a new master of DARE is appointed.
+MASTER,2,<player> is the Master of TRUTH. They can override 3 TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,2,<player> is the Master of DARE. They can override 3 DAREs for the rest of the game or until a new master of DARE is appointed.
+MASTER,2,<player> is the Master of TRUTH. They can override ALL TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,2,<player> is the Master of DARE. They can override ALL DAREs for the rest of the game or until a new master of DARE is appointed.
+MASTER,2,<player> is the Master of TRUTH. They can override 1 TRUTH for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,2,<player> is the Master of DARE. They can override 1 DARE for the rest of the game or until a new master of DARE is appointed.
+MASTER,2,<player> is the Master of TRUTH. They can override 2 TRUTHs for the rest of the game or until a new master of TRUTH is appointed.
+MASTER,2,<player> is the Master of DARE. They can override 2 DAREs for the rest of the game or until a new master of DARE is appointed.
+POLL,1,<player> must create a poll for the group to vote on.
+POLL,1,<player> asks everyone their opinion on a controversial topic.
+POLL,1,<player> should take a vote on who has the best outfit in the room.
+POLL,1,<player> must ask everyone what their favorite food is.
+POLL,1,<player> should poll the group on their favorite holiday destination.
+POLL,1,<player> has to take a vote on the funniest person in the room.
+POLL,1,<player> must ask everyone to vote on the best movie of all time.
+POLL,1,<player> should create a poll on who would survive the longest in a zombie apocalypse.
+POLL,1,<player> asks the group to vote on the most likely to become famous.
+POLL,1,<player> must take a vote on who tells the best jokes.
+POLL,2,<player> should ask the group who is the most honest.
+POLL,2,<player> must create a poll on who is the best at keeping secrets.
+POLL,2,<player> should take a vote on who is the most adventurous.
+POLL,2,<player> must poll the group on who is the best cook.
+POLL,2,<player> should ask everyone who they think would make the best president.
+POLL,2,<player> must ask the group who is the best at giving advice.
+POLL,2,<player> should take a vote on who is the most creative.
+POLL,2,<player> asks everyone to vote on the most likely to win an Oscar.
+POLL,2,<player> should poll the group on the best dancer.
+POLL,2,<player> asks the group who is the most likely to become a billionaire.
+TRIVIA,1,<player> must answer a question about geography.
+TRIVIA,1,<player> must answer a question about history.
+TRIVIA,1,<player> must answer a question about science.
+TRIVIA,1,<player> must answer a question about sports.
+TRIVIA,1,<player> must answer a question about movies.
+TRIVIA,1,<player> must answer a question about music.
+TRIVIA,1,<player> must answer a question about literature.
+TRIVIA,1,<player> must answer a question about pop culture.
+TRIVIA,1,<player> must answer a question about technology.
+TRIVIA,1,<player> must answer a question about art.
+TRIVIA,2,<player> must answer a difficult question about history.
+TRIVIA,2,<player> must answer a difficult question about science.
+TRIVIA,2,<player> must answer a difficult question about sports.
+TRIVIA,2,<player> must answer a difficult question about movies.
+TRIVIA,2,<player> must answer a difficult question about music.
+TRIVIA,2,<player> must answer a difficult question about literature.
+TRIVIA,2,<player> must answer a difficult question about pop culture.
+TRIVIA,2,<player> must answer a difficult question about technology.
+TRIVIA,2,<player> must answer a difficult question about art.
+TRIVIA,2,<player> must answer a difficult question about geography.
+BETRAYAL,1,<player> must decide which player has to skip their next turn.
+BETRAYAL,1,<player> must force another player to reveal their TRUTH or DARE choice before picking their own.
+BETRAYAL,1,<player> must swap a challenge with another player.
+BETRAYAL,1,<player> must choose one player to lose all their points.
+BETRAYAL,1,<player> must steal a challenge from another player.
+BETRAYAL,1,<player> has to make another player take a shot or lose a turn.
+BETRAYAL,1,<player> must choose a player to do an extra challenge.
+BETRAYAL,1,<player> has to swap seats with another player.
+BETRAYAL,1,<player> must make another player switch their challenge with someone else.
+BETRAYAL,1,<player> must take another player's turn.
+BETRAYAL,2,<player> must force another player to lose their points for this round.
+BETRAYAL,2,<player> must choose a player to reveal all their secrets.
+BETRAYAL,2,<player> must make another player take an additional DARE.
+BETRAYAL,2,<player> has to make another player lose their turn.
+BETRAYAL,2,<player> must swap a challenge with another player, causing them to do it instead.
+BETRAYAL,2,<player> must force a player to take a penalty or lose their turn.
+BETRAYAL,2,<player> must betray another player by making them reveal their biggest secret.
+BETRAYAL,2,<player> must take away a player’s challenge and give it to someone else.
+BETRAYAL,2,<player> must choose a player to miss their next turn.
+BETRAYAL,2,<player> has to switch roles with another player for the next round.
