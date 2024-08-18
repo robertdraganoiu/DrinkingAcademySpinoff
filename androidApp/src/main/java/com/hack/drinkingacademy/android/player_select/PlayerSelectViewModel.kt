@@ -7,10 +7,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PlayerSelectViewModel @Inject constructor(
-    private val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
+
     val players = savedStateHandle.getStateFlow("players", emptyList<String>())
-    val difficulty = savedStateHandle.getStateFlow("difficulty", 1)
+    val difficulty = savedStateHandle.getStateFlow("difficulty", 3)
 
     fun addPlayer(name: String) {
         savedStateHandle["players"] = players.value + name

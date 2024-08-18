@@ -56,9 +56,9 @@ class GameViewModel @Inject constructor(
 
             try {
                 val gameCards = GameCreationUtils.createGameFromCardsAndPlayers(
-                    gameDataSource.getRandomCards(
-                        difficulty,
-                        GameCreationUtils.computeGameSize(players.size)
+                    gameDataSource.getCardsWithDifficulty(
+                        difficulty.toLong(),
+                        GameCreationUtils.computeGameSize(players.size).toLong()
                     ), players
                 )
                 _gameState.value = GameState.Running(gameCards.toMutableList())
@@ -82,10 +82,6 @@ class GameViewModel @Inject constructor(
                 _gameState.value = GameState.Running(currentStack)
             }
         }
-    }
-
-    fun isGameOver(): Boolean {
-        return (gameState.value as? GameState.Running)?.gameCards?.isEmpty() ?: true
     }
 
     sealed class GameState {

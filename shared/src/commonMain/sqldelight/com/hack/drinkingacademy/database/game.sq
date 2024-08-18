@@ -1,4 +1,4 @@
-CREATE TABLE settings(
+CREATE TABLE IF NOT EXISTS settings(
     musicEnabled INTEGER NOT NULL
 );
 
@@ -9,7 +9,7 @@ toggleMusicEnabled:
 UPDATE settings
 SET musicEnabled = CASE WHEN musicEnabled = 1 THEN 0 ELSE 1 END;
 
-CREATE TABLE game_card(
+CREATE TABLE IF NOT EXISTS game_cards(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     challenge_type TEXT NOT NULL,
     difficulty INTEGER NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE game_card(
 );
 
 selectCardsWithDifficultyAndType:
-SELECT * FROM game_card
+SELECT * FROM game_cards
 WHERE difficulty = :difficulty AND challenge_type = :type
 ORDER BY RANDOM()
 LIMIT :card_limit;
