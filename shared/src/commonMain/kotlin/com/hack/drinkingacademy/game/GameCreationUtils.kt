@@ -13,14 +13,19 @@ object GameCreationUtils {
     ): List<GameCard> {
         val playerCount = players.size
         val playerUsage = MutableList(playerCount) { 0 }
-        val randomizedCards = cards.shuffled()
 
-        return randomizedCards.map { card ->
-            val placeholdersCount = "<player>".toRegex().findAll(card.description).count()
-            val selectedPlayers = selectPlayers(players, playerUsage, placeholdersCount)
-            val newDescription = replacePlaceholders(card.description, selectedPlayers)
-            card.copy(description = newDescription)
-        }
+        return cards
+            .filter { card ->
+                val placeholdersCount = "<player>".toRegex().findAll(card.description).count()
+                // Filter out cards where the number of placeholders is greater than the number of players
+                placeholdersCount <= playerCount
+            }
+            .map { card ->
+                val placeholdersCount = "<player>".toRegex().findAll(card.description).count()
+                val selectedPlayers = selectPlayers(players, playerUsage, placeholdersCount)
+                val newDescription = replacePlaceholders(card.description, selectedPlayers)
+                card.copy(description = newDescription)
+            }
     }
 
     private fun selectPlayers(

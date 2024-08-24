@@ -71,8 +71,11 @@ fun RunningGameScreen(currentCard: GameCard, onNextChallenge: () -> Unit, diffic
         ) {
             // Challenge Type Text
             Text(
-                text = currentCard.type.name.lowercase()
-                    .replaceFirstChar { it.titlecase(Locale.ROOT) },
+                text = when (val type = currentCard.type) {
+                    ChallengeType.SECRET_POLL -> "Secret Poll"
+                    else -> type.name.lowercase()
+                        .replaceFirstChar { it.titlecase(Locale.ROOT) }
+                },
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
@@ -114,8 +117,9 @@ fun ChallengeType.toColorTint() = when (this) {
     ChallengeType.DARE -> Color.Red.copy(alpha = 0.25f)
     ChallengeType.TRUTH -> Color.Blue.copy(alpha = 0.25f)
     ChallengeType.POLL -> Color.Green.copy(alpha = 0.25f)
+    ChallengeType.SECRET_POLL -> Color.Green.copy(alpha = 0.35f)
     ChallengeType.MASTER -> Color.Yellow.copy(alpha = 0.25f)
-    ChallengeType.TRIVIA -> Color.Magenta.copy(alpha = 0.25f)
+    ChallengeType.CATEGORIES -> Color.Magenta.copy(alpha = 0.25f)
     ChallengeType.BETRAYAL -> Color.Red.copy(alpha = 0.4f)
     ChallengeType.OTHER -> Color.Black.copy(alpha = 0.25f)
 }
