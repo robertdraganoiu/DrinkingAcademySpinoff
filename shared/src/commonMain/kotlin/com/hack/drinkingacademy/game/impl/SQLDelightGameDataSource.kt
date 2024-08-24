@@ -23,7 +23,7 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
             ChallengeType.DARE to (n * 0.35).toLong(), // 35% dares
             ChallengeType.TRUTH to (n * 0.2).toLong(), // 20% truths
             ChallengeType.POLL to (n * 0.15).toLong(), // 15% polls
-            ChallengeType.SECRET_POLL to (n * 0.15).toLong(), // 15% polls
+            ChallengeType.SECRET_POLL to (n * 0.15).toLong(), // 15% secret polls
             ChallengeType.CATEGORIES to (n * 0.15).toLong(), // 15% categories
         )
 
@@ -39,11 +39,11 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
                             listOf(
                                 GameCard(
                                     type = type,
-                                    description = "Everyone but <player> closes their eyes. This person reads question on the next screen."
+                                    description = "Everyone but <player> closes their eyes. This person reads the question on the next screen."
                                 ),
                                 GameCard(
                                     type = type,
-                                    description = it.content + "\n\nVote at the same time, thumb up for yes, thumb down for no. Everyone keeps their eyes closed and votes casted.\n\nTap to see if the poll remains a secret."
+                                    description = it.content + "\n\nVote at the same time, thumb up for yes, thumb down for no. Eyes remain closed while the votes are casted.\n\nTap to see if the poll remains a secret."
                                 ),
                                 GameCard(
                                     type = type, description = if (getRandomizedSecretPoll()) {
@@ -59,7 +59,7 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
                                 GameCard(
                                     type = type, description = when (type) {
                                         ChallengeType.POLL -> it.content + "\n\nVote at the same time, thumb up for yes, thumb down for no.\n\nThe minority drinks ${getRandomizedSips()} sips."
-                                        ChallengeType.CATEGORIES -> it.content + ".\n\nPick an order between yourselves. Everyone says one until something is repeated or someone runs out of things to say.\n\nThe loser drinks ${getRandomizedSips()} sips."
+                                        ChallengeType.CATEGORIES -> it.content + ".\n\nPick an order around the room. Everyone says one until something is repeated or someone runs out of things to say.\n\nThe loser drinks ${getRandomizedSips()} sips."
                                         else -> it.content
                                     }
                                 )
