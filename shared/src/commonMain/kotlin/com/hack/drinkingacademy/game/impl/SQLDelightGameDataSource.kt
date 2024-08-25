@@ -106,8 +106,8 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
 
     private fun getRandomizedSecretPollConclusion(): String {
         return when ((1..100).random()) {
-            in 1..66 -> "The minority drinks ${getRandomizedSips()} sips."
-            else -> "The minority drinks ${getRandomizedSips()} sips. If a single person has their thumb up, they explain when and how this happened or down their drink."
+            in 1..66 -> "The poll is revealed, keep your votes casted and open your eyes. The minority drinks ${getRandomizedSips()} sips."
+            else -> "The poll is revealed, keep your votes casted and open your eyes. \n\nThe minority drinks ${getRandomizedSips()} sips. If a single person has their thumb up, they explain when and how this happened or down their drink."
         }
     }
 }

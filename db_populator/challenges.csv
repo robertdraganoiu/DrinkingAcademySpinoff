@@ -1028,7 +1028,7 @@ DARE,4,"<player>, let <player> write a status update for you. Give 1 sip for eve
 DARE,4,"<player>, do your best impression of a celebrity’s acceptance speech. Drink 4 sips if no one knows who you’re imitating."
 DARE,4,"<player>, try to balance a book on your head for the next 3 rounds. Drink 4 sips if it falls off."
 DARE,4,"<player>, do a cartwheel or try a handstand. Drink 4 sips if you fail, give them to someone else if you succeed."
-DARE,4,"<player>, play a round of ‘Simon Says’ with the group. Whoever messes up drink 4 sips."
+DARE,4,"<player>, play a round of ‘Simon Says’ with the group. Whoever messes up drinks 4 sips."
 DARE,4,"<player>, for the next 3 rounds, whenever someone says 'cheers,' you must stand up and salute them. Drink 4 sips if you forget."
 DARE,4,"<player>, do your best impression of a famous movie villain. The first player to guess correctly gives 4 sips to someone else. Drink 4 sips if no one knows who you’re impersonating after 30 seconds."
 DARE,4,"<player>, challenge <player> to a dance-off. Loser drinks 4 sips."
@@ -1344,7 +1344,7 @@ DARE,5,"<player>, ask your third most recent contact: 'Do you think I'm a good k
 DARE,5,"<player>, for the next 4 rounds, every time you take a sip, you must give a compliment to someone. Drink 4 sips if you forget. Start with drinking 1 sip now."
 DARE,5,"<player>, act like you're auditioning for a soap opera for 30 seconds. Drink 4 sips if no one believes you're emotional enough."
 DARE,5,"<player>, for the next 3 rounds, you must refer to yourself in the third person. Drink 4 sips if you slip up."
-DARE,5,"<player>, call your crush and ask them for Netflix recommendations. Everyone downs their drinks if you manage to set up a time to watch Netflix together."
+DARE,5,"<player>, call your crush and ask them for Netflix recommendations. Everyone downs their drinks if you manage to set up a time to watch Netflix together. You down your drink if you chicken out and don't do it."
 DARE,5,"<player>, challenge <player> to a thumb war. Loser drinks 4 sips."
 DARE,5,"<player>, do your best 'drunk history' storytelling. Pick a random event and explain it to the group. Drink 3 sips if no one believes your facts."
 DARE,5,"<player>, for the next 3 rounds, every time you laugh, you must drink 2 sips."
@@ -1492,7 +1492,7 @@ SECRET_POLL,5,Who has ever hooked up with someone at a party and was later caugh
 SECRET_POLL,5,Who has ever blacked out from drinking at a party and had to piece together the night afterward?
 SECRET_POLL,5,Who has ever been involved in a scandalous party story that became well-known?
 TRUTH,5,"<player>, if you had to hook up with someone in this room, who would it be? After you answer, drink 3 sips. If the person you chose reciprocates, they may choose to drink 1 sip."
-TRUTH,5,"<player>, would you break up with your current partner for anyone in this room? If yes, drink 5 sips, no need to reveal the person."
+TRUTH,5,"<player>, would you break up with your current partner for anyone in this room? If yes, drink 4 sips, no need to reveal the person. If not, drink 3 sips."
 TRUTH,5,"<player>, if you had to confess something to someone in this room, who would it be and what would it be about? Both of you drink 2 sips."
 TRUTH,5,"<player>, what's the most illegal thing you’ve ever done? Drink 3 sips if you got away with it."
 TRUTH,5,"<player>, who do you think is the most likely person in this room to end up in jail? The chosen person drinks 3 sips to ponder on their behaviour."
