@@ -47,7 +47,7 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
                                 ),
                                 GameCard(
                                     type = type, description = if (getRandomizedSecretPoll()) {
-                                        "The poll is revealed.\n\nKeep your votes casted and open your eyes.\n\nThe minority drinks ${getRandomizedSips()} sips."
+                                        getRandomizedSecretPollConclusion()
                                     } else {
                                         "The poll is NOT revealed.\n\nFirst put your votes down, then open your eyes."
                                     }
@@ -101,6 +101,13 @@ class SQLDelightGameDataSource(db: GameDatabase) : GameDataSource {
         return when ((1..100).random()) {
             in 1..50 -> false
             else -> true
+        }
+    }
+
+    private fun getRandomizedSecretPollConclusion(): String {
+        return when ((1..100).random()) {
+            in 1..66 -> "The minority drinks ${getRandomizedSips()} sips."
+            else -> "The minority drinks ${getRandomizedSips()} sips. If a single person has their thumb up, they explain when and how this happened or down their drink."
         }
     }
 }

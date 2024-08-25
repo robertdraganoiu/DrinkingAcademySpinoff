@@ -1,24 +1,29 @@
 challenge_type,difficulty,content
-BETRAYAL,1,"<player>, pick a player to arm wrestle you. The loser downs their drink."
+BETRAYAL,1,"<player>, pick two players to arm wrestle. The loser downs their drink."
 BETRAYAL,1,"<player>, choose someone to give you a foot massage for 1 minute."
-BETRAYAL,1,"<player>, choose someone to give you a back massage for 30 seconds."
+BETRAYAL,1,"<player>, choose someone to give you a back massage for the next 3 rounds."
 BETRAYAL,1,"<player>, pick someone to speak in an accent of your choice for the rest of the game. Every time they fail to do so they drink 1 sip."
-BETRAYAL,1,"<player>, choose someone to swap seats with you for the rest of the game and stay there."
-BETRAYAL,1,"<player>, select a player to perform a one-minute stand-up comedy routine."
-BETRAYAL,1,"<player>, choose a player to do a cartwheel every time someone takes a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,1,"<player>, select a player to down their drink and perform a one-minute stand-up comedy routine."
+BETRAYAL,1,"<player>, choose a player to do a squat every time someone takes a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,1,"<player>, choose someone to speak in a robot voice for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,1,"<player>, select a player to wear their clothes inside out for the rest of the game."
 BETRAYAL,1,"<player>, pick someone to offer a back rub to every time you take a sip for the rest of the game."
 BETRAYAL,1,"<player>, pick someone to give you a 1-minute foot massage every time someone downs their drink."
-BETRAYAL,1,"<player>, select someone to give you a piggyback ride to the other side of the room."
-BETRAYAL,1,"<player>, choose someone to carry you bridal style across the room."
-BETRAYAL,1,"<player>, choose someone to crawl on their hands and knees to pick up their drink every time for the next 5 rounds."
+BETRAYAL,1,"<player>, select someone to give you a piggyback ride to the other side of the room and back. They have to repeat that you are the best person they have ever met during the ride."
+BETRAYAL,1,"<player>, choose 2 players. The first one carries the second bridal style across the room while keeping eye contact."
 BETRAYAL,1,"<player>, choose two players to switch their shirts for the rest of the game."
 BETRAYAL,1,"<player>, choose someone to touch your shoulder every time they drink for the rest of the game. They drink double every time they forget."
-BETRAYAL,1,"<player>, pick someone to hug you every time they take a sip for the next 5 rounds."
+BETRAYAL,1,"<player>, pick someone to hug you every time they take a sip for the rest of the game."
 BETRAYAL,1,"<player>, pick two players to play rock-paper-scissors. The loser has to carry the winner on their back for 1 minute."
-BETRAYAL,1,"<player>, choose someone to spin around 10 times. The person who spinned has to down their drink afterwards."
-BETRAYAL,1,"<player>, pick someone to spin in a circle every time you take a sip for the next 4 rounds."
+BETRAYAL,1,"<player>, choose someone to spin around 10 times, then down their drink."
+BETRAYAL,1,"<player>, pick someone to spin in a circle every time you take a sip for the rest of the game."
+BETRAYAL,1,"<player>, choose someone to tell a joke. If nobody laughs, they have to down their drink."
+BETRAYAL,1,"<player>, pick someone to down their drink, then sing the chorus of a song of your choice."
+BETRAYAL,1,"<player>, choose someone to give everyone in the group a high five. If any of them is a miss or doesn't produce the clap sound, they down their drink."
+BETRAYAL,1,"<player>, choose someone to try to say the alphabet backward. If they mess up, they down their drink."
+BETRAYAL,1,"<player>, choose someone to do a handstand against the wall for the next 3 rounds. If they fail to do so, they down their drink."
+BETRAYAL,1,"<player>, choose two players to hold their hands for the rest of the game."
+BETRAYAL,1,"<player>, select someone to give you a compliment every time they take a sip for the rest of the game."
 CATEGORIES,1,Fruits
 CATEGORIES,1,Colors
 CATEGORIES,1,Popular Fast Food Chains
@@ -36,7 +41,6 @@ CATEGORIES,1,Sports Teams
 CATEGORIES,1,Flavors of Soda
 CATEGORIES,1,Popular Snack Foods
 CATEGORIES,1,Types of Cookies
-CATEGORIES,1,Popular Fruits
 CATEGORIES,1,Popular Beverages
 CATEGORIES,1,Types of Meat Dishes
 CATEGORIES,1,Types of Coffee
@@ -62,11 +66,11 @@ CATEGORIES,1,Common Herbs and Spices
 CATEGORIES,1,Types of Muffins
 CATEGORIES,1,Types of Fruit Juices
 CATEGORIES,1,Common Kitchen Appliances
-DARE,1,"<player>, do 10 push-ups. Drink 3 sips if you can't finish them."
-DARE,1,"<player>, do a silly dance for 30 seconds or drink 2 sips."
-DARE,1,"<player>, act like <player> for 1 minute. If they’re impressed, they drink 2 sips."
-DARE,1,"<player>, do your best impression of <player> for 30 seconds. If they don't recognize it, drink 2 sips."
-DARE,1,"<player>, compliment <player> in the cheesiest way possible. If they cringe, drink 1 sip."
+DARE,1,"<player>, do 10 push-ups. Drink 3 sips if you can't finish them, otherwise give them to someone else."
+DARE,1,"<player>, do 10 sit-ups. Drink 3 sips if you can't finish them, otherwise give them to someone else."
+DARE,1,"<player>, do 10 squats. Drink 3 sips if you can't finish them, otherwise give them to someone else."
+DARE,1,"<player>, act like <player> for 30 seconds while talking to <player>. If the group feels the impression was accurate, you give away 3 sips. Otherwise you drink them."
+DARE,1,"<player>, compliment <player> in the cheesiest way possible. If anyone laughs, give 3 sips to someone else, otherwise drink them."
 DARE,1,"<player>, do your best celebrity impression for 30 seconds. If no one can guess who it is, drink 3 sips."
 DARE,1,"<player>, give <player> a compliment using only song lyrics. Drink 2 sips if they don't guess the song."
 DARE,1,"<player>, recite a tongue-twister while hopping on one foot. If you stumble, drink 3 sips."
@@ -77,13 +81,46 @@ DARE,1,"<player>, hop on one foot while flapping your arms like a chicken for 10
 DARE,1,"<player>, have <player> give you a gentle head massage for 30 seconds. Drink 1 sip at the end if you enjoyed it."
 DARE,1,"<player>, touch your toes without bending your knees. If you can't, down your drink."
 DARE,1,"<player>, have <player> take a photo of you with a funny prop. Drink 2 sips as a thank you."
-DARE,1,Have a toast. Everyone drinks 2 sips.
-DARE,1,Have a toast. Everyone drinks 2 sips.
-DARE,1,Have a toast. Everyone drinks 2 sips.
+DARE,1,"<player>, attempt to moonwalk across the room. Everyone drinks 1 sip in admiration."
+DARE,1,"<player>, give <player> a compliment. If they blush, they drink 2 sips."
+DARE,1,"Have a toast. Everyone drinks 2 sips."
+DARE,1,"Have a toast. Everyone drinks 2 sips."
+DARE,1,"Have a toast. Everyone drinks 2 sips."
 DARE,1,"<player>, do 10 jumping jacks while singing a Disney song. Give 3 sips to someone after you finish."
-MASTER,1,<player> is the master of truth. They can override 2 truth questions anytime in the game.
-MASTER,1,<player> is the master of dare. They can override 2 dares anytime in the game.
-MASTER,1,<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game.
+DARE,1,"<player>, try to balance a spoon on your nose for 10 seconds. If you drop it, drink 2 sips, otherwise give them."
+DARE,1,"<player>, try to say "she sells seashells by the seashore" five times fast. If you mess up, drink 3 sips, otherwise give them."
+DARE,1,"<player>, give a 30-second speech about why pineapples are the best fruit."
+DARE,1,"<player>, let <player> put lipstick on you while blindfolded."
+DARE,1,"<player>, hold a plank for as long as you can. Everyone else drinks 1 sip for every 10 seconds you hold it."
+DARE,1,"<player>, hold a wall sit for 30 seconds. If you stand early, drink 2 sips."
+DARE,1,"<player>, try to lick your elbow. If you fail, drink 2 sips."
+DARE,1,"<player>, walk across the room while balancing a book on your head. Drink 3 sips if it falls."
+DARE,1,"<player>, give <player> your best pick-up line. If they don't laugh, drink 2 sips."
+DARE,1,"<player>, touch your nose with your tongue. If you can't, drink 2 sips."
+DARE,1,"<player>, give <player> a nickname they have to use for the next 5 rounds. Anytime somebody doesn't use the nickname when calling them, they drink 3 sips." 
+DARE,1,"<player>, attempt to do the worm. Drink 2 sips if it's a complete failure."
+DARE,1,"<player>, tell a joke to <player>. If they don't laugh, drink 2 sips."
+DARE,1,"<player>, use only gestures to explain your favorite movie for 30 seconds. Drink 3 sips if no one guesses."
+DARE,1,"<player>, spin around 5 times and try to stand on one foot for 10 seconds. Drink 3 sips if you fall."
+DARE,1,"<player>, perform an air guitar solo for 20 seconds. Drink 2 sips if no one claps."
+DARE,1,"<player>, pretend you’re taking a selfie for 10 seconds, but with no phone."
+DARE,1,"<player>, do your best runway walk across the room and back."
+DARE,1,"<player>, let <player> tie your shoes together for the rest of the game. Drink 2 sips anytime you trip."
+DARE,1,"<player>, create a handshake with <player> in 30 seconds. Everybody repeats it in pairs after a demonstration. Whoever gets it wrong downs their drink."
+DARE,1,"<player>, make a fish face for 10 seconds."
+DARE,1,"<player>, give <player> a shoulder pat every time they speak for the next 5 rounds."
+DARE,1,"<player>, pretend to be <player>’s mirror for 1 minute."
+DARE,1,"<player>, do your best karate moves for 20 seconds. Give away 3 sips if you manage not to break anything in the process."
+DARE,1,"<player>, say three things you like about <player>. Give away 1 sip for every nice thing you manage to say, drink 5 sips if you don't manage to say all three."
+DARE,1,"<player>, make a heart shape with your hands and hold it over your head for the next 5 rounds. Drink 2 sips every time you break the heart."
+DARE,1,"<player>, jump up and down while naming 5 different animals. Give someone 3 sips after you finish."
+DARE,1,"<player>, sing the alphabet backward. Drink 3 sips if you mess up."
+DARE,1,"<player>, pat your head and rub your belly for 20 seconds. Drink 3 sips if you mess up, give them if you succeed."
+DARE,1,"<player>, take 5 big steps in a straight line with your eyes closed. Drink 2 sips if you walk off course, give them if you suceed."
+DARE,1,"<player>, hold your breath for 20 seconds. Drink 3 sips if you fail, give them if you succeed."
+MASTER,1,"<player> is the master of truth. They can override 2 truth questions anytime in the game."
+MASTER,1,"<player> is the master of dare. They can override 2 dares anytime in the game."
+MASTER,1,"<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game."
 POLL,1,Pineapple on pizza?
 POLL,1,Have you ever skipped a class?
 POLL,1,Who likes spicy food?
@@ -121,7 +158,6 @@ SECRET_POLL,1,Who has ever tried a local delicacy they regretted?
 SECRET_POLL,1,Who has ever taken a nap on the beach?
 SECRET_POLL,1,Who has ever missed a flight or train while on vacation?
 SECRET_POLL,1,Who has ever had a vacation romance that didn’t last?
-SECRET_POLL,1,Who has ever bought something ridiculous as a souvenir?
 SECRET_POLL,1,Who has ever accidentally sent a work email to the wrong person?
 SECRET_POLL,1,Who has ever fallen asleep at their desk during work hours?
 SECRET_POLL,1,Who has ever forgotten to mute themselves on a video call?
@@ -342,13 +378,13 @@ DARE,2,"<player>, for the next round, only speak in questions. Drink 2 sips if y
 DARE,2,"<player>, change your hairstyle into something ridiculous, chosen by <player>, for the next 3 rounds. Drink 2 sips if you refuse."
 DARE,2,"<player>, let <player> create a temporary tattoo on your arm with a pen. Drink 3 sips if you don't like it."
 DARE,2,"<player>, give <player> a massage for 1 minute. If they don't like it, you both drink 2 sips."
-DARE,2,"<player>, take a photo of your best model pose and send it to the group chat."
+DARE,2,"<player>, take a photo of your best model pose and send it to the group chat. Give away 1 sip for every reaction you get in the first 5 minutes."
 DARE,2,"<player>, let <player> create a new nickname for you. You must respond to it for the next 3 rounds or drink 2 sips each time you forget."
 DARE,2,"<player>, wear someone else's shoes for the next 3 rounds. Drink 3 sips if you complain."
 DARE,2,"<player>, let <player> text someone from your phone using only emojis. Drink 2 sips if the person replies confused."
 DARE,2,"<player>, play rock-paper-scissors with <player>. The loser drinks 3 sips. Best of three!"
 DARE,2,"<player>, tell us the weirdest thing you’ve Googled recently. Drink 2 sips if no one laughs."
-DARE,2,"<player>, act out a scene from your favorite movie. If no one can guess the movie, drink 2 sips."
+DARE,2,"<player>, act out a scene from your favorite movie with <player>. If no one can guess the movie, drink 2 sips."
 DARE,2,"<player>, call a random contact and ask them for advice on a made-up problem. Drink 2 sips if they hang up."
 DARE,2,"<player>, give a dramatic reading of a text message you last sent. Give away 3 sips if you make anyone laugh."
 DARE,2,"<player>, switch clothes from the waist with a player of your choice for the next 3 rounds."
@@ -358,9 +394,9 @@ DARE,2,"<player>, take a shot while doing a handstand against the wall. Give awa
 DARE,2,"<player>, give <player> a one minute shoulder massage. They take 1 sip as a gesture of gratitude."
 DARE,2,"<player>, give choose a player to take a sip for every player in the group."
 DARE,2,"<player>, make animal noises for 30 seconds. Drink 2 sips if you stop early."
-DARE,2,Have a toast. Everyone drinks 2 sips.
-DARE,2,Have a toast. Everyone drinks 2 sips.
-DARE,2,Have a toast. Everyone drinks 2 sips.
+DARE,2,"Have a toast. Everyone drinks 2 sips."
+DARE,2,"Have a toast. Everyone drinks 2 sips."
+DARE,2,"Have a toast. Everyone drinks 2 sips."
 DARE,2,"<player>, hold a plank position for 30 seconds. If you succeed, give 3 sips, otherwise drink them."
 DARE,2,"<player>, do a wall sit for 30 seconds. If you succeed, give 3 sips, otherwise drink them."
 DARE,2,"<player>, do 15 squats in 30 seconds. If you succeed, give 4 sips, otherwise drink them."
@@ -370,9 +406,9 @@ DARE,2,"<player>, crawl under <player>’s legs or drink 3 sips."
 DARE,2,"<player>, jump as high as you can while holding your drink. If you spill, drink 3 sips."
 DARE,2,"<player>, perform a jumping jack every time <player> says your name for the next 3 rounds or drink 3 sips. The player who says your name also has to drink 1 sip every time they call you."
 DARE,2,"<player>, hold your drink with your toes for 30 seconds. If you spill it, drink 3 sips."
-MASTER,2,<player> is the master of truth. They can override 2 truth questions anytime in the game.
-MASTER,2,<player> is the master of dare. They can override 2 dares anytime in the game.
-MASTER,2,<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game.
+MASTER,2,"<player> is the master of truth. They can override 2 truth questions anytime in the game."
+MASTER,2,"<player> is the master of dare. They can override 2 dares anytime in the game."
+MASTER,2,"<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game."
 POLL,2,Who has ever stolen something?
 POLL,2,Who has ever been in love?
 POLL,2,Who has ever ghosted someone?
@@ -393,13 +429,11 @@ POLL,2,Who has ever been to a music festival?
 POLL,2,Who has ever had a nickname?
 POLL,2,Who has ever written a poem or song?
 POLL,2,Who has ever tried an extreme sport?
-POLL,2,Who has ever done something embarrassing in public?
 POLL,2,Who has ever met someone from a dating app?
 POLL,2,Who has ever been to a music festival?
 POLL,2,Who has ever had a surprise party thrown for them?
-POLL,2,Who has ever had a long-distance friendship?
+POLL,2,Who has ever had a long-distance relationship?
 POLL,2,Who has ever done a food challenge?
-POLL,2,Who has ever tried a new hobby on a whim?
 POLL,2,Who has ever participated in a reality TV show casting call?
 POLL,2,Who has ever had a pet?
 POLL,2,Who has ever been to a live sports event?
@@ -486,8 +520,8 @@ TRUTH,2,"<player>, who would you trust more to text your crush for you, <player>
 TRUTH,2,"<player>, who do you think would accidentally like their crush’s old Instagram post first, <player> or <player>? The one you pick drinks 2 sips."
 TRUTH,2,"<player>, who do you think would be more likely to start a dance-off at a party, <player> or <player>? The one you pick drinks 2 sips and shows off a move."
 TRUTH,2,"<player>, who in this room would be the worst wingman or wingwoman? That person drinks 3 sips."
-TRUTH,2,"<player>, what's the worst date you've ever been on? No holding back, drink 2 sips once you’ve told it."
-TRUTH,2,"<player>, have you ever ghosted someone? Tell us who and drink 2 sips."
+TRUTH,2,"<player>, what's the worst date you've ever been on? No holding back, down your drink once you’ve told the story."
+TRUTH,2,"<player>, have you ever ghosted someone? Tell us who and how, then drink 2 sips."
 TRUTH,2,"<player>, what’s the dumbest lie you’ve ever told to get out of trouble? Tell the story and drink 2 sips."
 TRUTH,2,"<player>, who’s your weirdest crush ever? Share with the group and drink 2 sips."
 TRUTH,2,"<player>, what's the wildest thing you’ve done on a dare? Tell us and drink 2 sips."
@@ -503,29 +537,27 @@ TRUTH,2,"<player>, what’s a bad habit you have that no one knows about? Confes
 BETRAYAL,3,"<player>, pick a person. That person drinks double the amount of sips they take for the rest of the game."
 BETRAYAL,3,"<player>, choose someone to do 10 jumping jacks every time you drink for the rest of the game."
 BETRAYAL,3,"<player>, pick someone to perform a dance move every time you take a sip for the rest of the game."
-BETRAYAL,3,"<player>, choose someone to mimic a celebrity of your choice for the rest of the game."
-BETRAYAL,3,"<player>, pick someone to act like an animal of your choice for the rest of the game."
-BETRAYAL,3,"<player>, choose someone to keep their hands in the air for the rest of the game. Every time they lowe them they drink 2 sips."
+BETRAYAL,3,"<player>, choose someone to mimic a celebrity of your choice for the rest of the game. They will drink 2 sips every time they go out of character."
+BETRAYAL,3,"<player>, pick someone to act like an animal of your choice for the rest of the game. They will drink 2 sips every time they go out of character."
+BETRAYAL,3,"<player>, choose someone to keep their hands in the air for the rest of the game. Every time they lower them they drink 2 sips."
 BETRAYAL,3,"<player>, select someone to make a surprised face and a surprised sound effect every time they take a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,3,"<player>, choose a player to compliment you every time you take a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
-BETRAYAL,3,"<player>, pick someone to serenade you with a love song of their choice."
+BETRAYAL,3,"<player>, pick someone to serenade you with a love song of your choice. Drink 2 sips afterwards if you are impressed."
 BETRAYAL,3,"<player>, choose someone to compliment you and another player in every sentence they speak for the rest of the game. Every time they fail to do so they drink 2 sips."
-BETRAYAL,3,"<player>, pick someone to whisper sweet nothings to <player> every time they take a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
-BETRAYAL,3,"<player>, choose someone to pose as your romantic partner for the next 4 rounds. Every time they fail to do so they drink 2 sips."
-BETRAYAL,3,"<player>, choose someone to call you by a flirty nickname of your choice for the next 4 rounds. Every time they fail to do so they drink 2 sips."
-BETRAYAL,3,"<player>, select a player to give you a romantic toast every time you take a sip for the next 4 rounds."
-BETRAYAL,3,"<player>, select a player to give you a compliment and then take a sip whenever you do so for the rest of the game."
+BETRAYAL,3,"<player>, pick someone to whisper sweet things to <player> every time they take a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,3,"<player>, choose someone to pose as your romantic partner for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,3,"<player>, choose someone to call you by a flirty nickname of your choice for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,3,"<player>, select a player to give you a romantic toast every time you take a sip for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,3,"<player>, select a player to give you a compliment and then take a sip whenever you do so for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,3,"<player>, select a player to call people 'darling' every time they speak to anyone for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,3,"<player>, choose someone to give you a piggyback ride around the room whenever you want to for the rest of the game. You do have to drink 3 sips every time you require their services though."
 BETRAYAL,3,"<player>, select someone to give you a 30-second massage every time you ask for one. You have to drink 3 sips as tax when you require their services though."
-BETRAYAL,3,"<player>, pick a player. They can only drink while lying down for the rest of the game."
+BETRAYAL,3,"<player>, pick a player. They can only drink while lying down for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,3,"<player>, pick two players to arm wrestle, and the loser must down their drink."
-BETRAYAL,3,"<player>, choose someone to sit on the floor for the next 5 rounds and only drink while sitting there."
-BETRAYAL,3,"<player>, pick someone to give you a piggyback ride to the drink station and back."
-BETRAYAL,3,"<player>, choose someone to spin around in a circle every time they take a sip for the rest of the game."
-BETRAYAL,3,"<player>, choose someone to do lunges across the room every time they take a sip for the next 5 rounds."
+BETRAYAL,3,"<player>, pick someone to give you a piggyback ride to the drink station and back. If they fail to do so, they down their drink. If they succeed, they choose someone else except for you to down their drink."
+BETRAYAL,3,"<player>, choose someone to spin around in a circle every time they take a sip for the rest of the game. Every time they fail to do so they drink 2 extra sips."
+BETRAYAL,3,"<player>, choose someone to do lunges across the room every time they take a sip for the rest of the game. Every time they fail to do so they drink 2 extra sips."
 BETRAYAL,3,"<player>, choose someone to drink your sips for you the next 3 times you have to drink."
-BETRAYAL,3,"<player>, choose someone to dance on one leg every time they take a sip for the next 3 rounds."
 CATEGORIES,3,Brands of Sneakers
 CATEGORIES,3,Famous Musicians
 CATEGORIES,3,Popular Book Genres
@@ -626,19 +658,19 @@ DARE,3,"<player>, let <player> tweet something from your account. No looking!"
 DARE,3,"<player>, do your best animal impersonation for 20 seconds. If no one can guess, drink 3 sips."
 DARE,3,"<player>, give <player> a piggyback ride for one lap around the room. Drink 3 sips if you fail."
 DARE,3,"<player>, swap socks with <player> for the rest of the game. Drink 3 sips if you refuse."
-DARE,3,"<player>, for the next round, you can only communicate using hand gestures. Drink 2 sips if you accidentally speak."
+DARE,3,"<player>, for the next 4 rounds, you can only communicate using hand gestures. Drink 2 sips if you accidentally speak."
 DARE,3,"<player>, let <player> change your phone's wallpaper to whatever they want for the rest of the game. Drink 2 sips if you laugh when you see it."
 DARE,3,"<player>, drink 1 sip for every letter in your first name. If it’s more than 5, choose someone to help with the last few sips."
 DARE,3,"<player>, drink 1 sip for every letter in your last name. If it’s more than 5, choose someone to help with the last few sips."
 DARE,3,"<player>, let <player> go through your phone for 30 seconds. They may share anything with the group without showing your phone, unless you down your drink now."
-DARE,3,"<player>, post 'Who wants to date me?' as your status. Give away 3 sips if someone actually responds."
+DARE,3,"<player>, post 'Who wants to date me?' as your status on the social media of your choice. Give away 3 sips every time someone responds to it during this game."
 DARE,3,"<player>, sing the chorus of a popular song while gargling water. If no one can guess the song, drink 3 sips."
 DARE,3,"<player>, swap socks with <player> for the next 4 rounds. Drink 3 sips if you refuse."
 DARE,3,"<player>, do your best runway walk across the room. Drink 2 sips if someone calls you out for lack of confidence."
 DARE,3,"<player>, play a round of 'Two Truths and a Lie.' Whoever guesses wrong drinks 3 sips."
 DARE,3,"<player>, call a random contact and sing them a lullaby. Drink 3 sips if they hang up on you."
 DARE,3,"<player>, play a game of flip cup against <player>. The loser drinks 4 sips."
-DARE,3,"<player>, give a foot massage to <player> for 1 minute. If they say it’s bad, both drink 2 sips."
+DARE,3,"<player>, give a foot massage to <player> for 1 minute. If you both agree you did a good job, give someone 2 sips, otherwise drink them."
 DARE,3,"<player>, blindfold yourself and try to guess who <player> is by touching their face. Drink 3 sips if you guess wrong."
 DARE,3,"<player>, take a selfie with the person to your left and post it on social media. Drink 3 sips if no one likes it in 5 minutes."
 DARE,3,"<player>, show us the last picture you took on your phone. Drink 3 sips if it’s embarrassing."
@@ -666,9 +698,9 @@ DARE,3,"<player>, role-play a dramatic breakup with <player>. The reason is you 
 DARE,3,"<player>, do 10 jumping jacks while singing 'My Heart Will Go On' by Celine Dion. Give away 4 sips after you finish."
 DARE,3,"<player>, have <player> feed you a snack while you're blindfolded. Give away 2 sips if you finish it in 10 seconds, drink 2 sips if you don't."
 DARE,3,"<player>, have <player> style your hair how they want. Drink 3 sips if you fix it before the end of the game."
-DARE,3,Have a toast. Everyone drinks 3 sips.
-DARE,3,Have a toast. Everyone drinks 3 sips.
-DARE,3,Have a toast. Everyone drinks 3 sips.
+DARE,3,"Have a toast. Everyone drinks 3 sips."
+DARE,3,"Have a toast. Everyone drinks 3 sips."
+DARE,3,"Have a toast. Everyone drinks 3 sips."
 DARE,3,"<player>, balance on one foot for the next 4 rounds. If you fall, drink 3 sips."
 DARE,3,"<player>, do a cartwheel. If you fail, drink 3 sips, otherwise give them."
 DARE,3,"<player>, attempt to do the splits. If the other players are impressed with your performance, give away 2 sips."
@@ -676,9 +708,9 @@ DARE,3,"<player>, lift <player> off the ground for 10 seconds. If you succeed, g
 DARE,3,"<player>, spin around 15 times and then attempt to walk to the other side of the room. If you fall, drink 3 sips. If you succeed, give them to someone else."
 DARE,3,"<player>, hold a yoga tree pose for the next 3 rounds."
 DARE,3,"<player>, do a 30-second breakdance. Drink 2 sips if it's a complete failure."
-MASTER,3,<player> is the master of truth. They can override 2 truth questions anytime in the game.
-MASTER,3,<player> is the master of dare. They can override 2 dares anytime in the game.
-MASTER,3,<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game.
+MASTER,3,"<player> is the master of truth. They can override 2 truth questions anytime in the game."
+MASTER,3,"<player> is the master of dare. They can override 2 dares anytime in the game."
+MASTER,3,"<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game."
 POLL,3,Who has ever been in a serious relationship?
 POLL,3,Who has ever lied to a partner?
 POLL,3,Who has ever sent a risky text?
@@ -785,30 +817,27 @@ SECRET_POLL,3,Who has ever had their outfit ruined or altered during a party?
 SECRET_POLL,3,Who has ever flirted with someone at a party just to get free drinks?
 SECRET_POLL,3,Who has ever heard a wild rumor about themselves from a party?
 SECRET_POLL,3,Who has ever woken up to find party-related items in their home that they don’t remember?
-SECRET_POLL,3,Who has ever been involved in a secretive situation at a party that others found out about?
-SECRET_POLL,3,Who has ever surprised someone else at a party with something unexpected?
 SECRET_POLL,3,Who has ever been the subject of gossip after a party?
 TRUTH,3,"<player>, who is your crush? If the person is in the room, you can drink 5 sips instead of saying the name."
 TRUTH,3,"<player>, Who would you rather kiss, <player> or <player>?"
-TRUTH,3,"<player>, who do you think is the most attractive person in this room? Drink 3 sips after answering."
-TRUTH,3,"<player>, what's the worst thing you’ve ever been caught doing? Drink 3 sips if it was embarrassing."
-TRUTH,3,"<player>, if you could only listen to one song for the rest of your life, what would it be? Anyone who disagrees with your choice drinks 2 sips."
-TRUTH,3,"<player>, what’s a habit you wish you could break? Drink 3 sips if you’ve failed to do it."
-TRUTH,3,"<player>, who do you think is the most stylish person in this room? Both drink 3 sips together."
-TRUTH,3,"<player>, if you had to trade lives with someone in this room for a week, who would it be? Both of you drink 3 sips."
+TRUTH,3,"<player>, who do you think is the most attractive person in this room? Drink 3 sips after answering. Everyone who agrees also drinks 1 sip."
+TRUTH,3,"<player>, what's the worst thing you’ve ever been caught doing? Drink 3 sips after you tell the story.."
+TRUTH,3,"<player>, if you could only listen to one song for the rest of your life, what would it be? Everyone who doesn't know it drinks 2 sips."
+TRUTH,3,"<player>, who do you think is the most stylish person in this room? Both of you drink 3 sips together."
+TRUTH,3,"<player>, if you had to trade lives with someone in this room for a week, who would it be and why? Both of you drink 3 sips together after choosing."
 TRUTH,3,"<player>, what's the most ridiculous thing you've done because of a dare? Drink 3 sips if it still haunts you."
-TRUTH,3,"<player>, who in this room would be most likely to win a reality show? The chosen one drinks 3 sips."
+TRUTH,3,"<player>, who in this room would be most likely to win a reality show and why? The chosen one drinks 3 sips."
 TRUTH,3,"<player>, what's something you've done that no one here knows about? If someone already knew, drink 3 sips."
 TRUTH,3,"<player>, who is the biggest flirt in the room? That person drinks 3 sips and gets to choose who drinks 2 more."
 TRUTH,3,"<player>, who between <player> and <player> do you think would be more likely to cry during a movie? The one you pick drinks 3 sips."
 TRUTH,3,"<player>, who would you rather be stranded on a deserted island with, <player> or <player>? The chosen one drinks 2 sips."
 TRUTH,3,"<player>, who do you think would win a physical fight between <player> and <player>? The winner drinks 3 sips."
 TRUTH,3,"<player>, who in the room do you think is the most fun at parties? They give 3 sips to anyone."
-TRUTH,3,"<player>, if you had to rely on either <player> or <player> to plan your wedding, who would you pick? The chosen person drinks 3 sips."
+TRUTH,3,"<player>, if you had to rely on either <player> or <player> to plan your wedding, who would you pick and why? The chosen person drinks 3 sips."
 TRUTH,3,"<player>, between <player> and <player>, who would be more likely to forget their own birthday? The one you pick drinks 2 sips."
 TRUTH,3,"<player>, who do you think has the best taste in clothes, <player> or <player>? The best-dressed drinks 3 sips."
-TRUTH,3,"<player>, who do you think would get away with a crime easier, <player> or <player>? The chosen one drinks 3 sips."
-TRUTH,3,"<player>, who would you rather have as a roommate, <player> or <player>? The chosen roommate drinks 2 sips."
+TRUTH,3,"<player>, who do you think would get away with a crime easier and why, <player> or <player>? The chosen one drinks 3 sips."
+TRUTH,3,"<player>, who would you rather have as a roommate and why, <player> or <player>? The chosen roommate drinks 2 sips."
 TRUTH,3,"<player>, who do you think would be more likely to win a reality show, <player> or <player>? The winner drinks 3 sips."
 TRUTH,3,"<player>, if <player> and <player> both ran for president, who do you think would get more votes? The chosen candidate drinks 3 sips."
 TRUTH,3,"<player>, who do you think would survive longer on a dating show, <player> or <player>? The survivor drinks 3 sips."
@@ -817,10 +846,10 @@ TRUTH,3,"<player>, if <player> and <player> were both stranded at a bar with no 
 TRUTH,3,"<player>, who in this room do you think has the weirdest dating story? They have to share it and then drink 3 sips."
 TRUTH,3,"<player>, if <player> and <player> were competing in a flirt-off, who do you think would win? The winner gives 3 sips."
 TRUTH,3,"<player>, who do you think has the worst first date horror story, <player> or <player>? The one with the worst story drinks 3 sips."
-TRUTH,3,"<player>, who do you think is most likely to have sent a risky text to the wrong person? That person drinks 3 sips."
+TRUTH,3,"<player>, who in this room do you think is most likely to have sent a risky text to the wrong person and why? That person drinks 3 sips."
 TRUTH,3,"<player>, who in this room do you think would survive the longest without showering? The smelly one drinks 3 sips."
 TRUTH,3,"<player>, between <player> and <player>, who do you think would get caught sneaking into a club first? The caught one drinks 3 sips."
-TRUTH,3,"<player>, what's your most embarrassing drunk memory? Spill it and drink 3 sips."
+TRUTH,3,"<player>, what's your most embarrassing drunk memory? Spill it and drink 3 sips afterwards."
 TRUTH,3,"<player>, what’s the worst outfit you’ve ever worn in public? Describe it and drink 3 sips."
 TRUTH,3,"<player>, what's the most ridiculous thing you've done to impress someone? Share the cringe and drink 3 sips."
 TRUTH,3,"<player>, have you ever been caught in an awkward situation with a crush? Tell us and drink 3 sips."
@@ -835,18 +864,18 @@ TRUTH,3,"<player>, what's something you've done that made you cringe afterward? 
 TRUTH,3,"<player>, have you ever pretended to know something to look smart? Spill or drink 3 sips."
 TRUTH,3,"<player>, what's the most embarrassing thing that has ever happened to you in public? Tell us or drink 3 sips."
 TRUTH,3,"<player>, what’s the most embarrassing photo of you that’s still online? Describe it and drink 3 sips."
-TRUTH,3,"<player>, what’s something ridiculous you’ve done to get attention? Confess or drink 3 sips."
+TRUTH,3,"<player>, what’s something ridiculous you’ve done to get attention? Confess and drink 3 sips."
 TRUTH,3,"<player>, have you ever lied about your age to impress someone? Tell the story or drink 3 sips."
-TRUTH,3,"<player>, what's the most scandalous thing you've ever done at a party? Tell us or drink 3 sips."
-TRUTH,3,"<player>, what's a secret you've been keeping from everyone here? Reveal it or drink 3 sips."
-TRUTH,3,"<player>, what's the dumbest way you've injured yourself? Tell us the story or drink 3 sips."
-BETRAYAL,4,"<player>, choose one person to take 3 sips whenever you do for the rest of the game."
-BETRAYAL,4,"<player>, choose someone to act as your servant for the next 5 rounds."
+TRUTH,3,"<player>, what's the most scandalous thing you've ever done at a party? Tell us and drink 3 sips."
+TRUTH,3,"<player>, what's a secret you've been keeping from everyone here? Reveal it or down your drink. If you don't have one, you still down your drink."
+TRUTH,3,"<player>, what's the dumbest way you've injured yourself? Tell us the story and drink 3 sips."
+BETRAYAL,4,"<player>, choose one person to take 3 sips whenever you drink for the rest of the game."
+BETRAYAL,4,"<player>, choose someone to act as your servant for the next 5 rounds. Every time they fail to comply with your requests, they drink 3 sips."
 BETRAYAL,4,"<player>, choose two players to swap clothes for the rest of the game."
-BETRAYAL,4,"<player>, choose someone to hold their drink in their non-dominant hand for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,4,"<player>, choose someone to hold their drink in their non-dominant hand for the rest of the game. Every time they are caught not doing so they drink 2 sips."
 BETRAYAL,4,"<player>, select a player to mimic your movements for the rest of the game. Every time they fail to do so they drink 2 sips."
-BETRAYAL,4,"<player>, select a player to keep their phone face-up and visible for the rest of the game."
-BETRAYAL,4,"<player>, choose a player to wear sunglasses indoors for the rest of the game. Every time they fail to do so they drink 2 sips."
+BETRAYAL,4,"<player>, select a player to keep their phone face-up, visible and unlocked for the rest of the game."
+BETRAYAL,4,"<player>, choose a player to wear sunglasses indoors for the rest of the game. Every time they fail to do so they drink 2 sips. If you are outdoors or find no sunglasses, everybody downs their drink."
 BETRAYAL,4,"<player>, choose someone to swap their drink with someone else’s for the rest of the game."
 BETRAYAL,4,"<player>, pick someone to answer all questions with ‘I don’t know’ for the rest of the game. Every time they fail to do so they drink 2 sips."
 BETRAYAL,4,"<player>, pick someone to speak in a whisper for the rest of the game. Every time they fail to do so they drink 2 sips."
@@ -872,10 +901,10 @@ BETRAYAL,4,"<player>, pick someone to lie on the floor and pretend to be a rug f
 BETRAYAL,4,"<player>, choose two players to have a plank-off. The loser drinks double for the rest of the game."
 BETRAYAL,4,"<player>, pick two players to swap an item of clothing of your choice for the rest of the game."
 BETRAYAL,4,"<player>, choose someone to let you sit on their back for 1 minute while they stay on all fours. The game can go on during this time."
-BETRAYAL,4,"<player>, choose two players to perform a slow-motion fight scene for 1 minute."
-BETRAYAL,4,"<player>, choose two players to pretend to be stuck together at the hips for the next 5 minutes."
+BETRAYAL,4,"<player>, choose two players to down their drinks and perform a slow-motion fight scene for 1 minute."
+BETRAYAL,4,"<player>, choose two players to pretend to be stuck together at the hips for the next 5 minutes. Every time they disconnect their hips they drink 3 sips."
 BETRAYAL,4,"<player>, pick someone to balance on one leg for the rest of the game. Every time they lose balance, they drink 2 sips."
-BETRAYAL,4,"<player>, select someone to hold their drink above their head for the next 3 rounds. Every time they lower it, they drink 2 sips and put it back."
+BETRAYAL,4,"<player>, select someone to hold their drink above their head for the next 4 rounds. Every time they lower it, they drink 2 sips and put it back."
 CATEGORIES,4,TV Show Characters
 CATEGORIES,4,Movie Directors
 CATEGORIES,4,Superhero Powers
@@ -962,7 +991,7 @@ CATEGORIES,4,Famous Landmarks in the US
 CATEGORIES,4,Great Historical Events
 CATEGORIES,4,Famous Historic Sites
 CATEGORIES,4,Great Cinematic Genres
-DARE,4,"<player>, swap your lower from the waist down with <player> for the rest of the game."
+DARE,4,"<player>, swap your clothes from the waist down with <player> for the rest of the game."
 DARE,4,"<player>, let <player> check your search history. Drink 3 sips if anything unusual appears when typing the letter p."
 DARE,4,"<player>, let <player> send a message to your crush. You may refuse by downing your drink."
 DARE,4,"<player>, text the third most recent contact in your phone, 'I miss you.' If they reply 'I miss you too' or something similar during this game, everyone else drinks 3 sips."
@@ -970,53 +999,45 @@ DARE,4,"<player>, handcuff yourself to <player> for the next 3 rounds."
 DARE,4,"<player>, let <player> write a text to your crush. You give away 3 sips if your crush replies with something flirty."
 DARE,4,"<player>, get on one knee and propose to <player>. If they say no, drink 4 sips."
 DARE,4,"<player>, take an embarrassing selfie and send it to your most recent contact. Drink 4 sips if you don't get a reply in 5 minutes."
-DARE,4,"<player>, do a prank call to someone in your phonebook. Drink 4 sips if they figure it out in under 1 minute."
+DARE,4,"<player>, do a prank call to someone in <player>'s phonebook. Drink 4 sips if they figure it out in under 1 minute."
 DARE,4,"<player>, for the next 2 rounds, act like a waiter/waitress and serve drinks to the group. Drink 3 sips if you drop anything."
 DARE,4,"<player>, let <player> read your last 5 messages aloud. Drink 3 sips if they find anything embarrassing."
-DARE,4,"<player>, let <player> go through your camera roll. Drink 4 sips if they find something funny or embarrassing."
-DARE,4,"<player>, act like a chicken for 30 seconds, including the sound. Drink 3 sips if no one clucks in approval."
-DARE,4,"<player>, wear your shirt inside out for the next 3 rounds. Drink 4 sips if you complain about it."
+DARE,4,"<player>, let <player> go through <player>'s camera roll for 30 seconds. Drink 4 sips if you find something funny or embarrassing, without revealing it to other players."
+DARE,4,"<player>, act like a chicken for 30 seconds, including the sound. Drink 3 sips afterwards because you're ridiculous."
+DARE,4,"<player>, wear your shirt inside out for the next 3 rounds. When you put it back the right way, take 3 sips."
 DARE,4,"<player>, for the next 3 rounds, you can only whisper. Drink 3 sips if you raise your voice."
-DARE,4,"<player>, let <player> pick an item of food or drink for you to hold in your mouth for 10 seconds. Drink 3 sips if you refuse."
-DARE,4,"<player>, take a sip for every social media app on your phone. Drink 3 sips if you have more than 5."
+DARE,4,"<player>, let <player> pick an item of food or drink for you to hold in your mouth for the next 5 minutes. Down your drink if you remove it."
+DARE,4,"<player>, take a sip for every social media app on your phone."
 DARE,4,"<player>, let <player> send a text to your ex from your phone. Drink 4 sips if they reply during this game."
-DARE,4,"<player>, for the next 4 rounds, every time someone says your name, you must bark like a dog. Drink 2 sips if you forget."
+DARE,4,"<player>, for the next 4 rounds, every time someone says your name, you must bark like a dog. Drink 2 sips every time you forget."
 DARE,4,"<player>, challenge <player> to a staring contest. The loser drinks 3 sips."
-DARE,4,"<player>, act like a personal assistant to <player> for the next 3 rounds. Drink 3 sips if you complain."
-DARE,4,"<player>, play 'Heads Up' with <player>. Whoever loses must drink 4 sips."
+DARE,4,"<player>, act like a personal assistant to <player> for the next 3 rounds. Drink 3 sips every time you refuse a task."
+DARE,4,"<player>, play 'Heads Up' with <player>. Whoever loses must drink 4 sips. If neither of you know what the heck that is, both drink 4 sips."
 DARE,4,"<player>, let <player> text the 3rd most recent contact on your phone, 'I miss your face.' Drink 3 sips if they don't reply in 10 minutes."
-DARE,4,"<player>, create a handshake with <player>. If no one else can copy it, they drink 3 sips."
-DARE,4,"<player>, for the next 3 rounds, you can only communicate by singing. Drink 3 sips if you speak normally."
+DARE,4,"<player>, create a handshake with <player>. Other players make pairs and try to copy it. Whoever fails to do so in the first try drinks 3 sips."
+DARE,4,"<player>, for the next 3 rounds, you can only communicate by singing. Drink 3 sips every time you speak normally."
 DARE,4,"<player>, dance with an invisible partner for 30 seconds. Drink 3 sips if no one can guess what style of dance you're doing."
 DARE,4,"<player>, post the last photo you took on your phone to your story. Drink 4 sips if you refuse."
-DARE,4,"<player>, call your parents and tell them you’ve decided to get a pet. Drink 4 sips if they ask what kind."
-DARE,4,"<player>, let <player> create a ridiculous nickname for you. You must use it for the next 4 rounds. Drink 4 sips if you refuse."
-DARE,4,"<player>, play a quick round of ‘Never Have I Ever’ with the group. Anyone who puts their finger down must drink 4 sips."
-DARE,4,"<player>, let <player> choose a silly filter for you to use on your next social media post. Drink 4 sips if you refuse."
+DARE,4,"<player>, call your parents and tell them you’ve decided to get a pet. If they ask what type of pet, tell them you don't think they should know and hang up. If they call back in the next 5 minutes, down your drink."
+DARE,4,"<player>, play a quick round of ‘Never Have I Ever’ with the group. Anyone who has, in fact, done that particular thing, downs their drink."
 DARE,4,"<player>, perform a 30-second stand-up comedy routine. Drink 4 sips if you don’t make anyone laugh."
-DARE,4,"<player>, let <player> pick a song for you to sing karaoke-style. Drink 4 sips if you refuse or mess up."
-DARE,4,"<player>, take a bite of something unusual from the kitchen. Drink 4 sips if you refuse."
-DARE,4,"<player>, for the next 4 rounds, talk in rhymes. Drink 4 sips if you speak normally."
-DARE,4,"<player>, have a conversation with a random item from the room as if it were a person. Drink 4 sips if you refuse."
-DARE,4,"<player>, let <player> write a funny status update for you. Drink 4 sips if it gets no likes in 10 minutes."
+DARE,4,"<player>, let <player> pick a song for you to sing karaoke-style. After you sing the song, give 3 sips to someone."
+DARE,4,"<player>, for the next 4 rounds, talk in rhymes. Drink 4 sips every time you speak normally."
+DARE,4,"<player>, pick a random item from the room. You may now talk only to that item for the rest of the game. Drink 4 sips every time you talk to someone else."
+DARE,4,"<player>, let <player> write a status update for you. Give 1 sip for every reply you get in the first 10 minutes."
 DARE,4,"<player>, do your best impression of a celebrity’s acceptance speech. Drink 4 sips if no one knows who you’re imitating."
 DARE,4,"<player>, try to balance a book on your head for the next 3 rounds. Drink 4 sips if it falls off."
-DARE,4,"<player>, do a cartwheel or try a handstand. Drink 4 sips if you refuse or fall over."
-DARE,4,"<player>, play a round of ‘Simon Says’ with the group. If you mess up, drink 4 sips."
-DARE,4,"<player>, let <player> create a new ringtone for you. You must use it for the next 4 rounds. Drink 4 sips if you refuse."
+DARE,4,"<player>, do a cartwheel or try a handstand. Drink 4 sips if you fail, give them to someone else if you succeed."
+DARE,4,"<player>, play a round of ‘Simon Says’ with the group. Whoever messes up drink 4 sips."
 DARE,4,"<player>, for the next 3 rounds, whenever someone says 'cheers,' you must stand up and salute them. Drink 4 sips if you forget."
-DARE,4,"<player>, do your best impression of a famous movie villain. Drink 4 sips if no one knows who you’re impersonating."
+DARE,4,"<player>, do your best impression of a famous movie villain. The first player to guess correctly gives 4 sips to someone else. Drink 4 sips if no one knows who you’re impersonating after 30 seconds."
 DARE,4,"<player>, challenge <player> to a dance-off. Loser drinks 4 sips."
-DARE,4,"<player>, let <player> pick a random item from your room for you to wear for the next 3 rounds. Drink 4 sips if you refuse."
-DARE,4,"<player>, do your best impression of a cartoon character for 1 minute. Drink 4 sips if no one recognizes it."
-DARE,4,"<player>, write a funny poem about someone in the room and read it aloud. Drink 4 sips if they don’t laugh."
-DARE,4,"<player>, create a human pyramid with up to 3 people. Drink 4 sips if it collapses."
-DARE,4,"<player>, do a 30-second commercial for a made-up product. Drink 4 sips if it’s not entertaining."
-DARE,4,"<player>, play a round of ‘Charades’ with the group. If no one guesses correctly, drink 4 sips."
-DARE,4,"<player>, let <player> write a status update about you on your social media. Drink 4 sips if you refuse."
-DARE,4,"<player>, for the next 3 rounds, talk like a pirate. Drink 4 sips if you forget to stay in character."
+DARE,4,"<player>, let <player> pick a random item from your room for you to wear for the next 3 rounds."
+DARE,4,"<player>, do your best impression of a cartoon character for 1 minute. The first player to recognize it gives 2 sips to someone else. Drink 4 sips if no one recognizes it after 30 seconds."
+DARE,4,"<player>, <player> and <player>, create a human pyramid. Drink 4 sips if it collapses in the first 30 seconds."
+DARE,4,"<player>, play a round of ‘Charades’ with the group. Whoever guesses correctly first gives 2 sips to someone else. If no one guesses correctly, drink 4 sips."
+DARE,4,"<player>, for the next 4 rounds, talk like a pirate. Drink 4 sips every time you forget to stay in character."
 DARE,4,"<player>, pretend to be a news anchor for 1 minute. Drink 4 sips if you don’t get at least one laugh."
-DARE,4,"<player>, swap places with <player> for the next 3 rounds. Drink 4 sips if you refuse."
 DARE,4,"<player>, spin a bottle and kiss the player it lands on. Both of you drink 1 sip together with a toast afterwards."
 DARE,4,"<player>, spin a bottle and kiss the player it lands on. Both of you drink 1 sip together with a toast afterwards."
 DARE,4,"<player>, spin a bottle and kiss the player it lands on. Both of you drink 1 sip together with a toast afterwards."
@@ -1040,25 +1061,25 @@ DARE,4,"<player>, take a piece of clothing off for the rest of the game. You may
 DARE,4,"<player>, take a piece of clothing off for the rest of the game. You may refuse by downing your drink."
 DARE,4,"<player>, take a piece of clothing off for the rest of the game. You may refuse by downing your drink."
 DARE,4,"<player>, take a piece of clothing off for the rest of the game. You may refuse by downing your drink."
-DARE,4,"<player>, write your name on the wall using your butt. Give away 3 sips at the end."
-DARE,4,"<player>, write your name on the wall using your butt. Give away 3 sips at the end."
-DARE,4,"<player>, write your name on the wall using your butt. Give away 2 sips at the end."
+DARE,4,"<player>, write your name on the wall using your butt, letter by letter. Give away 3 sips at the end."
+DARE,4,"<player>, write your name on the wall using your butt, letter by letter. Give away 3 sips at the end."
+DARE,4,"<player>, write your name on the wall using your butt, letter by letter. Give away 2 sips at the end."
 DARE,4,"<player>, sit on your back while <player> performs 3 push-ups on top of you. Every time you get close, kiss. Drink 3 times for every failed push-up or kiss."
 DARE,4,"<player>, hold <player>'s legs while they perform 3 sit-ups on top of you. Every time you get close, kiss. Drink 3 times for every failed sit-up or kiss."
 DARE,4,"<player> and <player>, down your drinks and give each other a 1-minute foot massage. If either of you refuse or complain, drink 4 sips."
-DARE,4,Have a toast. Everyone downs their drink.
-DARE,4,Have a toast. Everyone downs their drink.
-DARE,4,Have a toast. Everyone downs their drink.
-DARE,4,Have a toast. Everyone downs their drink.
+DARE,4,"Have a toast. Everyone downs their drink."
+DARE,4,"Have a toast. Everyone downs their drink."
+DARE,4,"Have a toast. Everyone downs their drink."
+DARE,4,"Have a toast. Everyone downs their drink."
 DARE,4,"<player>, let <player> choose a random song, and you must perform a 1-minute lip-sync with exaggerated gestures. Give away 3 sips after your performance."
 DARE,4,"<player>, spin around 10 times and try to walk in a straight line. If you fail, drink 4 sips, otherwise give them."
 DARE,4,"<player>, balance a book on your head for 1 minute while standing. If it falls, drink 4 sips."
 DARE,4,"<player>, run to the nearest door and back within 10 seconds. Drink 4 sips if you fail, give to sips if you succeed."
 DARE,4,"<player>, hold a squat position for 1 minute. If you fail, drink 4 sips. If you succeed, give them to someone else."
 DARE,4,"<player>, do 20 lunges. If you stop or fail, drink 4 sips."
-MASTER,4,<player> is the master of truth. They can override 2 truth questions anytime in the game.
-MASTER,4,<player> is the master of dare. They can override 2 dares anytime in the game.
-MASTER,4,<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game.
+MASTER,4,"<player> is the master of truth. They can override 2 truth questions anytime in the game."
+MASTER,4,"<player> is the master of dare. They can override 2 dares anytime in the game."
+MASTER,4,"<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game."
 POLL,4,Who has ever cheated on a partner?
 POLL,4,Who has ever gotten drunk alone?
 POLL,4,Who has ever had a one-night stand?
@@ -1099,10 +1120,8 @@ POLL,4,Who has ever organized a large event or party?
 POLL,4,Who has ever had a surprise visit from someone important?
 POLL,4,Who has ever had an unusual or rare hobby?
 POLL,4,Who has ever performed on stage in front of a large audience?
-POLL,4,Who has ever had a unique or unusual job?
 POLL,4,Who has ever traveled to a remote or off-the-beaten-path destination?
 POLL,4,Who has ever been on a luxury vacation?
-POLL,4,Who has ever had an unexpected adventure or mishap while traveling?
 POLL,4,Who has ever experienced a significant cultural shock on vacation?
 POLL,4,Who has ever participated in an extreme sport or adventure activity abroad?
 POLL,4,Who has ever taken a sabbatical or extended leave to travel?
@@ -1116,20 +1135,19 @@ POLL,4,Who has ever tried to look busy while actually doing nothing?
 POLL,4,Who has ever used office supplies for a personal project?
 SECRET_POLL,4,Who has ever sent explicit messages to someone in this room?
 SECRET_POLL,4,Who has ever been caught in an intimate situation by someone in this room?
-SECRET_POLL,4,Who has ever secretly flirted with a partner of someone in this room?
-SECRET_POLL,4,Who has ever had a secret relationship with someone in this room?
-SECRET_POLL,4,Who has ever had a secret affair with someone in this room that no one else knows about?
+SECRET_POLL,4,Who has ever flirted with a partner of someone in this room?
+SECRET_POLL,4,Who has ever had a relationship with someone in this room?
+SECRET_POLL,4,Who has ever had a affair with someone in this room that no one else knows about?
 SECRET_POLL,4,Who has ever had a one-night stand with someone in this room?
 SECRET_POLL,4,Who has ever been involved in a sexual encounter with someone in this room while they were under the influence?
-SECRET_POLL,4,Who has ever made out with someone in this room and kept it a secret?
-SECRET_POLL,4,Who has ever secretly flirted with someone in this room?
-SECRET_POLL,4,Who has ever hooked up with someone in this room and kept it a secret?
+SECRET_POLL,4,Who has ever made out with someone in this room?
+SECRET_POLL,4,Who has ever flirted with someone in this room?
+SECRET_POLL,4,Who has ever hooked up with someone in this room?
 SECRET_POLL,4,Who has ever been caught in a compromising position by someone in this room?
 SECRET_POLL,4,Who has ever sent intimate photos to someone in this room?
 SECRET_POLL,4,Who has ever had a secret rendezvous with someone in this room?
 SECRET_POLL,4,Who has ever had a romantic affair with someone in this room?
 SECRET_POLL,4,Who has ever been involved in a steamy group chat with someone in this room?
-SECRET_POLL,4,Who has ever had a secret relationship with someone in this room?
 SECRET_POLL,4,Who has ever secretly flirted with someone at a party?
 SECRET_POLL,4,Who has ever had a romantic encounter with someone they met online?
 SECRET_POLL,4,Who has ever engaged in a secret affair with a colleague?
@@ -1163,23 +1181,23 @@ SECRET_POLL,4,Who has ever been involved in a work-related scandal that could af
 SECRET_POLL,4,Who has ever had a steamy encounter with a coworker at a work function?
 SECRET_POLL,4,Who has ever had an intense argument with a boss or higher-up that nearly got them fired?
 SECRET_POLL,4,Who has ever leaked sensitive work information to someone outside the company?
-SECRET_POLL,4,Who has ever hooked up with someone at a party and kept it a secret?
+SECRET_POLL,4,Who has ever hooked up with someone at a party?
 SECRET_POLL,4,Who has ever snuck into a party uninvited?
 SECRET_POLL,4,Who has ever had a romantic involvement with someone from the family’s social circle?
 SECRET_POLL,4,Who has ever had a scandalous experience with a local while traveling?
-SECRET_POLL,4,Who has ever had a secret romance with someone they met while traveling?
+SECRET_POLL,4,Who has ever had a romance with someone they met while traveling?
 SECRET_POLL,4,Who has ever had a significant falling out with a teacher or professor?
 SECRET_POLL,4,Who has ever been part of a major school scandal or controversy?
 SECRET_POLL,4,Who has ever had an intimate experience involving their gym buddy?
 SECRET_POLL,4,Who has ever been involved in a scandal related to health or fitness?
-SECRET_POLL,4,Who has ever hooked up with someone from a party and kept it a secret?
+SECRET_POLL,4,Who has ever hooked up with someone from a party ?
 SECRET_POLL,4,Who has ever accidentally caused a scene at a party?
 SECRET_POLL,4,Who has ever been kicked out of a party for inappropriate behavior?
-SECRET_POLL,4,Who has ever had a secret argument or drama at a party that no one knew about?
+SECRET_POLL,4,Who has ever had an argument or drama at a party involving a person in a relationship?
 SECRET_POLL,4,Who has ever pulled off a major prank at a party and gotten away with it?
 SECRET_POLL,4,Who has ever participated in a drinking game at a party and ended up regretting it?
 SECRET_POLL,4,Who has ever worn a party costume that led to an unexpected or awkward situation?
-SECRET_POLL,4,Who has ever had a secret romantic interest in someone they met at a party?
+SECRET_POLL,4,Who has ever had a romantic interest in someone they met at a party?
 SECRET_POLL,4,Who has ever been the cause of a major party drama or conflict?
 SECRET_POLL,4,Who has ever started a party rumor that turned out to be true?
 SECRET_POLL,4,Who has ever dealt with the aftermath of a party hangover in an embarrassing way?
@@ -1194,31 +1212,22 @@ TRUTH,4,"<player>, who do you regret not staying in touch with? Drink 4 sips if 
 TRUTH,4,"<player>, what's the worst lie you’ve ever told to get out of trouble? Drink 4 sips if you got caught."
 TRUTH,4,"<player>, who do you think would be the most fun person to get drunk with in this room? Both of you drink 4 sips together."
 TRUTH,4,"<player>, what's the pettiest reason you've ever broken up with someone? Drink 4 sips if you’ve never admitted it before."
-TRUTH,4,"<player>, if you had to break the law to save someone in this room, who would it be? Both of you drink 4 sips."
+TRUTH,4,"<player>, if you had to break the law to save someone in this room, who would it be and why? Both of you drink 4 sips."
 TRUTH,4,"<player>, what’s the worst thing you’ve done to someone who didn’t deserve it? Drink 4 sips if they don’t know about it."
-TRUTH,4,"<player>, who in this room would make the best partner for a bank heist? Both of you drink 4 sips if you agree."
-TRUTH,4,"<player>, if you could erase one memory from your life, what would it be? Drink 4 sips if it involves someone here."
-TRUTH,4,"<player>, who would you trust more to babysit your kids, <player> or <player>? The babysitter drinks 4 sips."
-TRUTH,4,"<player>, who do you think has done the most embarrassing thing while drunk, <player> or <player>? The one with more stories drinks 4 sips."
+TRUTH,4,"<player>, who in this room would make the best partner for a bank heist and why? Both of you drink 4 sips if you agree."
+TRUTH,4,"<player>, if you could erase one memory from your life, what would it be and why? Drink 4 sips if it involves someone here."
+TRUTH,4,"<player>, who would you trust more to babysit your kids and why, <player> or <player>? The babysitter drinks 4 sips."
+TRUTH,4,"<player>, who do you think has done the most embarrassing thing while drunk, <player> or <player>? The chosen one drinks 4 sips."
 TRUTH,4,"<player>, who do you think would lie more easily, <player> or <player>? The better liar drinks 3 sips."
 TRUTH,4,"<player>, who do you think has been on the most awkward date, <player> or <player>? The one you choose drinks 4 sips."
-TRUTH,4,"<player>, who in this room do you think has the most embarrassing childhood story? They drink 4 sips."
 TRUTH,4,"<player>, who in this room do you think is the most likely to ghost someone after a date? They drink 3 sips."
 TRUTH,4,"<player>, who do you think is more likely to get lost in their own neighborhood, <player> or <player>? The one you pick drinks 4 sips."
-TRUTH,4,"<player>, between <player> and <player>, who do you think would spend more money on a silly impulse buy? The chosen spender drinks 4 sips."
-TRUTH,4,"<player>, if you had to trust either <player> or <player> to tell you the truth about something important, who would it be? The trusted one drinks 4 sips."
-TRUTH,4,"<player>, who do you think is more likely to fall asleep during a movie, <player> or <player>? The one you choose drinks 3 sips."
-TRUTH,4,"<player>, who do you think would win a debate between <player> and <player>? The debater drinks 3 sips."
-TRUTH,4,"<player>, if <player> and <player> were your coworkers, who do you think would slack off more? The slacker drinks 4 sips."
-TRUTH,4,"<player>, who in this room do you think is more likely to accidentally insult someone? That person drinks 4 sips."
+TRUTH,4,"<player>, if you had to trust either <player> or <player> to tell you the truth about something important, who would it be and why? The trusted one drinks 4 sips."
+TRUTH,4,"<player>, who do you think would win a debate about the best sex position between <player> and <player> and why? The debater drinks 3 sips."
 TRUTH,4,"<player>, between <player> and <player>, who do you think has told the most lies to get out of trouble? The liar drinks 3 sips."
-TRUTH,4,"<player>, who do you think has the most embarrassing secret, <player> or <player>? The one with the bigger secret drinks 3 sips."
-TRUTH,4,"<player>, between <player> and <player>, who do you think has done more things they regret? The one you pick drinks 4 sips."
-TRUTH,4,"<player>, if <player> and <player> were trying to win over the same person’s heart, who would succeed? The winner drinks 4 sips and tells us their best pickup line."
-TRUTH,4,"<player>, who do you think is more likely to leave an awkward voicemail, <player> or <player>? The awkward one drinks 4 sips."
-TRUTH,4,"<player>, who in this room do you think has the wildest story from freshman year? They drink 4 sips."
-TRUTH,4,"<player>, if <player> and <player> got matching tattoos, who would regret it first? The one with regrets drinks 4 sips."
-TRUTH,4,"<player>, who in this room do you think has the most embarrassing drunk memory? They drink 4 sips."
+TRUTH,4,"<player>, if <player> and <player> were trying to win over <player>'s heart, who would succeed? The winner drinks 4 sips and tells us their best pickup line."
+TRUTH,4,"<player>, who in this room do you think has the wildest story from freshman year? They drink 4 sips and share the wildest freshman year story."
+TRUTH,4,"<player>, if <player> and <player> got matching tattoos with each other's names, who would regret it more? The one with regrets drinks 4 sips."
 TRUTH,4,"<player>, who do you think is more likely to text their ex after a night out, <player> or <player>? The one you choose drinks 4 sips."
 TRUTH,4,"<player>, between <player> and <player>, who do you think would make the worst wingman or wingwoman? The wing-disaster drinks 4 sips."
 TRUTH,4,"<player>, who do you think has taken the most ridiculous drunk photos? They drink 4 sips and share their funniest one."
@@ -1230,50 +1239,41 @@ TRUTH,4,"<player>, what's the weirdest thing you've googled when no one was arou
 TRUTH,4,"<player>, what’s the most ridiculous way you’ve hurt yourself? Tell us and drink 4 sips."
 TRUTH,4,"<player>, what's the worst excuse you've ever given for missing something important? Explain and drink 4 sips."
 TRUTH,4,"<player>, have you ever gone through someone’s phone without permission? If yes, drink 4 sips."
-TRUTH,4,"<player>, what’s the biggest secret you’re hiding right now? Spill it or drink 4 sips."
-TRUTH,4,"<player>, what’s the worst thing you’ve done that no one else knows about? Tell us or drink 4 sips."
-TRUTH,4,"<player>, what’s the most embarrassing thing you’ve ever done in front of someone you liked? Confess or drink 4 sips."
-TRUTH,4,"<player>, what’s something you’ve lied about to get out of trouble? Tell us the truth or drink 4 sips."
-TRUTH,4,"<player>, what's the most ridiculous thing you’ve ever done for a crush? Tell us or drink 4 sips."
-TRUTH,4,"<player>, what’s something you’ve done while drunk that you swore you’d never tell anyone? Share it now or drink 4 sips."
-TRUTH,4,"<player>, what's the most embarrassing nickname you’ve ever had? Reveal it or drink 4 sips."
-TRUTH,4,"<player>, what’s the worst date you've ever been on and why? Tell us or drink 4 sips."
-TRUTH,4,"<player>, what's something you’ve done that would shock your parents? Tell us or drink 4 sips."
-TRUTH,4,"<player>, what's the dumbest thing you’ve done to impress someone? Tell us or drink 4 sips."
-TRUTH,4,"<player>, have you ever had an inappropriate dream about someone in this room? Admit it or drink 4 sips."
+TRUTH,4,"<player>, what’s the worst thing you’ve done that no one else knows about? Tell us and drink 4 sips."
+TRUTH,4,"<player>, what’s the most embarrassing thing you’ve ever done in front of someone you liked? Confess and drink 4 sips."
+TRUTH,4,"<player>, what's the most ridiculous thing you’ve ever done for a crush? Tell us and drink 4 sips."
+TRUTH,4,"<player>, what’s something you’ve done while drunk that you swore you’d never tell anyone? Share it now and drink 4 sips."
+TRUTH,4,"<player>, what's the most embarrassing nickname you’ve ever had? Reveal it and drink 4 sips."
+TRUTH,4,"<player>, what’s the worst date you've ever been on and why? Tell us and drink 4 sips."
+TRUTH,4,"<player>, what's something you’ve done that would shock your parents? Tell us and drink 4 sips."
+TRUTH,4,"<player>, what's the dumbest thing you’ve done to impress someone? Tell us and drink 4 sips."
+TRUTH,4,"<player>, have you ever had an inappropriate dream about someone in this room? Tell us about it and drink 4 sips. If you didn't, still drink 4 sips."
 TRUTH,4,"<player>, what's the most cringe-worthy text you've sent to your crush? Read it out or drink 4 sips."
 TRUTH,4,"<player>, what's the pettiest thing you've done out of revenge? Spill it or drink 4 sips."
 TRUTH,4,"<player>, what’s the weirdest place you’ve fallen asleep? Tell us or drink 4 sips."
-TRUTH,4,"<player>, what’s something you’ve never told anyone but are willing to confess now? Spill or drink 4 sips."
+TRUTH,4,"<player>, what’s something you’ve never told anyone but are willing to confess now? Spill and drink 4 sips."
 TRUTH,4,"<player>, if you could delete one memory from your life, what would it be? Tell us and drink 4 sips."
 BETRAYAL,5,"<player>, choose someone to swap phones with you for the rest of the game."
-BETRAYAL,5,"<player>, choose someone to give up their phone for the rest of the game."
 BETRAYAL,5,"<player>, choose two players to swap phones for the rest of the game. The phones should be first unlocked, of course."
-BETRAYAL,5,"<player>, choose to players to down their drinks and go in a separate room (or drawer?) for the next 5 minutes. The others can keep playing. They don't need to say anything when they return."
+BETRAYAL,5,"<player>, choose two players to down their drinks and go in a separate room (or drawer?) for the next 5 minutes. The others can keep playing. They don't need to say anything when they return."
 BETRAYAL,5,"<player>, choose someone to swap their drink with yours and drink from it for the rest of the game. Whenever you drink,they should drink double the amount."
 BETRAYAL,5,"<player>, pick someone to send a text message composed by you from their phone to someone in their contact list. After they do it, they down their drink."
 BETRAYAL,5,"<player>, pick someone to answer all questions for the rest of the game in song form."
-BETRAYAL,5,"<player>, pick someone to be your personal assistant for the rest of the game, following all your instructions."
-BETRAYAL,5,"<player>, choose two players that will swap outfits for the rest of the game."
+BETRAYAL,5,"<player>, pick someone to be your personal assistant for the rest of the game, following all your instructions. Every time they fail to comply, they down their drink."
+BETRAYAL,5,"<player>, choose two players that will swap full outfits for the rest of the game."
 BETRAYAL,5,"<player>, choose a player to act as if they’re on a cooking show, describing every action they do for the rest of the game. Every time they fail to do so they drink 2 sips."
-BETRAYAL,5,"<player>, pick someone to follow you around as your personal shadow for the rest of the game."
-BETRAYAL,5,"<player>, select someone to take a silly selfie and set it as their profile picture on the social app of their choice for the rest of the game."
 BETRAYAL,5,"<player>, choose someone to act as your personal fan for the rest of the game, cheering for you loudly every time you do something."
-BETRAYAL,5,"<player>, choose someone to make a romantic declaration to <player> group on your behalf."
-BETRAYAL,5,"<player>, choose someone to set their phone wallpaper to a romantic image of you for the rest of the game."
+BETRAYAL,5,"<player>, choose someone to down their drink and make a romantic declaration to <player> group on your behalf."
+BETRAYAL,5,"<player>, choose someone to set their phone wallpaper to a romantic image of you for the rest of the game. They may choose someone to down their drink if they also send a random screenshot of it to their most recent contact."
 BETRAYAL,5,"<player>, pick someone to send a flirty voice message to someone in their contact list. Before doing that, they should down their drink for extra courage."
-BETRAYAL,5,"<player>, choose two players to act out a romantic scene from a movie/TV series of your choice."
-BETRAYAL,5,"<player>, select two players to arm wrestle. The loser drinks double for the rest of the game."
-BETRAYAL,5,"<player>, choose two players to hold hands for the rest of the game."
-BETRAYAL,5,"<player>, pick someone to give a lap dance to another player of your choice."
-BETRAYAL,5,"<player>, select two players to stand face-to-face, touching noses, for the next 5 minutes."
-BETRAYAL,5,"<player>, choose two players to perform a fake wrestling match for 1 minute. The loser drinks 5 sips."
-BETRAYAL,5,"<player>, select two players to carry you like royalty across the room."
-BETRAYAL,5,"<player>, select someone to pick you up every time you take a sip for the next 5 rounds."
-BETRAYAL,5,"<player>, select two players to dance cheek-to-cheek for 30 seconds. The rest of the group can choose the music."
+BETRAYAL,5,"<player>, choose two players to down their drinks and act out a romantic scene from a movie/TV series of your choice."
+BETRAYAL,5,"<player>, select two players to down their drinks and arm wrestle. The loser drinks double for the rest of the game."
+BETRAYAL,5,"<player>, choose two players to down their drinks and hold hands for the rest of the game."
+BETRAYAL,5,"<player>, pick someone to down their drinks and give a lap dance to another player of your choice."
+BETRAYAL,5,"<player>, select two players to down their drinks and stand tand face-to-face, touching noses, for the next 5 minutes. Every time their noses disconnect during this time, they down their drinks again."
+BETRAYAL,5,"<player>, select two players to carry you like royalty across the room every time you want. You take 3 sips as tax every time you require their services."
 BETRAYAL,5,"<player>, choose two players to high-five every time they take a sip for the rest of the game. Every time they forget, they drink double."
 BETRAYAL,5,"<player>, select two players to race to the door and back. The loser downs their drink."
-BETRAYAL,5,"<player>, pick someone to lift you in the air every time you take a sip for the next 4 rounds."
 BETRAYAL,5,"<player>, pick two players to do push-ups until one gives up. The loser drinks double for the rest of the game."
 BETRAYAL,5,"<player>, choose two players to balance on one foot. The game may go on during the contest. The first one to fall drinks double for the rest of the game."
 CATEGORIES,5,Famous Historical Figures
@@ -1322,26 +1322,25 @@ CATEGORIES,5,Spicy Pickup Lines
 DARE,5,"<player>, swap you whole outfit with <player> for the rest of the game."
 DARE,5,"<player>, kiss <player> on the lips. No refusals! Drink 1 sip together after you do it."
 DARE,5,"<player>, kiss a player of <player>'s choice on the lips. Either of you can refuse by downing your drink."
-DARE,5,"<player>, text 'I love you' to the last person you texted."
+DARE,5,"<player>, text 'I love you' to the last person you texted. Down your drink if they don't say 'I love you' back in 3 minutes. Choose someone else to down their drink if they do."
 DARE,5,"<player>, whisper a secret to <player> of your choosing. Both drink 1 sip together as a promise to keep it."
 DARE,5,"<player>, strip down to your underwear for 5 minutes."
 DARE,5,"<player>, let <player> pick a dare for you. If you refuse, everyone downs their drink."
-DARE,5,"<player>, perform a dramatic love confession to <player> as if you're in a soap opera. Drink 4 sips if no one believes it."
-DARE,5,"<player>, text your crush asking, 'Do you think we’d make a good couple?' Drink 4 sips if they say no or don't respond for 20 minutes."
-DARE,5,"<player>, call your ex and ask if they want to catch up. Drink 4 sips if they say no or don't pick up."
-DARE,5,"<player>, for the next 2 rounds, every time you speak, you must refer to yourself in the third person. Drink 3 sips if you slip up."
-DARE,5,"<player>, strip down to your socks and shoes for the next 5 minutes. Drink 4 sips if you refuse."
+DARE,5,"<player>, perform a dramatic love confession to <player> as if you're in a soap opera. Give away 3 sips afterwards."
+DARE,5,"<player>, text your second most recent contact asking, 'Do you think we’d make a good couple?' Drink 4 sips if they say no or don't respond for 3 minutes."
+DARE,5,"<player>, call your ex and ask if they want to catch up. Drink 4 sips if they say no or doesn't pick up. Give away 3 sips otherwise."
+DARE,5,"<player>, for the next 3 rounds, every time you speak, you must refer to yourself in the third person. Drink 3 sips if you slip up."
+DARE,5,"<player>, take 3 sips and strip down to your socks and shoes for the next 5 minutes."
 DARE,5,"<player>, let <player> give you a new nickname that you must respond to for the rest of the game. Drink 3 sips every time you forget."
-DARE,5,"<player>, sit on <player>'s lap for the next 2 rounds. Drink 4 sips if you refuse."
+DARE,5,"<player>, sit on <player>'s lap for the next 2 rounds."
 DARE,5,"<player>, down your drink in 5 seconds, or let someone else choose a dare for you. Drink 4 sips if you fail."
-DARE,5,"<player>, choose someone in the group to send an 'I miss you' text to a person of their choice, no context. Drink 4 sips if they don't reply within 10 minutes."
-DARE,5,"<player>, take an item of clothing off and swap it with <player> for the next 3 rounds. Drink 4 sips if you refuse."
+DARE,5,"<player>, choose someone in the group to send an 'I miss you' text to a person of their choice, no context. Drink 4 sips if they don't reply within 3 minutes."
+DARE,5,"<player>, take 2 sips, then take an item of clothing off and swap it with <player> for the next 3 rounds."
 DARE,5,"<player>, pretend to be on a first date with <player> for 1 minute. Give away 4 sips if you make them laugh. If you don't, drink them."
-DARE,5,"<player>, for the next 3 rounds, anytime someone says 'drink,' you must say 'cheers' and clink an invisible glass. Drink 3 sips if you forget."
-DARE,5,"<player>, write a funny caption for <player>'s most recent Instagram photo. Drink 4 sips if they don't approve."
-DARE,5,"<player>, create a love poem on the spot about the person on your right. Drink 4 sips if no one applauds."
+DARE,5,"<player>, for the next 3 rounds, anytime someone says 'drink,' you must say 'cheers' and raise your glass. Drink 3 sips if you forget."
+DARE,5,"<player>, write a comment on <player>'s most recent Instagram photo. Give away 2 sips if it contains the words 'Love Island'."
 DARE,5,"<player>, play a game of 'Simon Says' with the group. Anyone who messes up drinks 3 sips."
-DARE,5,"<player>, choose a random contact and ask them, 'Do you think I'm a good kisser?' Drink 3 sips if they say no or don't reply."
+DARE,5,"<player>, ask your third most recent contact: 'Do you think I'm a good kisser?' Drink 3 sips if they say no or don't reply in 3 minutes."
 DARE,5,"<player>, for the next 4 rounds, every time you take a sip, you must give a compliment to someone. Drink 4 sips if you forget. Start with drinking 1 sip now."
 DARE,5,"<player>, act like you're auditioning for a soap opera for 30 seconds. Drink 4 sips if no one believes you're emotional enough."
 DARE,5,"<player>, for the next 3 rounds, you must refer to yourself in the third person. Drink 4 sips if you slip up."
@@ -1351,17 +1350,15 @@ DARE,5,"<player>, do your best 'drunk history' storytelling. Pick a random event
 DARE,5,"<player>, for the next 3 rounds, every time you laugh, you must drink 2 sips."
 DARE,5,"<player>, play a quick game of charades with the group. The first one to guess right gives away 2 sips. If nobody guesses in 30 seconds, you drink 4 sips."
 DARE,5,"<player>, for the next 4 rounds, every time someone else takes a drink, you must say 'cheers' and take one with them."
-DARE,5,"<player>, eat a spoonful of a condiment chosen by <player>. Drink 4 sips if you refuse."
+DARE,5,"<player>, eat a spoonful of a condiment chosen by <player>. Down your drink to refuse."
 DARE,5,"<player>, try to say a tongue-twister five times fast. Drink 3 sips if you mess up."
-DARE,5,"<player>, let <player> give you a hairstyle for the next 3 rounds. Drink 4 sips if you refuse."
-DARE,5,"<player>, swap phones with <player> for the next 3 rounds. Drink 4 sips if you refuse."
-DARE,5,"<player>, post a funny dance video of yourself online. Drink 5 sips if it gets no likes within 15 minutes."
+DARE,5,"<player>, swap phones with <player> for the next 3 rounds. Either of you can refuse by downing your drink."
 DARE,5,"<player>, spin a bottle and french kiss the player it lands on. Both of you drink 1 sip together with a toast afterwards."
 DARE,5,"<player>, spin a bottle and french kiss the player it lands on. Both of you drink 1 sip together with a toast afterwards."
 DARE,5,"<player>, spin a bottle and french kiss the player it lands on. Both of you drink 1 sip together with a toast afterwards."
 DARE,5,"<player>, call your crush and confess your feelings. You may refuse by downing your drink."
-DARE,5,"<player>, do a shot off of the belly button of <player> without using your hand. You may choose someone else to down their drink if you succeed without spilling anything."
-DARE,5,"<player>, wear your underwear on your head for the next three rounds. Take 5 sips if you take it off before then."
+DARE,5,"<player>, do a shot off of the belly button of <player> without using your mouth. You may choose someone else to down their drink if you succeed without spilling anything."
+DARE,5,"<player>, take 2 sips and wear your underwear on your head for the next three rounds."
 DARE,5,"<player>, act out a scene from 'Fifty shades of grey' or 'Titanic' with <player>. Give away 5 sips after the round of applause from the audience."
 DARE,5,"<player>, sing 'Happy Birthday' to <player>. They drink 3 sips as a thank you."
 DARE,5,"<player>, kiss <player> on the cheek. They may choose to kiss you back or drink 4 sips."
@@ -1384,18 +1381,18 @@ DARE,5,"<player>, take a piece of clothing off for the rest of the game. You may
 DARE,5,"<player>, take a piece of clothing off for the rest of the game. You may refuse by downing your drink if you're already in your underwear."
 DARE,5,"<player>, hold <player>'s legs while they perform 3 sit-ups on top of you. Every time you get close, kiss. Drink 3 times for every failed sit-up or kiss."
 DARE,5,"<player>, sit on your back while <player> performs 3 push-ups on top of you. Every time you get close, kiss. Drink 3 times for every failed push-up or kiss."
-DARE,5,Have a toast. Everyone downs their drink.
-DARE,5,Have a toast. Everyone downs their drink.
-DARE,5,Have a toast. Everyone downs their drink.
-DARE,5,Have a toast. Everyone downs their drink.
+DARE,5,"Have a toast. Everyone downs their drink."
+DARE,5,"Have a toast. Everyone downs their drink."
+DARE,5,"Have a toast. Everyone downs their drink."
+DARE,5,"Have a toast. Everyone downs their drink."
 DARE,5,"<player>, undo <player>'s zipper or bra with your mouth. Take 5 sips if you are unsuccessful, give them to someone else if you are."
 DARE,5,"<player>, let <player> choose a piece of clothing for you to wear on your head for the next 5 rounds. Drink 5 sips if you refuse."
 DARE,5,"<player>, do 5 burpees. If you manage to finish, give 4 sips, otherwise drink them."
 DARE,5,"<player>, attempt to carry <player> players across the room. If you fail, drink 5 sips. If you succeed, give them to someone else."
 DARE,5,"<player>, do a handstand for 10 seconds. If you succeed, give 4 sips to someone. Otherwise drink them."
-MASTER,5,<player> is the master of truth. They can override 2 truth questions anytime in the game.
-MASTER,5,<player> is the master of dare. They can override 2 dares anytime in the game.
-MASTER,5,<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game.
+MASTER,5,"<player> is the master of truth. They can override 2 truth questions anytime in the game."
+MASTER,5,"<player> is the master of dare. They can override 2 dares anytime in the game."
+MASTER,5,"<player> is the master of rules. They can add one rule to the game now that everyone must respect until the end of the game."
 POLL,5,Who has ever had a threesome?
 POLL,5,Who has ever lied about being single?
 POLL,5,Who has ever dated more than one person at a time?
@@ -1419,9 +1416,6 @@ POLL,5,Who has ever used a dating app for a one-night stand?
 POLL,5,Who has ever had a secret affair with someone in this room?
 POLL,5,Who has ever sent explicit content to someone in this room?
 POLL,5,Who has ever kissed someone else’s partner in this room?
-POLL,5,Who has ever been involved in a secret relationship with someone in this room?
-POLL,5,Who has ever been caught in a compromising situation by someone in this room?
-POLL,5,Who has ever had a one-night stand with someone in this room?
 POLL,5,Who has ever hooked up with a friend’s partner in this room?
 POLL,5,Who has ever been in a secret romantic relationship with someone in this room?
 POLL,5,Who has ever lied about being single to someone in this room?
@@ -1435,15 +1429,8 @@ POLL,5,Who has ever staged a public protest or demonstration?
 POLL,5,Who has ever been on a reality TV show?
 POLL,5,Who has ever met a world leader or celebrity?
 POLL,5,Who has ever been involved in a major public protest or movement?
-POLL,5,Who has ever won a significant award or recognition?
-POLL,5,Who has ever been part of a high-stakes competition or event?
-POLL,5,Who has ever worked in a high-profile or secretive job?
-POLL,5,Who has ever had a significant influence on social media?
-POLL,5,Who has ever had a major life-changing experience that was widely publicized?
-POLL,5,Who has ever traveled to a destination on a personal bucket list?
 POLL,5,"Who has ever been part of a high-profile or luxury travel experience, like a private yacht or exclusive resort?"
-POLL,5,"Who has ever had an extraordinary travel experience, like meeting a celebrity or attending a major event?"
-POLL,5,Who has ever traveled to a destination known for its nightlife and partying?
+POLL,5,Who has ever traveled to Romania?
 POLL,5,"Who has ever been on a long-term travel adventure, like backpacking through multiple countries?"
 POLL,5,"Who has ever experienced a once-in-a-lifetime travel opportunity, like a space tourism trip or polar expedition?"
 POLL,5,Who has ever been involved in a travel experience that made headlines or was featured in media?
@@ -1454,22 +1441,19 @@ POLL,5,Who has ever had a workplace mishap that became a legendary office story?
 POLL,5,Who has ever made an outrageous claim about their work experience to impress a client or boss?
 POLL,5,Who has ever been involved in an office party or event that got hilariously out of hand?
 POLL,5,Who has ever been mistaken for someone else and had to play along in a work situation?
-SECRET_POLL,5,Who has ever had a secret romantic relationship with someone in this room that no one else knows about?
-SECRET_POLL,5,Who has ever sent nudes to someone in this room and regretted it?
+SECRET_POLL,5,Who has ever sent nudes to someone in this room?
 SECRET_POLL,5,Who has ever had a clandestine sexual encounter with someone in this room?
-SECRET_POLL,5,Who has ever been caught in a compromising position by someone in this room and kept it a secret?
-SECRET_POLL,5,Who has ever had a secretive romantic relationship with someone in this room that was never disclosed?
+SECRET_POLL,5,Who has ever been caught in a compromising position by someone in this room?
+SECRET_POLL,5,Who has ever had a romantic relationship with someone in this room that was never disclosed?
 SECRET_POLL,5,Who has ever lied about their romantic or sexual activities to someone in this room?
 SECRET_POLL,5,Who has ever had a private romantic rendezvous with someone in this room?
-SECRET_POLL,5,Who has ever participated in a secret affair involving someone in this room?
+SECRET_POLL,5,Who has ever participated in an affair involving someone in this room?
 SECRET_POLL,5,Who has ever sent intimate content to someone in this room without others knowing?
 SECRET_POLL,5,Who has ever had a threesome with someone in this room?
-SECRET_POLL,5,Who has ever sent explicit content to someone in this room and regretted it?
+SECRET_POLL,5,Who has ever sent explicit content to someone in this room ?
 SECRET_POLL,5,Who has ever been caught in a sexual act by someone in this room?
 SECRET_POLL,5,Who has ever lied about their sexual encounters to someone in this room?
-SECRET_POLL,5,Who has ever been in a secret romantic relationship with someone in this room?
 SECRET_POLL,5,Who has ever had a clandestine affair with someone in this room?
-SECRET_POLL,5,Who has ever participated in a secret sexual rendezvous with someone in this room?
 SECRET_POLL,5,Who has ever had a secret crush on someone in this room that no one knows about?
 SECRET_POLL,5,Who has ever had a hidden romantic relationship with someone in this room?
 SECRET_POLL,5,Who has ever sent nudes to someone in this room?
@@ -1481,7 +1465,7 @@ SECRET_POLL,5,Who has ever been caught cheating by a partner?
 SECRET_POLL,5,Who has ever had a hidden affair while in a relationship?
 SECRET_POLL,5,Who has ever sent explicit content to a person they barely knew?
 SECRET_POLL,5,Who has ever had a secret rendezvous at a hotel?
-SECRET_POLL,5,Who has ever engaged in a secret romantic relationship with a teacher or professor?
+SECRET_POLL,5,Who has ever engaged in a romantic relationship with a teacher or professor?
 SECRET_POLL,5,Who has ever been involved in a clandestine relationship with a celebrity?
 SECRET_POLL,5,Who has ever had a threesome?
 SECRET_POLL,5,Who has ever sent nudes?
@@ -1491,28 +1475,21 @@ SECRET_POLL,5,Who has ever been caught in a sexual act?
 SECRET_POLL,5,Who has ever done something they regret while drunk?
 SECRET_POLL,5,Who has ever skinny-dipped?
 SECRET_POLL,5,Who has ever hooked up with someone they met on vacation and regretted it afterward?
-SECRET_POLL,5,Who has ever been involved in a scandalous situation with someone in their travel group?
 SECRET_POLL,5,Who has ever had a vacation affair that led to unexpected complications?
 SECRET_POLL,5,Who has ever been caught in a compromising situation by a local or other travelers?
-SECRET_POLL,5,Who has ever had a secret romantic escapade while on vacation that no one knows about?
 SECRET_POLL,5,Who has ever had a vacation encounter that made it into a juicy rumor back home?
 SECRET_POLL,5,Who has ever made a major mistake on vacation that could be considered scandalous?
 SECRET_POLL,5,Who has ever had a serious workplace affair that caused major repercussions?
 SECRET_POLL,5,Who has ever been part of a major office scandal involving personal misconduct?
-SECRET_POLL,5,Who has ever been involved in a high-stakes corporate espionage situation?
 SECRET_POLL,5,Who has ever engaged in risky behavior that could jeopardize their job or career?
 SECRET_POLL,5,Who has ever been caught in a major lie or deception that affected their work reputation?
-SECRET_POLL,5,Who has ever had a secret romantic relationship that could have led to a conflict of interest at work?
-SECRET_POLL,5,Who has ever been in a major legal or ethical issue involving their job or employer?
+SECRET_POLL,5,Who has ever had a romantic relationship that could have led to a conflict of interest at work?
 SECRET_POLL,5,Who has ever been caught in a compromising situation at a party by someone they know?
 SECRET_POLL,5,Who has ever been the subject of a major family feud or conflict?
-SECRET_POLL,5,Who has ever been involved in a travel-related scandal or illegal activity?
-SECRET_POLL,5,Who has ever been involved in a secretive romantic or sexual relationship while on vacation?
-SECRET_POLL,5,Who has ever had a secret romantic or sexual relationship with a professor or faculty member?
+SECRET_POLL,5,Who has ever had a romantic or sexual relationship with a professor or faculty member?
 SECRET_POLL,5,Who has ever been caught doing something inappropriate related to health or fitness?
 SECRET_POLL,5,Who has ever hooked up with someone at a party and was later caught by someone they knew?
 SECRET_POLL,5,Who has ever blacked out from drinking at a party and had to piece together the night afterward?
-SECRET_POLL,5,Who has ever been caught in an intense or scandalous situation at a party by someone they knew?
 SECRET_POLL,5,Who has ever been involved in a scandalous party story that became well-known?
 TRUTH,5,"<player>, if you had to hook up with someone in this room, who would it be? After you answer, drink 3 sips. If the person you chose reciprocates, they may choose to drink 1 sip."
 TRUTH,5,"<player>, would you break up with your current partner for anyone in this room? If yes, drink 5 sips, no need to reveal the person."
@@ -1520,18 +1497,17 @@ TRUTH,5,"<player>, if you had to confess something to someone in this room, who 
 TRUTH,5,"<player>, what's the most illegal thing you’ve ever done? Drink 3 sips if you got away with it."
 TRUTH,5,"<player>, who do you think is the most likely person in this room to end up in jail? The chosen person drinks 3 sips to ponder on their behaviour."
 TRUTH,5,"<player>, if you had to hook up with someone in this room but never speak of it again, who would it be? Both drink 5 sips."
-TRUTH,5,<player> confesses a secret they've never told anyone before. Everyone else takes a sip in solidarity.
+TRUTH,5,"<player>, confess a secret you've never told anyone before. Everyone else takes a sip in solidarity. If you don't have a secret to confess, down your drink."
 TRUTH,5,"<player>, who do you think would be the worst at keeping a straight face if they were lying, <player> or <player>? The chosen one drinks 3 sips."
 TRUTH,5,"<player>, who in this room do you think has the juiciest gossip? They drink 4 sips."
 TRUTH,5,"<player>, who do you think would give the worst advice between <player> and <player>? The one you pick drinks 3 sips."
 TRUTH,5,"<player>, if <player> and <player> were in a reality TV show, who do you think would cause more drama? The one you choose drinks 2 sips."
-TRUTH,5,"<player>, who do you think would be the first to run away during a scary situation, <player> or <player>? The runner drinks 4 sips."
+TRUTH,5,"<player>, who do you think would be the first to run away during a bear attach in the mountains, <player> or <player>? The runner drinks 4 sips."
 TRUTH,5,"<player>, who in this room do you think would lie to get out of trouble? They drink 3 sips."
 TRUTH,5,"<player>, between <player> and <player>, who do you think is more likely to keep a big secret? The secret-keeper drinks 2 sips."
 TRUTH,5,"<player>, who do you think is most likely to exaggerate a story, <player> or <player>? The one you choose drinks 3 sips."
-TRUTH,5,"<player>, if <player> and <player> were stranded together in the wilderness, who do you think would survive longer? The survivor drinks 4 sips."
+TRUTH,5,"<player>, if <player> and <player> were stranded together in the wilderness, who do you think would survive longer and why? The survivor drinks 4 sips."
 TRUTH,5,"<player>, who do you think is most likely to forget an important date, <player> or <player>? The forgetful one drinks 3 sips."
-TRUTH,5,"<player>, who do you think has the biggest secret they haven’t told anyone? They drink 4 sips."
 TRUTH,5,"<player>, between <player> and <player>, who do you think would get in trouble first if they worked in the same office? The troublemaker drinks 3 sips."
 TRUTH,5,"<player>, who do you think would be more successful at sneaking into a VIP event, <player> or <player>? The one you choose drinks 2 sips."
 TRUTH,5,"<player>, who in this room do you think is most likely to cry after a breakup? They drink 3 sips."
@@ -1539,11 +1515,9 @@ TRUTH,5,"<player>, who do you think would be the most dramatic if they were arre
 TRUTH,5,"<player>, who in this room do you think is most likely to win an argument with their partner? They drink 3 sips."
 TRUTH,5,"<player>, if <player> and <player> were both competing in a game show, who do you think would win? The winner drinks 4 sips."
 TRUTH,5,"<player>, who do you think would be more likely to forget their keys at home, <player> or <player>? The forgetful one drinks 3 sips."
-TRUTH,5,"<player>, who in this room do you think would be the worst at keeping a straight face during a prank? They drink 2 sips."
 TRUTH,5,"<player>, who do you think would handle a breakup better, <player> or <player>? The stronger one drinks 3 sips."
 TRUTH,5,"<player>, who do you think would spill a secret faster, <player> or <player>? The leaky one drinks 5 sips."
 TRUTH,5,"<player>, who in this room do you think is the biggest flirt? They drink 5 sips and prove it with a compliment to someone else."
-TRUTH,5,"<player>, between <player> and <player>, who do you think has had the most embarrassing accidental text moment? The one you pick drinks 5 sips."
 TRUTH,5,"<player>, who do you think is more likely to accidentally fall asleep at a party, <player> or <player>? The sleeper drinks 5 sips."
 TRUTH,5,"<player>, if <player> and <player> had to compete in a karaoke battle, who do you think would win? The champion drinks 5 sips and sings a line of their favorite song."
 TRUTH,5,"<player>, who in this room do you think is more likely to take a selfie in a bathroom? The selfie-taker drinks 5 sips."
@@ -1557,9 +1531,9 @@ TRUTH,5,"<player>, who do you think is more likely to accidentally drunk-dial th
 TRUTH,5,"<player>, who in this room do you think would make the worst contestant on a dating show? They drink 5 sips."
 TRUTH,5,"<player>, if <player> and <player> had to compete in a prank war, who do you think would win? The prank master gives 5 sips."
 TRUTH,5,"<player>, have you ever sent a risky text to the wrong person? Tell the story and drink 5 sips."
-TRUTH,5,"<player>, what's the wildest thing you've done at a party? Be brave and drink 5 sips after you share."
+TRUTH,5,"<player>, what's the wildest thing you've done at a party? Be brave and drink 5 sips before you share."
 TRUTH,5,"<player>, have you ever been caught in a lie that spiraled out of control? Tell us and drink 5 sips."
-TRUTH,5,"<player>, what's the most scandalous secret you've kept? You have to spill and drink 5 sips."
+TRUTH,5,"<player>, what's the most scandalous secret you've kept? You have to spill it and drink 5 sips."
 TRUTH,5,"<player>, who’s someone you’ve lied to about why you couldn’t hang out? Confess and drink 5 sips."
 TRUTH,5,"<player>, what's the pettiest thing you've ever done in a relationship? Share and drink 5 sips."
 TRUTH,5,"<player>, have you ever been rejected in a hilariously awkward way? Tell us the story and drink 5 sips."
