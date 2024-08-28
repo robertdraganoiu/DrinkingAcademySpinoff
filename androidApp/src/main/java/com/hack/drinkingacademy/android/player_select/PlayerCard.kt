@@ -71,7 +71,6 @@ fun PlayerCard(
                 TextField(
                     value = name,
                     onValueChange = onNameChange,
-//                label = { Text("Name", color = Color.White) },
                     textStyle = TextStyle(
                         fontFamily = FontFamily(Font(R.font.rubik)),
                         color = Color.White,
@@ -82,6 +81,8 @@ fun PlayerCard(
                     keyboardActions = KeyboardActions(onDone = {
                         if (name.isNotBlank()) {
                             onAddPlayer()
+                        } else {
+                            onCloseClick()
                         }
                     }),
                     colors = TextFieldDefaults.textFieldColors(
@@ -95,6 +96,7 @@ fun PlayerCard(
                         .weight(1f)
                         .padding(end = 8.dp)
                         .focusRequester(focusRequester)
+
                 )
             }
             IconButton(onClick = { onCloseClick() }) {
