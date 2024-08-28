@@ -65,9 +65,10 @@ fun PlayerCard(
                     fontSize = 18.sp,
                     color = Color.White,
                     fontFamily = FontFamily(Font(R.font.rubik)),
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp)
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp).weight(1f)
                 )
             } else {
+                // Limiting the max width of the TextField
                 TextField(
                     value = name,
                     onValueChange = onNameChange,
@@ -115,6 +116,8 @@ fun PlayerCard(
         }
     }
 }
+
+
 
 @Composable
 @Preview
