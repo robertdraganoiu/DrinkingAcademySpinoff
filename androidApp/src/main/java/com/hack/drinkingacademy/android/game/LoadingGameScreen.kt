@@ -7,7 +7,6 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -48,9 +47,10 @@ fun LoadingGameScreen(navController: NavHostController, difficulty: Int) {
         )
     }
 
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .clickable { navController.popBackStack() }) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
         // Background Image
         Image(
             painter = painterResource(difficulty.toGameBackground()),
